@@ -1,6 +1,6 @@
 [package]
 name = "contractions"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Tom Keller <tomlouiskeller@gmail.com>"]
 edition = "2018"
 

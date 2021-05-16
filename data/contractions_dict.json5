@@ -1,3 +1,5 @@
+// from https://github.com/kootenpv/contractions
+// order matters go from shortest to longest (I'm -> I'm'a)
 {
     "I'm": "I am",
     "I'm'a": "I am about to",

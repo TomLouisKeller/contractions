@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use std::collections::BTreeMap;
 
 use serde::Deserialize;
 
@@ -8,7 +8,7 @@ const SLANG_JSON: &str = include_str!("../data/slang_dict.json5");
 
 #[derive(Deserialize, Debug)]
 pub struct Contractions {
-    contractions: HashMap<String, String>,
+    contractions: BTreeMap<String, String>,
 }
 
 impl Default for Contractions {
@@ -23,7 +23,7 @@ impl Contractions {
     // make sure Quoter can return None or some solution like that
     /// Deserialize quoter from json
     fn from_json(contractions_as_str: &str) -> Self {
-        let contractions: HashMap<String, String> = json5::from_str(contractions_as_str).unwrap();
+        let contractions: BTreeMap<String, String> = json5::from_str(contractions_as_str).unwrap();
         Contractions { contractions }
     }
 
@@ -39,22 +39,26 @@ impl Contractions {
     /// assert_eq("I am your brother's son", replace("I'm your brother's son"));
     /// '''
     pub fn expand(&self, input: &str) -> String {
-        // TODO: what about periods, etc
-        let mut output = String::with_capacity(input.len());
-        for word in input.split(' ') {
-            match self.contractions.get(word) {
-                Some(replacement) => output.push_str(replacement),
-                None => output.push_str(word),
-            }
-            output.push(' ');
-        }
+        let mut output = input.to_string();
 
-        // remove last space
-        output.pop();
+        for (short, long) in self.contractions.iter().rev() {
+            output = output.replace(short, long);
+        }
 
         output
     }
 }
+
+// for word in input.split(' ') {
+//     match self.contractions.get(word) {
+//         Some(replacement) => output.push_str(replacement),
+//         None => output.push_str(word),
+//     }
+//     output.push(' ');
+// }
+
+// remove last space
+// output.pop();
 
 // struct Contraction {
 //     short_form :String,

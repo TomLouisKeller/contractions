@@ -3,9 +3,6 @@ use super::*;
 
 // expand()
 
-// TODO: use a framework to turn these into one test with a single setup
-// for Contractions::default()
-
 #[test]
 fn expand__single_apostroph() {
     let contractions = Contractions::default();
@@ -25,16 +22,19 @@ fn expand__double_apostroph() {
 }
 
 #[test]
-fn expand__period_after_non_contraction() {
+fn expand__multiple_terms() {
     let contractions = Contractions::default();
-    assert_eq!(contractions.expand("Hello there."), "Hello there.");
+    assert_eq!(
+        contractions.expand("I'm gonna make you an offer you can't refuse"),
+        "I am going to make you an offer you can not refuse"
+    );
 }
 
-// #[test]
-// fn expand__period_after_contraction() {
-//     let contractions = Contractions::default();
-//     assert_eq!(contractions.expand("I can't."), "I can not.");
-// }
+#[test]
+fn expand__period_after_contraction() {
+    let contractions = Contractions::default();
+    assert_eq!(contractions.expand("I can't."), "I can not.");
+}
 
 /// Possessives are "Tom's car", "England's navy" - make sure we don't remove those 's
 #[test]
@@ -45,10 +45,3 @@ fn expand__dont_replace_possessives() {
         "Your brother's son"
     );
 }
-
-// #[test]
-// fn test_replace() {
-//     let x = "No, you can't.";
-
-//     assert_eq!(x.replace("can't", "can not"), "No, you can not.");
-// }
