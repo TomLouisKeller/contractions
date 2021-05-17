@@ -18,6 +18,7 @@ rejected:
 "o'": "of",
 "o'clock": "of the clock",
 
+## contractions_partial
 
 ## no_apostroph_single_contractions.json
 

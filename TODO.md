@@ -3,6 +3,7 @@
 ## Functionality
 
 - Assure both apostroph as well as grave accent work ( ' ’ `)
+- use \b as word boundries. this way order doesn't matter (except for the partials)
 - Ignore case when searching,
 - Respect original capitalization(case-sensitivity) when replacing
 - Don't replace when a contraction is part of a larger term. eg "Adelphe's" currently turn's to "Adelphe is" because of "he's" => "he is"
