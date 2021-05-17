@@ -2,9 +2,7 @@ use std::collections::BTreeMap;
 
 use serde::Deserialize;
 
-const CONTRACTIONS_JSON: &str = include_str!("../data/contractions_dict.json5");
-const LEFTOVERS_JSON: &str = include_str!("../data/leftovers_dict.json5");
-const SLANG_JSON: &str = include_str!("../data/slang_dict.json5");
+const CONTRACTIONS_JSON: &str = include_str!("../data/single_contractions.json");
 
 #[derive(Deserialize, Debug)]
 pub struct Contractions {
@@ -23,7 +21,8 @@ impl Contractions {
     // make sure Quoter can return None or some solution like that
     /// Deserialize quoter from json
     fn from_json(contractions_as_str: &str) -> Self {
-        let contractions: BTreeMap<String, String> = json5::from_str(contractions_as_str).unwrap();
+        let contractions: BTreeMap<String, String> =
+            serde_json::from_str(contractions_as_str).unwrap();
         Contractions { contractions }
     }
 

@@ -22,6 +22,24 @@ fn expand__double_apostroph() {
 }
 
 #[test]
+fn expand__double_apostroph_would_have() {
+    let contractions = Contractions::default();
+    assert_eq!(contractions.expand("it'd've"), "it would have");
+}
+
+#[test]
+fn expand__double_apostroph_will_have() {
+    let contractions = Contractions::default();
+    assert_eq!(contractions.expand("he'll've"), "he will have");
+}
+
+#[test]
+fn expand__double_apostroph_are() {
+    let contractions = Contractions::default();
+    assert_eq!(contractions.expand("You'ren't"), "he will have");
+}
+
+#[test]
 fn expand__multiple_terms() {
     let contractions = Contractions::default();
     assert_eq!(
@@ -34,6 +52,12 @@ fn expand__multiple_terms() {
 fn expand__period_after_contraction() {
     let contractions = Contractions::default();
     assert_eq!(contractions.expand("I can't."), "I can not.");
+}
+
+#[test]
+fn expand__capitalization() {
+    let contractions = Contractions::default();
+    assert_eq!(contractions.expand("Can't"), "Can not");
 }
 
 /// Possessives are "Tom's car", "England's navy" - make sure we don't remove those 's
