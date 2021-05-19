@@ -8,15 +8,17 @@ use regex_wrapper::RegexWrapper;
 
 use serde::{Deserialize, Serialize};
 
-pub const CONTRACTIONS_PARTIAL_JSON: &str = include_str!("../data/contractions_partial.json");
-pub const CONTRACTIONS_SINGLE_JSON: &str = include_str!("../data/contractions_single.json");
-pub const CONTRACTIONS_DOUBLE_JSON: &str = include_str!("../data/contractions_double.json");
-pub const CONTRACTIONS_TRIPPLE_JSON: &str = include_str!("../data/contractions_tripple.json");
+pub const CONTRACTIONS_PARTIAL_JSON: &str =
+    include_str!("../data/expand/contractions_partial.json");
+pub const CONTRACTIONS_SINGLE_JSON: &str = include_str!("../data/expand/contractions_single.json");
+pub const CONTRACTIONS_DOUBLE_JSON: &str = include_str!("../data/expand/contractions_double.json");
+pub const CONTRACTIONS_TRIPPLE_JSON: &str =
+    include_str!("../data/expand/contractions_tripple.json");
 pub const CONTRACTIONS_SINGLE_NO_APOSTROPHE_JSON: &str =
-    include_str!("../data/contractions_single_no_apostroph.json");
+    include_str!("../data/expand/contractions_single_no_apostroph.json");
 pub const CONTRACTIONS_DOUBLE_NO_APOSTROPHE_JSON: &str =
-    include_str!("../data/contractions_double_no_apostroph.json");
-pub const SLANG_JSON: &str = include_str!("../data/slang.json");
+    include_str!("../data/expand/contractions_double_no_apostroph.json");
+pub const SLANG_JSON: &str = include_str!("../data/expand/slang.json");
 
 pub const CONTRACTIONS_JSON_ORDER: &[&str] = &[
     SLANG_JSON,

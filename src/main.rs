@@ -2,7 +2,7 @@
 use std::error::Error;
 
 use contractions::Contractions;
-use regex::Regex;
+// use regex::Regex;
 
 fn main() -> Result<(), Box<dyn Error>> {
     // let contractions = Contractions::default()?;
