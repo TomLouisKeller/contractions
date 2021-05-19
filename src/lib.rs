@@ -1,10 +1,9 @@
-use std::error::Error;
-
 use linked_hash_map::LinkedHashMap;
+use regex::Regex;
+use std::error::Error;
+use std::hash::{Hash, Hasher};
 
-use serde::Deserialize;
-
-const CONTRACTIONS_PARTIAL_JSON: &str = include_str!("../data/contractions_partial.json");
+// const CONTRACTIONS_PARTIAL_JSON: &str = include_str!("../data/contractions_partial.json");
 const CONTRACTIONS_SINGLE_JSON: &str = include_str!("../data/contractions_single.json");
 const CONTRACTIONS_DOUBLE_JSON: &str = include_str!("../data/contractions_double.json");
 const CONTRACTIONS_TRIPPLE_JSON: &str = include_str!("../data/contractions_tripple.json");
@@ -21,12 +20,28 @@ const CONTRACTIONS_JSON_ORDER: &[&str] = &[
     CONTRACTIONS_TRIPPLE_JSON,
     CONTRACTIONS_DOUBLE_JSON,
     CONTRACTIONS_SINGLE_JSON,
-    CONTRACTIONS_PARTIAL_JSON,
+    // CONTRACTIONS_PARTIAL_JSON,
 ];
 
-#[derive(Deserialize, Debug)]
+#[derive(Debug)]
+struct RegexWrapper(Regex);
+
+impl PartialEq for RegexWrapper {
+    fn eq(&self, other: &RegexWrapper) -> bool {
+        self.0.as_str() == other.0.as_str()
+    }
+}
+
+impl Eq for RegexWrapper {}
+
+impl Hash for RegexWrapper {
+    fn hash<H: Hasher>(&self, state: &mut H) {
+        self.0.as_str().hash(state);
+    }
+}
+
 pub struct Contractions {
-    contractions: LinkedHashMap<String, String>,
+    contractions: LinkedHashMap<RegexWrapper, String>,
 }
 
 impl Contractions {
@@ -39,7 +54,7 @@ impl Contractions {
     // make sure Quoter can return None or some solution like that
     /// Deserialize quoter from json
     pub fn from_json(contractions_as_str: &[&str]) -> Result<Self, Box<dyn Error>> {
-        let mut contractions: LinkedHashMap<String, String> = LinkedHashMap::new();
+        let mut contractions: LinkedHashMap<RegexWrapper, String> = LinkedHashMap::new();
 
         for s in contractions_as_str {
             // println!("s: {}", s);
@@ -47,7 +62,10 @@ impl Contractions {
 
             // LinkedHashMap doesn't have append, so we have to add one entry at a time
             for (e_short, e_long) in contr_part.iter() {
-                contractions.insert(e_short.to_string(), e_long.to_string());
+                let e_short = format!(r"\b(?i){}(?-i)\b", e_short);
+                let regex = Regex::new(&e_short).unwrap();
+                // println!("{}", regex);
+                contractions.insert(RegexWrapper(regex), e_long.to_string());
             }
         }
 
@@ -56,7 +74,7 @@ impl Contractions {
 
     pub fn list(&self) {
         for (short, long) in self.contractions.iter() {
-            println!("{} -> {}", short, long);
+            println!("{:?} -> {}", short, long);
         }
     }
 
@@ -74,8 +92,13 @@ impl Contractions {
     pub fn expand(&self, input: &str) -> String {
         let mut output = input.to_string();
 
-        for (short, long) in self.contractions.iter() {
-            output = output.replace(short, long);
+        for (regex, long) in self.contractions.iter() {
+            // output = output.replace(short, long);
+            // println!("{}", regex.0);
+            if regex.0.is_match(&output) {
+                println!("Found match {:?}", regex.0);
+                output = regex.0.replace_all(&output, long).into_owned();
+            }
         }
 
         output

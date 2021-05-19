@@ -8,8 +8,8 @@ use std::error::Error;
 fn expand__single_apostroph() -> Result<(), Box<dyn Error>> {
     let contractions = Contractions::default()?;
     assert_eq!(
-        contractions.expand("I'm happy to meet you"),
-        "I am happy to meet you"
+        contractions.expand("i'm happy to meet you"),
+        "i am happy to meet you"
     );
     Ok(())
 }
@@ -18,8 +18,8 @@ fn expand__single_apostroph() -> Result<(), Box<dyn Error>> {
 fn expand__double_apostroph() -> Result<(), Box<dyn Error>> {
     let contractions = Contractions::default()?;
     assert_eq!(
-        contractions.expand("I'm'a head out"),
-        "I am about to head out"
+        contractions.expand("i'm'a head out"),
+        "i am about to head out"
     );
     Ok(())
 }
@@ -49,8 +49,8 @@ fn expand__double_apostroph_are() -> Result<(), Box<dyn Error>> {
 fn expand__multiple_terms() -> Result<(), Box<dyn Error>> {
     let contractions = Contractions::default()?;
     assert_eq!(
-        contractions.expand("I'm gonna make you an offer you can't refuse"),
-        "I am going to make you an offer you can not refuse"
+        contractions.expand("i'm gonna make you an offer you can't refuse"),
+        "i am going to make you an offer you can not refuse"
     );
     Ok(())
 }
@@ -77,5 +77,13 @@ fn expand__dont_replace_possessives() -> Result<(), Box<dyn Error>> {
         contractions.expand("Your brother's son"),
         "Your brother's son"
     );
+    Ok(())
+}
+
+/// Possessives are "Tom's car", "England's navy" - make sure we don't remove those 's
+#[test]
+fn expand__slang() -> Result<(), Box<dyn Error>> {
+    let contractions = Contractions::default()?;
+    assert_eq!(contractions.expand("r u ok?"), "are you ok?");
     Ok(())
 }
