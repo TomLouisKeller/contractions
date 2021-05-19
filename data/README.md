@@ -1,4 +1,7 @@
+#
 
+
+## Source
 Original starting point is from:
 from https://github.com/kootenpv/contractions
 
@@ -6,6 +9,11 @@ Double contractions are partially from
 Robert Charles Lee's answer on:
 https://www.quora.com/Are-double-contractions-like-yourent-allowed-in-English-In-slang-innit-which-is-a-contraction-of-is-not-and-it-isnt-it-is-it-not-is-commonly-used
 
+
+
+## Notes
+
+\b in regex is a word boundry
 
 abiguous:
 "he's" => "he is" / "he has"   (as well as all related contractions such as "he’sn’t")
@@ -52,3 +60,25 @@ Those contractions were removed.
 "howdy": "how do you",
 "es": "he is",
 "yallll": "you all will",
+
+
+## Structure
+
+In `find` there is a regular expression which matches all cases in replace.
+It's mainly here, so we don't have to go through all replace statements, and therefore it improves performance.
+
+The `keys` in `replace` are there to match, the `value` are to replace.
+The reason to have multiple in here is to preserve capitalization.
+The last entry ought to catch all cases of capitalization and replace it with a all lowercase version.
+When replacing, we go from the first entry in `replace` down to the last one.
+
+### Example:
+{
+    "find": "\\b(?i)i'm(?-i)\\b",
+    "replace": {
+      "\\bi'm\\b": "i am",
+      "\\bI'm\\b": "I am",
+      "\\bI'M\\b": "I AM",
+      "\\b(?i)i'm(?-i)\\b": "i am"
+    }
+  },

@@ -74,7 +74,8 @@
   {
     "find": "\\b(?i)'e'll(?-i)\\b",
     "replace": {
-      "\\b'e'll\\b": "He will",
+      "\\b'e'll\\b": "he will",
+      "\\b'E'll\\b": "He will",
       "\\b'E'LL\\b": "HE WILL",
       "\\b(?i)'e'll(?-i)\\b": "he will"
     }
@@ -82,7 +83,8 @@
   {
     "find": "\\b(?i)'e's(?-i)\\b",
     "replace": {
-      "\\b'e's\\b": "He is",
+      "\\b'e's\\b": "he is",
+      "\\b'E's\\b": "He is",
       "\\b'E'S\\b": "HE IS",
       "\\b(?i)'e's(?-i)\\b": "he is"
     }
@@ -90,7 +92,8 @@
   {
     "find": "\\b(?i)'tisn't(?-i)\\b",
     "replace": {
-      "\\b'tisn't\\b": "It is not",
+      "\\b'tisn't\\b": "it is not",
+      "\\b'Tisn't\\b": "It is not",
       "\\b'TISN'T\\b": "IT IS NOT",
       "\\b(?i)'tisn't(?-i)\\b": "it is not"
     }
@@ -98,7 +101,8 @@
   {
     "find": "\\b(?i)'twasn't(?-i)\\b",
     "replace": {
-      "\\b'twasn't\\b": "It was not",
+      "\\b'twasn't\\b": "it was not",
+      "\\b'Twasn't\\b": "It was not",
       "\\b'TWASN'T\\b": "IT WAS NOT",
       "\\b(?i)'twasn't(?-i)\\b": "it was not"
     }
@@ -106,7 +110,8 @@
   {
     "find": "\\b(?i)'twon't(?-i)\\b",
     "replace": {
-      "\\b'twon't\\b": "It will not",
+      "\\b'twon't\\b": "it will not",
+      "\\b'Twon't\\b": "It will not",
       "\\b'TWON'T\\b": "IT WILL NOT",
       "\\b(?i)'twon't(?-i)\\b": "it will not"
     }
@@ -114,7 +119,8 @@
   {
     "find": "\\b(?i)'twou'd(?-i)\\b",
     "replace": {
-      "\\b'twou'd\\b": "It would",
+      "\\b'twou'd\\b": "it would",
+      "\\b'Twou'd\\b": "It would",
       "\\b'TWOU'D\\b": "IT WOULD",
       "\\b(?i)'twou'd(?-i)\\b": "it would"
     }
@@ -122,7 +128,8 @@
   {
     "find": "\\b(?i)'twouldn't(?-i)\\b",
     "replace": {
-      "\\b'twouldn't\\b": "It would not",
+      "\\b'twouldn't\\b": "it would not",
+      "\\b'Twouldn't\\b": "It would not",
       "\\b'TWOULDN'T\\b": "IT WOULD NOT",
       "\\b(?i)'twouldn't(?-i)\\b": "it would not"
     }
@@ -130,10 +137,10 @@
   {
     "find": "\\b(?i)can't've(?-i)\\b",
     "replace": {
-      "\\bcan't've\\b": "cannot have",
-      "\\bCan't've\\b": "Cannot have",
-      "\\bCAN'T'VE\\b": "CANNOT HAVE",
-      "\\b(?i)can't've(?-i)\\b": "cannot have"
+      "\\bcan't've\\b": "can not have",
+      "\\bCan't've\\b": "Can not have",
+      "\\bCAN'T'VE\\b": "CAN NOT HAVE",
+      "\\b(?i)can't've(?-i)\\b": "can not have"
     }
   },
   {
@@ -364,7 +371,8 @@
   {
     "find": "\\b(?i)'tweren't(?-i)\\b",
     "replace": {
-      "\\b'tweren't\\b": "It were not",
+      "\\b'tweren't\\b": "it were not",
+      "\\b'Tweren't\\b": "It were not",
       "\\b'TWEREN'T\\b": "IT WERE NOT",
       "\\b(?i)'tweren't(?-i)\\b": "it were not"
     }

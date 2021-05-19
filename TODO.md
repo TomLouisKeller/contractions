@@ -6,8 +6,13 @@
 - Don't replace when a contraction is part of a larger term. eg "Adelphe's" currently turn's to "Adelphe is" because of "he's" => "he is"
 - Use parts-of-speech tagging or named-entity-recognition to figure out if the 's is a possessive or a 'is'
 - combine "daren't" "daresn't" "dasn't"  to one regex
+- combine shan't and shalln't in one regex
 - What about months?
 - use partials again
+- move current contractions json files into a "expand" folder
+- Stabilize api
+- add() and remove() to change dataset
+- make json dataset properly accessible to library users
 
 ## Contractions
 

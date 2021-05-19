@@ -119,7 +119,7 @@
     "find": "\\b(?i)u(?-i)\\b",
     "replace": {
       "\\bu\\b": "you",
-      "\\bU\\b": "YOU",
+      "\\bU\\b": "You",
       "\\b(?i)u(?-i)\\b": "you"
     }
   },
@@ -127,7 +127,7 @@
     "find": "\\b(?i)r(?-i)\\b",
     "replace": {
       "\\br\\b": "are",
-      "\\bR\\b": "ARE",
+      "\\bR\\b": "Are",
       "\\b(?i)r(?-i)\\b": "are"
     }
   },
@@ -170,7 +170,8 @@
   {
     "find": "\\b(?i)'cause(?-i)\\b",
     "replace": {
-      "\\b'cause\\b": "Because",
+      "\\b'cause\\b": "because",
+      "\\b'Cause\\b": "Because",
       "\\b'CAUSE\\b": "BECAUSE",
       "\\b(?i)'cause(?-i)\\b": "because"
     }
@@ -250,7 +251,8 @@
   {
     "find": "\\b(?i)'coz(?-i)\\b",
     "replace": {
-      "\\b'coz\\b": "Because",
+      "\\b'coz\\b": "because",
+      "\\b'Coz\\b": "Because",
       "\\b'COZ\\b": "BECAUSE",
       "\\b(?i)'coz(?-i)\\b": "because"
     }

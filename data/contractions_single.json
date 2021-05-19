@@ -45,15 +45,6 @@
     }
   },
   {
-    "find": "\\b(?i)ain't(?-i)\\b",
-    "replace": {
-      "\\bain't\\b": "are not",
-      "\\bAin't\\b": "Are not",
-      "\\bAIN'T\\b": "ARE NOT",
-      "\\b(?i)ain't(?-i)\\b": "are not"
-    }
-  },
-  {
     "find": "\\b(?i)aren't(?-i)\\b",
     "replace": {
       "\\baren't\\b": "are not",
@@ -587,7 +578,7 @@
   {
     "find": "\\b(?i)'em(?-i)\\b",
     "replace": {
-      "\\b'em\\b": "Them",
+      "\\b'em\\b": "them",
       "\\b'EM\\b": "THEM",
       "\\b(?i)'em(?-i)\\b": "them"
     }
@@ -1027,7 +1018,8 @@
   {
     "find": "\\b(?i)'tis(?-i)\\b",
     "replace": {
-      "\\b'tis\\b": "It is",
+      "\\b'tis\\b": "it is",
+      "\\b'Tis\\b": "It is",
       "\\b'TIS\\b": "IT IS",
       "\\b(?i)'tis(?-i)\\b": "it is"
     }
@@ -1035,7 +1027,8 @@
   {
     "find": "\\b(?i)'twas(?-i)\\b",
     "replace": {
-      "\\b'twas\\b": "It was",
+      "\\b'twas\\b": "it was",
+      "\\b'Twas\\b": "It was",
       "\\b'TWAS\\b": "IT WAS",
       "\\b(?i)'twas(?-i)\\b": "it was"
     }
