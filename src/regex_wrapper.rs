@@ -4,14 +4,15 @@ use serde::{Deserialize, Deserializer, Serialize, Serializer};
 use std::borrow::Cow;
 use std::hash::{Hash, Hasher};
 
-/// RegexWrapper is here so we can use Regex in HashMap, LinkedHashMap etc.
+/// `RegexWrapper` wraps Regex in order for it to be usable in `HashMap`, `LinkedHashMap` etc.
 ///
-/// RegexWrapper implements `Eq`, `PartialEq` and `Hash` so we can use it in Maps.
+/// `RegexWrapper` implements `Eq`, `PartialEq` and `Hash` so it can be used in `HashMap`, `LinkedHashMap` etc
+/// `RegexWrapper` implements `Deserialize` and `Serialize` so it can be directly generated via `Contraction`
 #[derive(Debug)]
 pub struct RegexWrapper(pub Regex);
 
 impl PartialEq for RegexWrapper {
-    fn eq(&self, other: &RegexWrapper) -> bool {
+    fn eq(&self, other: &Self) -> bool {
         self.0.as_str() == other.0.as_str()
     }
 }
@@ -25,14 +26,14 @@ impl Hash for RegexWrapper {
 }
 
 impl<'de> Deserialize<'de> for RegexWrapper {
-    fn deserialize<D>(d: D) -> Result<RegexWrapper, D::Error>
+    fn deserialize<D>(d: D) -> Result<Self, D::Error>
     where
         D: Deserializer<'de>,
     {
         let s = <Cow<str>>::deserialize(d)?;
 
         match s.parse() {
-            Ok(regex) => Ok(RegexWrapper(regex)),
+            Ok(regex) => Ok(Self(regex)),
             Err(err) => Err(D::Error::custom(err)),
         }
     }
@@ -46,3 +47,6 @@ impl Serialize for RegexWrapper {
         self.0.as_str().serialize(serializer)
     }
 }
+
+// RegexWrapper was moved into it's own file,
+// because it uses a different Error trait than the rest of the crate

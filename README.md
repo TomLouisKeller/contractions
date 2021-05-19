@@ -1,6 +1,10 @@
 
 # Contractions
+`Contractions` is a library to handle contractions
+So far contractions can only be expanded.
 
+Expands "I'm" to "I am" etc.
+Preserves capitalization (as regular expressions for all-lowercase, all-uppercase and first letter uppercase)
 
 
 

@@ -15,14 +15,5 @@
       "\\b'TWOU'DN'T\\b": "IT WOULD NOT",
       "\\b(?i)'twou'dn't(?-i)\\b": "it would not"
     }
-  },
-  {
-    "find": "\\b(?i)cou'dn't(?-i)\\b",
-    "replace": {
-      "\\bcou'dn't\\b": "could not",
-      "\\bCou'dn't\\b": "Could not",
-      "\\bCOU'DN'T\\b": "COULD NOT",
-      "\\b(?i)cou'dn't(?-i)\\b": "could not"
-    }
   }
 ]
