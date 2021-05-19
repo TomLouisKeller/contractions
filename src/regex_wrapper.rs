@@ -38,15 +38,6 @@ impl<'de> Deserialize<'de> for RegexWrapper {
     }
 }
 
-// impl<'a> Serialize for &'a RegexWrapper {
-//     fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
-//     where
-//         S: Serializer,
-//     {
-//         self.0.as_str().serialize(serializer)
-//     }
-// }
-
 impl Serialize for RegexWrapper {
     fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
     where

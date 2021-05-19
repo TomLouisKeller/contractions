@@ -27,7 +27,6 @@ pub const CONTRACTIONS_JSON_ORDER: &[&str] = &[
     CONTRACTIONS_TRIPPLE_JSON,
     CONTRACTIONS_DOUBLE_JSON,
     CONTRACTIONS_SINGLE_JSON,
-    // CONTRACTIONS_PARTIAL_JSON,
 ];
 
 /// Contraction holds search term and
@@ -35,7 +34,6 @@ pub const CONTRACTIONS_JSON_ORDER: &[&str] = &[
 pub struct Contraction {
     #[serde(with = "serde_regex")]
     find: Regex,
-    // #[serde(with = "serde_regex_wrapper")]
     replace: LinkedHashMap<RegexWrapper, String>,
 }
 
@@ -59,7 +57,7 @@ pub struct Contractions {
 
 impl Contractions {
     pub fn default() -> Result<Self, Box<dyn Error>> {
-        Ok(Self::from_json(CONTRACTIONS_JSON_ORDER)?)
+        Self::from_json(CONTRACTIONS_JSON_ORDER)
     }
 
     // TODO: Serialize and deserialize Contractions, so we simply have to push in the contractions into the holder
@@ -67,37 +65,12 @@ impl Contractions {
     pub fn from_json(contractions_as_str: &[&str]) -> Result<Self, Box<dyn Error>> {
         let mut contractions: Vec<Contraction> = Vec::new();
         for s in contractions_as_str {
-            // println!("s: {}", s);
             let mut contr_part: Vec<Contraction> = serde_json::from_str(s).unwrap();
             contractions.append(&mut contr_part);
-            // for (in_find, in_replace) in contr_part.iter() {
-            //     let find = Regex::new(&in_find).unwrap();
-            //     let find = RegexWrapper(find);
-
-            //     let mut replace: LinkedHashMap<RegexWrapper, String> = LinkedHashMap::new();
-            //     for (repl_regex, repl_replace) in in_replace.iter() {
-            //         let repl_regex = Regex::new(&repl_regex).unwrap();
-            //         let repl_regex = RegexWrapper(repl_regex);
-            //         replace.insert(repl_regex, repl_replace.to_string());
-            //     }
-
-            //     contractions.push(Contraction { find, replace });
-            // }
         }
 
         Ok(Contractions { contractions })
     }
-
-    pub fn list(&self) {
-        for contr in self.contractions.iter() {
-            println!("{:?}", contr);
-        }
-    }
-
-    // Returns a reference to the value that `key` maps to.
-    // pub fn get(&self, key :&str) -> Option<&str> {
-    //     self.contractions.get(key)
-    // }
 
     /// Replace contractions with their long form
     ///
@@ -109,11 +82,8 @@ impl Contractions {
         let mut output = input.to_string();
 
         for contraction in self.contractions.iter() {
-            // output = output.replace(short, long);
-            // println!("{}", regex.0);
             if contraction.is_match(&output) {
-                println!("Found match {:?}", contraction.find.as_str());
-                // output = regex.0.replace_all(&output, long).into_owned();
+                // println!("Found match {:?}", contraction.find.as_str());
                 output = contraction.replace_all(&output);
             }
         }
