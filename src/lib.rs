@@ -1,19 +1,24 @@
 use linked_hash_map::LinkedHashMap;
 use regex::Regex;
+
 use std::error::Error;
-use std::hash::{Hash, Hasher};
 
-// const CONTRACTIONS_PARTIAL_JSON: &str = include_str!("../data/contractions_partial.json");
-const CONTRACTIONS_SINGLE_JSON: &str = include_str!("../data/contractions_single.json");
-const CONTRACTIONS_DOUBLE_JSON: &str = include_str!("../data/contractions_double.json");
-const CONTRACTIONS_TRIPPLE_JSON: &str = include_str!("../data/contractions_tripple.json");
-const CONTRACTIONS_SINGLE_NO_APOSTROPHE_JSON: &str =
+mod regex_wrapper;
+use regex_wrapper::RegexWrapper;
+
+use serde::{Deserialize, Serialize};
+
+pub const CONTRACTIONS_PARTIAL_JSON: &str = include_str!("../data/contractions_partial.json");
+pub const CONTRACTIONS_SINGLE_JSON: &str = include_str!("../data/contractions_single.json");
+pub const CONTRACTIONS_DOUBLE_JSON: &str = include_str!("../data/contractions_double.json");
+pub const CONTRACTIONS_TRIPPLE_JSON: &str = include_str!("../data/contractions_tripple.json");
+pub const CONTRACTIONS_SINGLE_NO_APOSTROPHE_JSON: &str =
     include_str!("../data/contractions_single_no_apostroph.json");
-const CONTRACTIONS_DOUBLE_NO_APOSTROPHE_JSON: &str =
+pub const CONTRACTIONS_DOUBLE_NO_APOSTROPHE_JSON: &str =
     include_str!("../data/contractions_double_no_apostroph.json");
-const SLANG_JSON: &str = include_str!("../data/slang.json");
+pub const SLANG_JSON: &str = include_str!("../data/slang.json");
 
-const CONTRACTIONS_JSON_ORDER: &[&str] = &[
+pub const CONTRACTIONS_JSON_ORDER: &[&str] = &[
     SLANG_JSON,
     CONTRACTIONS_DOUBLE_NO_APOSTROPHE_JSON,
     CONTRACTIONS_SINGLE_NO_APOSTROPHE_JSON,
@@ -23,25 +28,31 @@ const CONTRACTIONS_JSON_ORDER: &[&str] = &[
     // CONTRACTIONS_PARTIAL_JSON,
 ];
 
-#[derive(Debug)]
-struct RegexWrapper(Regex);
-
-impl PartialEq for RegexWrapper {
-    fn eq(&self, other: &RegexWrapper) -> bool {
-        self.0.as_str() == other.0.as_str()
-    }
+/// Contraction holds search term and
+#[derive(Debug, Serialize, Deserialize)]
+pub struct Contraction {
+    #[serde(with = "serde_regex")]
+    find: Regex,
+    // #[serde(with = "serde_regex_wrapper")]
+    replace: LinkedHashMap<RegexWrapper, String>,
 }
 
-impl Eq for RegexWrapper {}
+impl Contraction {
+    pub fn is_match(&self, text: &str) -> bool {
+        self.find.is_match(text)
+    }
 
-impl Hash for RegexWrapper {
-    fn hash<H: Hasher>(&self, state: &mut H) {
-        self.0.as_str().hash(state);
+    pub fn replace_all(&self, text: &str) -> String {
+        let mut output = text.to_string();
+        for (search, replace) in self.replace.iter() {
+            output = search.0.replace_all(&output, replace).into_owned();
+        }
+        output
     }
 }
 
 pub struct Contractions {
-    contractions: LinkedHashMap<RegexWrapper, String>,
+    contractions: Vec<Contraction>,
 }
 
 impl Contractions {
@@ -49,32 +60,35 @@ impl Contractions {
         Ok(Self::from_json(CONTRACTIONS_JSON_ORDER)?)
     }
 
-    // TODO: error handling
-    // TODO: check if there are quotes. if not => log error and
-    // make sure Quoter can return None or some solution like that
+    // TODO: Serialize and deserialize Contractions, so we simply have to push in the contractions into the holder
     /// Deserialize quoter from json
     pub fn from_json(contractions_as_str: &[&str]) -> Result<Self, Box<dyn Error>> {
-        let mut contractions: LinkedHashMap<RegexWrapper, String> = LinkedHashMap::new();
-
+        let mut contractions: Vec<Contraction> = Vec::new();
         for s in contractions_as_str {
             // println!("s: {}", s);
-            let contr_part: LinkedHashMap<String, String> = serde_json::from_str(s)?;
+            let mut contr_part: Vec<Contraction> = serde_json::from_str(s).unwrap();
+            contractions.append(&mut contr_part);
+            // for (in_find, in_replace) in contr_part.iter() {
+            //     let find = Regex::new(&in_find).unwrap();
+            //     let find = RegexWrapper(find);
 
-            // LinkedHashMap doesn't have append, so we have to add one entry at a time
-            for (e_short, e_long) in contr_part.iter() {
-                let e_short = format!(r"\b(?i){}(?-i)\b", e_short);
-                let regex = Regex::new(&e_short).unwrap();
-                // println!("{}", regex);
-                contractions.insert(RegexWrapper(regex), e_long.to_string());
-            }
+            //     let mut replace: LinkedHashMap<RegexWrapper, String> = LinkedHashMap::new();
+            //     for (repl_regex, repl_replace) in in_replace.iter() {
+            //         let repl_regex = Regex::new(&repl_regex).unwrap();
+            //         let repl_regex = RegexWrapper(repl_regex);
+            //         replace.insert(repl_regex, repl_replace.to_string());
+            //     }
+
+            //     contractions.push(Contraction { find, replace });
+            // }
         }
 
         Ok(Contractions { contractions })
     }
 
     pub fn list(&self) {
-        for (short, long) in self.contractions.iter() {
-            println!("{:?} -> {}", short, long);
+        for contr in self.contractions.iter() {
+            println!("{:?}", contr);
         }
     }
 
@@ -92,34 +106,19 @@ impl Contractions {
     pub fn expand(&self, input: &str) -> String {
         let mut output = input.to_string();
 
-        for (regex, long) in self.contractions.iter() {
+        for contraction in self.contractions.iter() {
             // output = output.replace(short, long);
             // println!("{}", regex.0);
-            if regex.0.is_match(&output) {
-                println!("Found match {:?}", regex.0);
-                output = regex.0.replace_all(&output, long).into_owned();
+            if contraction.is_match(&output) {
+                println!("Found match {:?}", contraction.find.as_str());
+                // output = regex.0.replace_all(&output, long).into_owned();
+                output = contraction.replace_all(&output);
             }
         }
 
         output
     }
 }
-
-// for word in input.split(' ') {
-//     match self.contractions.get(word) {
-//         Some(replacement) => output.push_str(replacement),
-//         None => output.push_str(word),
-//     }
-//     output.push(' ');
-// }
-
-// remove last space
-// output.pop();
-
-// struct Contraction {
-//     short_form :String,
-//     long_form :String,
-// }
 
 #[cfg(test)]
 #[path = "./unit_tests/ut_contractions.rs"]

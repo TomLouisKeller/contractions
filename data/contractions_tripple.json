@@ -1,5 +1,28 @@
-{
-    "y'all'd've": "you all would have",
-    "'twou'dn't": "it would not",
-    "cou'dn't": "could not"
-}
+[
+  {
+    "find": "\\b(?i)y'all'd've(?-i)\\b",
+    "replace": {
+      "\\by'all'd've\\b": "you all would have",
+      "\\bY'all'd've\\b": "You all would have",
+      "\\bY'ALL'D'VE\\b": "YOU ALL WOULD HAVE",
+      "\\b(?i)y'all'd've(?-i)\\b": "you all would have"
+    }
+  },
+  {
+    "find": "\\b(?i)'twou'dn't(?-i)\\b",
+    "replace": {
+      "\\b'twou'dn't\\b": "It would not",
+      "\\b'TWOU'DN'T\\b": "IT WOULD NOT",
+      "\\b(?i)'twou'dn't(?-i)\\b": "it would not"
+    }
+  },
+  {
+    "find": "\\b(?i)cou'dn't(?-i)\\b",
+    "replace": {
+      "\\bcou'dn't\\b": "could not",
+      "\\bCou'dn't\\b": "Could not",
+      "\\bCOU'DN'T\\b": "COULD NOT",
+      "\\b(?i)cou'dn't(?-i)\\b": "could not"
+    }
+  }
+]

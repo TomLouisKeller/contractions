@@ -20,6 +20,10 @@ rejected:
 
 ## contractions_partial
 
+## contractions_single
+"The word 'ain't' is a contraction for am not, is not, are not, has not, and have not in the common English language vernacular. In some dialects ain't is also used as a contraction of do not, does not, and did not." - https://en.wikipedia.org/wiki/Ain't
+We therefore do not include ain't.
+
 ## no_apostroph_single_contractions.json
 
 homophones

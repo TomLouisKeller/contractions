@@ -1,10 +1,67 @@
-{
-    "'m": " am",
-    "'re": "are",
-    "'t": "not",
-    "n't": "not",
-    "'d": "would",
-    "'ll": "will",
-    "'ve": "have",
-    "'em": " them"
-}
+[
+  {
+    "find": "\\b(?i)'m(?-i)\\b",
+    "replace": {
+      "\\b'm\\b": " am",
+      "\\b'M\\b": " AM",
+      "\\b(?i)'m(?-i)\\b": " am"
+    }
+  },
+  {
+    "find": "\\b(?i)'re(?-i)\\b",
+    "replace": {
+      "\\b're\\b": "Are",
+      "\\b'RE\\b": "ARE",
+      "\\b(?i)'re(?-i)\\b": "are"
+    }
+  },
+  {
+    "find": "\\b(?i)'t(?-i)\\b",
+    "replace": {
+      "\\b't\\b": "Not",
+      "\\b'T\\b": "NOT",
+      "\\b(?i)'t(?-i)\\b": "not"
+    }
+  },
+  {
+    "find": "\\b(?i)n't(?-i)\\b",
+    "replace": {
+      "\\bn't\\b": "not",
+      "\\bN't\\b": "Not",
+      "\\bN'T\\b": "NOT",
+      "\\b(?i)n't(?-i)\\b": "not"
+    }
+  },
+  {
+    "find": "\\b(?i)'d(?-i)\\b",
+    "replace": {
+      "\\b'd\\b": "Would",
+      "\\b'D\\b": "WOULD",
+      "\\b(?i)'d(?-i)\\b": "would"
+    }
+  },
+  {
+    "find": "\\b(?i)'ll(?-i)\\b",
+    "replace": {
+      "\\b'll\\b": "Will",
+      "\\b'LL\\b": "WILL",
+      "\\b(?i)'ll(?-i)\\b": "will"
+    }
+  },
+  {
+    "find": "\\b(?i)'ve(?-i)\\b",
+    "replace": {
+      "\\b've\\b": "Have",
+      "\\b'VE\\b": "HAVE",
+      "\\b(?i)'ve(?-i)\\b": "have"
+    }
+  },
+  {
+    "find": "\\b(?i)'em(?-i)\\b",
+    "replace": {
+      "\\b'em\\b": " them",
+      "\\b'EM\\b": " THEM",
+      "\\b(?i)'em(?-i)\\b": " them"
+    }
+  }
+]

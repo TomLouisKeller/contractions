@@ -87,3 +87,14 @@ fn expand__slang() -> Result<(), Box<dyn Error>> {
     assert_eq!(contractions.expand("r u ok?"), "are you ok?");
     Ok(())
 }
+
+/// Don't split Adelphe's into Adelp he is
+#[test]
+fn expand__do_not_replace_partials_where_not_intended() -> Result<(), Box<dyn Error>> {
+    let contractions = Contractions::default()?;
+    assert_eq!(
+        contractions.expand("Adelphe's car is broken"),
+        "Adelphe's car is broken"
+    );
+    Ok(())
+}
