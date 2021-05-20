@@ -1,6 +1,10 @@
 
 # Contractions
 
+[![MIT licensed][mit-badge]][mit-url]
+
+---
+
 **Notice**: `Contractions`' API is not stabilized yet and still work in progress
 
 ---
@@ -24,3 +28,10 @@ Preserves capitalization (as regular expressions for all-lowercase, all-uppercas
   - "someone's" is replaced with "someone is"
   - "Carl's" is not replaced!
 - He's -> can be he is or he has. We replace it with "He is".
+
+---
+
+This project is licensed under the terms of the MIT license.
+
+[mit-url]: LICENSE
+[mit-badge]: https://img.shields.io/badge/license-MIT-blue.svg
