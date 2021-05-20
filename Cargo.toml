@@ -1,6 +1,6 @@
 [package]
 name = "contractions"
-description = "Library to expand contractions"
+description = "`Contractions` is a rust library to expand contractions in English."
 version = "0.2.0"
 authors = ["Tom Keller <tomlouiskeller@gmail.com>"]
 edition = "2018"

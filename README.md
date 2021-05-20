@@ -9,14 +9,11 @@
 
 ---
 
-`Contractions` is a library to handle contractions
+`Contractions` is a rust library to expand contractions in English.  
 So far contractions can only be expanded.
 
 Expands "I'm" to "I am" etc.
 Preserves capitalization (as regular expressions for all-lowercase, all-uppercase and first letter uppercase)
-
-
-
 
 ## Problem cases:
 - Ain't
