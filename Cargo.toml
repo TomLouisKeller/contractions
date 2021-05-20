@@ -4,7 +4,9 @@ description = "Library to expand contractions"
 version = "0.2.0"
 authors = ["Tom Keller <tomlouiskeller@gmail.com>"]
 edition = "2018"
-license-file = "LICENSE"
+license="MIT"
+keywords = ["language", "nlp", "preprocessing"]
+categories = ["text-processing"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

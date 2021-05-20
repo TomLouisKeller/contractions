@@ -1,7 +1,11 @@
 # ToDo
 
+Write README
+fix up this file and the data/expand/README.md
+
 ## Functionality
 
+- logging
 - Assure both apostroph as well as grave accent work ( ' ’ `)
 - Don't replace when a contraction is part of a larger term. eg "Adelphe's" currently turn's to "Adelphe is" because of "he's" => "he is"
 - Use parts-of-speech tagging or named-entity-recognition to figure out if the 's is a possessive or a 'is'
@@ -13,6 +17,9 @@
 - Stabilize api
 - add() and remove() to change dataset
 - make json dataset properly accessible to library users
+- finish documentation
+- upload to crates.io
+- generate documentation (and upload it to docs.rs)
 
 ## Contractions
 
