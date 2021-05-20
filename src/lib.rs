@@ -5,40 +5,42 @@
 #![deny(clippy::cargo)]
 #![deny(missing_docs)]
 
+use std::error::Error;
+
 use linked_hash_map::LinkedHashMap;
 use regex::Regex;
 
-use std::error::Error;
-
 mod regex_wrapper;
 use regex_wrapper::RegexWrapper;
-
-use serde::{Deserialize, Serialize};
+use serde::{
+    Deserialize,
+    Serialize,
+};
 
 /// Contains slang terms which will be expanded/changed to their full form
-pub const SLANG_JSON: &str = include_str!("../data/expand/slang.json");
+pub const SLANG_JSON :&str = include_str!("../data/expand/slang.json");
 /// Contains contractions with one apostroph in json form (eg: I'm, I've, 'twas)
-pub const CONTRACTIONS_SINGLE_JSON: &str = include_str!("../data/expand/contractions_single.json");
+pub const CONTRACTIONS_SINGLE_JSON :&str = include_str!("../data/expand/contractions_single.json");
 /// Contains contractions with two apostroph in json form (eg: Who'll've, Wouldn't've, Mustn't've)
-pub const CONTRACTIONS_DOUBLE_JSON: &str = include_str!("../data/expand/contractions_double.json");
+pub const CONTRACTIONS_DOUBLE_JSON :&str = include_str!("../data/expand/contractions_double.json");
 /// Contains contractions with three apostroph in json form (Y'all'd've, 'twou'dn't)
-pub const CONTRACTIONS_TRIPPLE_JSON: &str =
+pub const CONTRACTIONS_TRIPPLE_JSON :&str =
     include_str!("../data/expand/contractions_tripple.json");
 /// Contains most of `CONTRACTIONS_SINGLE_JSON` contractions but without apostroph
-pub const CONTRACTIONS_SINGLE_NO_APOSTROPHE_JSON: &str =
+pub const CONTRACTIONS_SINGLE_NO_APOSTROPHE_JSON :&str =
     include_str!("../data/expand/contractions_single_no_apostroph.json");
 /// Contains most of `CONTRACTIONS_DOUBLE_JSON` contractions but without apostroph
-pub const CONTRACTIONS_DOUBLE_NO_APOSTROPHE_JSON: &str =
+pub const CONTRACTIONS_DOUBLE_NO_APOSTROPHE_JSON :&str =
     include_str!("../data/expand/contractions_double_no_apostroph.json");
 /// Contains partial contractions in json form. (eg: 'm, 've, n't, 're)
-pub const CONTRACTIONS_PARTIAL_JSON: &str =
+pub const CONTRACTIONS_PARTIAL_JSON :&str =
     include_str!("../data/expand/contractions_partial.json");
 
 /// The list of all json strings.
 ///
 /// The order used to matter, but does no longer.
 /// The order is preserved and will be processed from top to bottom.
-pub const CONTRACTIONS_JSON_ORDER: &[&str] = &[
+pub const CONTRACTIONS_JSON_ORDER :&[&str] = &[
     SLANG_JSON,
     CONTRACTIONS_DOUBLE_NO_APOSTROPHE_JSON,
     CONTRACTIONS_SINGLE_NO_APOSTROPHE_JSON,
@@ -51,16 +53,16 @@ pub const CONTRACTIONS_JSON_ORDER: &[&str] = &[
 #[derive(Debug, Serialize, Deserialize)]
 struct Contraction {
     #[serde(with = "serde_regex")]
-    find: Regex,
-    replace: LinkedHashMap<RegexWrapper, String>,
+    find :Regex,
+    replace :LinkedHashMap<RegexWrapper, String>,
 }
 
 impl Contraction {
-    fn is_match(&self, text: &str) -> bool {
+    fn is_match(&self, text :&str) -> bool {
         self.find.is_match(text)
     }
 
-    fn replace_all(&self, text: &str) -> String {
+    fn replace_all(&self, text :&str) -> String {
         let mut output = text.to_string();
         for (search, replace) in self.replace.iter() {
             output = search.0.replace_all(&output, replace).into_owned();
@@ -80,7 +82,7 @@ impl Contraction {
 /// assert_eq!("Are you sure?", contractions.expand("R u sure?"));
 /// ```
 pub struct Contractions {
-    contractions: Vec<Contraction>,
+    contractions :Vec<Contraction>,
 }
 
 impl Default for Contractions {
@@ -95,15 +97,16 @@ impl Default for Contractions {
 }
 
 impl Contractions {
-    // TODO: Serialize and deserialize Contractions, so we simply have to push in the contractions into the holder
+    // TODO: Serialize and deserialize Contractions, so we simply have to push in the contractions
+    // into the holder
     /// Deserialize quoter from json
     ///
     /// # Errors
     /// Returns an Error if deserialization fails
-    pub fn from_json(contractions_as_str: &[&str]) -> Result<Self, Box<dyn Error>> {
-        let mut contractions: Vec<Contraction> = Vec::new();
+    pub fn from_json(contractions_as_str :&[&str]) -> Result<Self, Box<dyn Error>> {
+        let mut contractions :Vec<Contraction> = Vec::new();
         for s in contractions_as_str {
-            let mut contr_part: Vec<Contraction> = serde_json::from_str(s)?;
+            let mut contr_part :Vec<Contraction> = serde_json::from_str(s)?;
             contractions.append(&mut contr_part);
         }
         Ok(Self { contractions })
@@ -117,7 +120,7 @@ impl Contractions {
     /// assert_eq!("I am your brother's son", contractions.expand("I'm your brother's son"));
     /// ```
     #[must_use]
-    pub fn expand(&self, input: &str) -> String {
+    pub fn expand(&self, input :&str) -> String {
         let mut output = input.to_string();
 
         for contraction in &self.contractions {

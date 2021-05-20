@@ -1,0 +1,47 @@
+# Configuration Options: https://rust-lang.github.io/rustfmt/
+# use_small_heuristics = "Max"
+
+# Maximum width of each line (default: 100)
+max_width = 100
+# Maximum width of the args of a function-like attributes before falling back to vertical formatting.
+# attr_fn_like_width = 60  # gets implemented in rustfmt 2.0
+# Maximum width of a chain to fit on one line.
+# By default this option is set as a percentage of max_width provided by width_heuristics, but a value set directly for chain_width will take precedence.
+# chain_width = 60  # gets implemented in rustfmt 2.0
+# Combine control expressions with function calls.
+combine_control_expr = false
+# Maximum length of comments. No effect unless wrap_comments = true
+comment_width = 100
+# Specifies which edition is used by the parser.
+edition = "2018"
+# Maximum width of the args of a function call before falling back to vertical formatting.
+# By default this option is set as a percentage of max_width provided by width_heuristics, but a value set directly for fn_call_width will take precedence. 
+# fn_call_width = 60  # gets implemented in rustfmt 2.0
+# Format string literals where necessary
+format_strings = true
+# Item layout inside a imports block
+imports_layout = "Vertical"  # not stable yet
+# Put a trailing comma after a block based match arm (non-block arms are not affected)
+match_block_trailing_comma = true
+# Merge together related imports based on their paths.
+imports_granularity = "Crate"
+# Unix or Windows line endings
+newline_style = "Unix"
+# Convert #![doc] and #[doc] attributes to //! and /// doc comments.
+normalize_doc_attributes = true
+# Reorder impl items. type and const are put first, then macros and methods.
+reorder_impl_items = true
+# Controls the strategy for how imports are grouped together.
+group_imports = "StdExternalCrate"
+# Leave a space after the colon.
+space_after_colon = false
+# Leave a space before the colon.
+space_before_colon = true
+# Determines if '=' are wrapped in spaces in attributes.
+# space_around_attr_eq = true  # this will be default once stable
+# Put small struct literals on a single line
+# struct_lit_single_line = true  # this will be default once stable  # gets implemented in rustfmt 2.0
+# Use field initialize shorthand if possible.
+use_field_init_shorthand = true
+# Break comments to fit on the line
+wrap_comments=true
