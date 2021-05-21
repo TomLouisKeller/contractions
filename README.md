@@ -15,6 +15,14 @@ So far contractions can only be expanded.
 Expands "I’m" to "I am" etc.
 The default data set has a replacement for all-lowercase, all-uppercase and first letter uppercase.
 
+## Example
+
+```rust
+let contractions = contractions::Contractions::default();
+assert_eq!("I am sure you would have been fine.", contractions.expand("I’m sure you’d’ve been fine."));
+assert_eq!("Are you sure?", contractions.expand("R u sure?"));
+```
+
 ## Problem cases (default data set):
 - Ain’t
   "The word ’ain’t’ is a contraction for am not, is not, are not, has not, and have not in the common English language vernacular. In some dialects ain’t is also used as a contraction of do not, does not, and did not." - https://en.wikipedia.org/wiki/Ain’t  

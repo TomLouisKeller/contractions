@@ -5,9 +5,9 @@ fix up this file and the data/expand/README.md
 
 ## Functionality
 
-- use partials
+- Add example in README.md
 - add() and remove() to change dataset
-- make `Contraction` pub
+- use partials
 - Use parts-of-speech tagging or named-entity-recognition to figure out if the 's is a possessive or a 'is'
 - finish documentation
 - upload to crates.io
