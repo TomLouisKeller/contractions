@@ -59,6 +59,3 @@ impl Serialize for RegexWrapper {
         self.0.as_str().serialize(serializer)
     }
 }
-
-// RegexWrapper was moved into it's own file,
-// because it uses a different Error trait than the rest of the crate

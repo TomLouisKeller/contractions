@@ -8,8 +8,6 @@
 #[macro_use]
 extern crate log;
 
-use std::error::Error;
-
 use linked_hash_map::LinkedHashMap;
 use regex::Regex;
 
@@ -115,7 +113,7 @@ impl Contractions {
     ///
     /// # Errors
     /// Returns an Error if deserialization fails
-    pub fn from_json(contractions_as_str :&[&str]) -> Result<Self, Box<dyn Error>> {
+    pub fn from_json(contractions_as_str :&[&str]) -> Result<Self, Box<dyn std::error::Error>> {
         let mut contractions :Vec<Contraction> = Vec::new();
         for s in contractions_as_str {
             let mut contr_part :Vec<Contraction> = serde_json::from_str(s)?;
