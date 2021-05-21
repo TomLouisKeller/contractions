@@ -105,6 +105,13 @@ impl Default for Contractions {
 }
 
 impl Contractions {
+    /// Creates empty `Contractions
+    pub fn new() -> Self {
+        Contractions {
+            contractions :vec![],
+        }
+    }
+
     /// Deserialize quoter from json
     ///
     /// # Errors

@@ -113,3 +113,47 @@ fn expand__grave_accent() -> Result<(), Box<dyn Error>> {
     assert_eq!(contractions.expand("I`m fine"), "I am fine");
     Ok(())
 }
+
+#[test]
+fn expand__new() {
+    let contractions = Contractions::new();
+    assert_eq!(contractions.expand("I`m fine"), "I`m fine");
+}
+
+#[test]
+fn expand__from_json_by_hand() -> Result<(), Box<dyn Error>> {
+    let contractions_as_json = r#"
+    [
+        {
+            "find": "\\b(?i)i['’`]m['’`]a(?-i)\\b",
+            "replace": {
+            "\\bi['’`]m['’`]a\\b": "i am about to",
+            "\\bI['’`]m['’`]a\\b": "I am about to",
+            "\\bI['’`]M['’`]A\\b": "I AM ABOUT TO",
+            "\\b(?i)i['’`]m['’`]a(?-i)\\b": "i am about to"
+            }
+        }
+    ]
+    "#;
+    let contractions = Contractions::from_json(&[&contractions_as_json])?;
+    assert_eq!(
+        contractions.expand("I`m`a woop your butt"),
+        "I am about to woop your butt"
+    );
+    Ok(())
+}
+
+#[test]
+fn expand__from_json_from_file() -> Result<(), Box<dyn Error>> {
+    let contractions =
+        Contractions::from_json(&[&contractions::CONTRACTIONS_SINGLE_NO_APOSTROPHE_JSON])?;
+    assert_eq!(
+        contractions.expand("You mustnt do that!"),
+        "You must not do that!"
+    );
+    assert_eq!(
+        contractions.expand("You mustn't do that!"),
+        "You mustn't do that!"
+    );
+    Ok(())
+}
