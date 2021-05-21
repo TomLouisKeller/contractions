@@ -1,7 +1,7 @@
 #![allow(non_snake_case)]
 use std::error::Error;
 
-use super::*;
+use contractions::Contractions;
 
 // expand()
 

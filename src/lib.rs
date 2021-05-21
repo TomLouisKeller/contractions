@@ -143,7 +143,3 @@ impl Contractions {
         output
     }
 }
-
-#[cfg(test)]
-#[path = "./unit_tests/ut_contractions.rs"]
-mod unit_tests;
