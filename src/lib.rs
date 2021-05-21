@@ -71,13 +71,11 @@ impl Contraction {
         }
     }
 
-    fn replace_all(&self, text :&str) -> String {
+    fn replace_all(&self, text :&mut String) {
         debug!("Replace all - Pattern: \"{}\"", &self.find);
-        let mut output = text.to_string();
         for (search, replace) in self.replace.iter() {
-            output = search.0.replace_all(&output, replace).into_owned();
+            *text = search.0.replace_all(text, replace).into_owned();
         }
-        output
     }
 }
 
@@ -135,7 +133,7 @@ impl Contractions {
         let mut output = input.to_string();
         for contraction in &self.contractions {
             if contraction.is_match(&output) {
-                output = contraction.replace_all(&output);
+                contraction.replace_all(&mut output);
             }
         }
         output
