@@ -105,8 +105,6 @@ impl Default for Contractions {
 }
 
 impl Contractions {
-    // TODO: Serialize and deserialize Contractions, so we simply have to push in the contractions
-    // into the holder
     /// Deserialize quoter from json
     ///
     /// # Errors
