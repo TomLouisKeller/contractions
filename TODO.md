@@ -5,8 +5,6 @@ fix up this file and the data/expand/README.md
 
 ## Functionality
 
-- in from_json we could find a way to deserialize the strings that work, and simply log those who don't. - think about it
-- Assure both apostroph as well as grave accent work ( ' ’ `)
 - Don't replace when a contraction is part of a larger term. eg "Adelphe's" currently turn's to "Adelphe is" because of "he's" => "he is"
 - Use parts-of-speech tagging or named-entity-recognition to figure out if the 's is a possessive or a 'is'
 - combine "daren't" "daresn't" "dasn't"  to one regex

@@ -86,7 +86,7 @@ impl Contraction {
 /// # Example
 /// ```
 /// let contractions = contractions::Contractions::default();
-/// assert_eq!("I am sure you would have been fine.", contractions.expand("I'm sure you'd've been fine."));
+/// assert_eq!("I am sure you would have been fine.", contractions.expand("I’m sure you’d’ve been fine."));
 /// assert_eq!("Are you sure?", contractions.expand("R u sure?"));
 /// ```
 pub struct Contractions {
@@ -126,7 +126,7 @@ impl Contractions {
     /// # Example
     /// ```
     /// let contractions = contractions::Contractions::default();
-    /// assert_eq!("I am your brother's son", contractions.expand("I'm your brother's son"));
+    /// assert_eq!("I am your brother’s son", contractions.expand("I’m your brother’s son"));
     /// ```
     #[must_use]
     pub fn expand(&self, input :&str) -> String {

@@ -1,66 +1,66 @@
 [
   {
-    "find": "\\b(?i)'m(?-i)\\b",
+    "find": "\\b(?i)['’`]m(?-i)\\b",
     "replace": {
-      "\\b'm\\b": " am",
-      "\\b'M\\b": " AM",
-      "\\b(?i)'m(?-i)\\b": " am"
+      "\\b['’`]m\\b": " am",
+      "\\b['’`]M\\b": " AM",
+      "\\b(?i)['’`]m(?-i)\\b": " am"
     }
   },
   {
-    "find": "\\b(?i)'re(?-i)\\b",
+    "find": "\\b(?i)['’`]re(?-i)\\b",
     "replace": {
-      "\\b're\\b": " are",
-      "\\b'RE\\b": " ARE",
-      "\\b(?i)'re(?-i)\\b": " are"
+      "\\b['’`]re\\b": " are",
+      "\\b['’`]RE\\b": " ARE",
+      "\\b(?i)['’`]re(?-i)\\b": " are"
     }
   },
   {
-    "find": "\\b(?i)'t(?-i)\\b",
+    "find": "\\b(?i)['’`]t(?-i)\\b",
     "replace": {
-      "\\b't\\b": " not",
-      "\\b'T\\b": " NOT",
-      "\\b(?i)'t(?-i)\\b": " not"
+      "\\b['’`]t\\b": " not",
+      "\\b['’`]T\\b": " NOT",
+      "\\b(?i)['’`]t(?-i)\\b": " not"
     }
   },
   {
-    "find": "\\b(?i)n't(?-i)\\b",
+    "find": "\\b(?i)n['’`]t(?-i)\\b",
     "replace": {
-      "\\bn't\\b": " not",
-      "\\bN'T\\b": " NOT",
-      "\\b(?i)n't(?-i)\\b": " not"
+      "\\bn['’`]t\\b": " not",
+      "\\bN['’`]T\\b": " NOT",
+      "\\b(?i)n['’`]t(?-i)\\b": " not"
     }
   },
   {
-    "find": "\\b(?i)'d(?-i)\\b",
+    "find": "\\b(?i)['’`]d(?-i)\\b",
     "replace": {
-      "\\b'd\\b": " would",
-      "\\b'D\\b": " WOULD",
-      "\\b(?i)'d(?-i)\\b": " would"
+      "\\b['’`]d\\b": " would",
+      "\\b['’`]D\\b": " WOULD",
+      "\\b(?i)['’`]d(?-i)\\b": " would"
     }
   },
   {
-    "find": "\\b(?i)'ll(?-i)\\b",
+    "find": "\\b(?i)['’`]ll(?-i)\\b",
     "replace": {
-      "\\b'll\\b": " will",
-      "\\b'LL\\b": " WILL",
-      "\\b(?i)'ll(?-i)\\b": " will"
+      "\\b['’`]ll\\b": " will",
+      "\\b['’`]LL\\b": " WILL",
+      "\\b(?i)['’`]ll(?-i)\\b": " will"
     }
   },
   {
-    "find": "\\b(?i)'ve(?-i)\\b",
+    "find": "\\b(?i)['’`]ve(?-i)\\b",
     "replace": {
-      "\\b've\\b": " have",
-      "\\b'VE\\b": " HAVE",
-      "\\b(?i)'ve(?-i)\\b": " have"
+      "\\b['’`]ve\\b": " have",
+      "\\b['’`]VE\\b": " HAVE",
+      "\\b(?i)['’`]ve(?-i)\\b": " have"
     }
   },
   {
-    "find": "\\b(?i)'em(?-i)\\b",
+    "find": "\\b(?i)['’`]em(?-i)\\b",
     "replace": {
-      "\\b'em\\b": " them",
-      "\\b'EM\\b": " THEM",
-      "\\b(?i)'em(?-i)\\b": " them"
+      "\\b['’`]em\\b": " them",
+      "\\b['’`]EM\\b": " THEM",
+      "\\b(?i)['’`]em(?-i)\\b": " them"
     }
   }
 ]
