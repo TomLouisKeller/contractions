@@ -265,5 +265,14 @@
       "\\bCOZ\\b": "BECAUSE",
       "\\b(?i)coz(?-i)\\b": "because"
     }
+  },
+  {
+    "find": "\\b(?i)dunno(?-i)\\b",
+    "replace": {
+      "\\dunno\\b": "do not know",
+      "\\bDunno\\b": "Do not know",
+      "\\bDUNNO\\b": "DO NOT KNOW",
+      "\\b(?i)dunno(?-i)\\b": "do not know"
+    }
   }
 ]
