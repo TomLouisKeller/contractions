@@ -3,7 +3,10 @@
 #![deny(clippy::pedantic)]
 #![deny(clippy::nursery)]
 #![deny(clippy::cargo)]
-#![deny(missing_docs)]
+#![warn(missing_docs)]
+
+#[macro_use]
+extern crate log;
 
 use std::error::Error;
 
@@ -59,10 +62,19 @@ struct Contraction {
 
 impl Contraction {
     fn is_match(&self, text :&str) -> bool {
-        self.find.is_match(text)
+        if self.find.is_match(text) {
+            debug!(
+                "Found match - Pattern: \"{}\" - Text: \"{}\"",
+                &self.find, &text
+            );
+            true
+        } else {
+            false
+        }
     }
 
     fn replace_all(&self, text :&str) -> String {
+        debug!("Replace all - Pattern: \"{}\"", &self.find);
         let mut output = text.to_string();
         for (search, replace) in self.replace.iter() {
             output = search.0.replace_all(&output, replace).into_owned();
@@ -109,6 +121,7 @@ impl Contractions {
             let mut contr_part :Vec<Contraction> = serde_json::from_str(s)?;
             contractions.append(&mut contr_part);
         }
+        debug!("Loaded contractions from json.\n{:#?}\n", contractions);
         Ok(Self { contractions })
     }
 
@@ -122,14 +135,11 @@ impl Contractions {
     #[must_use]
     pub fn expand(&self, input :&str) -> String {
         let mut output = input.to_string();
-
         for contraction in &self.contractions {
             if contraction.is_match(&output) {
-                // println!("Found match {:?}", contraction.find.as_str());
                 output = contraction.replace_all(&output);
             }
         }
-
         output
     }
 }
