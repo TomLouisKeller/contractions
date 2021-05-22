@@ -163,6 +163,22 @@ impl Contractions {
         Ok(())
     }
 
+    /// Remove a contraction from `Contractions`
+    ///
+    /// # Example
+    /// ```
+    /// use contractions::{self, Contractions};
+    /// let mut contractions = Contractions::new();
+    /// assert_eq!("I’m happy", contractions.expand("I’m happy"));
+    /// contractions.add_from_json(contractions::CONTRACTIONS_SINGLE_JSON);
+    /// assert_eq!("I am happy", contractions.expand("I’m happy"));
+    /// contractions.remove("\\b(?i)i['’`]m(?-i)\\b");
+    /// assert_eq!("I’m happy", contractions.expand("I’m happy"));
+    /// ```
+    pub fn remove(&mut self, key :&str) {
+        self.contractions.retain(|c| c.find.as_str() != key);
+    }
+
     /// Replace contractions with their long form
     ///
     /// # Example

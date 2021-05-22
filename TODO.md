@@ -5,7 +5,7 @@ fix up this file and the data/expand/README.md
 
 ## Functionality
 
-- Add example in README.md
+- use testing framework to speed up tests (so we don't have to load everything every time from Contractions::default())
 - rename files(CONTRACTIONS_SINGLE_JSON,...) to be more obvious what they are.
 - only enter one string to add_from_json ??? or array? does it matter?
 - test partials

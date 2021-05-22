@@ -168,3 +168,26 @@ fn add_from_json__from_file() -> Result<(), Box<dyn Error>> {
     );
     Ok(())
 }
+
+#[test]
+fn remove() -> Result<(), Box<dyn Error>> {
+    let mut contractions = Contractions::new();
+    assert_eq!("I’m happy", contractions.expand("I’m happy"));
+    contractions.add_from_json(contractions::CONTRACTIONS_SINGLE_JSON)?;
+    assert_eq!("I am happy", contractions.expand("I’m happy"));
+    contractions.remove(r#"\b(?i)i['’`]m(?-i)\b"#);
+    assert_eq!("I’m happy", contractions.expand("I’m happy"));
+    Ok(())
+}
+
+#[test]
+fn remove__keep_others() -> Result<(), Box<dyn Error>> {
+    let mut contractions = Contractions::new();
+    assert_eq!("I’ve stuff", contractions.expand("I’ve stuff"));
+    contractions.add_from_json(contractions::CONTRACTIONS_SINGLE_JSON)?;
+    assert_eq!("I have stuff", contractions.expand("I’ve stuff"));
+    contractions.remove(r#"\b(?i)i['’`]m(?-i)\b"#);
+    assert_eq!("I have stuff", contractions.expand("I’ve stuff"));
+
+    Ok(())
+}
