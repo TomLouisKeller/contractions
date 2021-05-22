@@ -151,6 +151,7 @@ impl Contractions {
     /// let mut contractions = Contractions::new();
     /// contractions.add_from_json(contractions::CONTRACTIONS_SINGLE_JSON);
     /// ```
+    ///
     /// # Errors
     /// Returns an Error if deserialization fails
     pub fn add_from_json(
@@ -177,6 +178,40 @@ impl Contractions {
     /// ```
     pub fn remove(&mut self, key :&str) {
         self.contractions.retain(|c| c.find.as_str() != key);
+    }
+
+    /// Add a contraction to `Contractions`
+    ///
+    /// # Example
+    /// ```
+    /// use contractions::{self, Contractions};
+    /// let mut contractions = Contractions::new();
+    /// assert_eq!("I’m happy", contractions.expand("I’m happy"));
+    /// let find = r#"\b(?i)i['’`]m(?-i)\b"#;
+    /// let mut replace = linked_hash_map::LinkedHashMap::new();
+    /// replace.insert(find.clone(), "I am");
+    /// contractions.add(find, replace);
+    /// assert_eq!("I am happy", contractions.expand("I’m happy"));
+    /// ```
+    ///
+    /// # Errors
+    /// Returns an Error if `find` or the key in the `replace`
+    /// cannot be successfully turned into a Regex
+    pub fn add(
+        &mut self,
+        find :&str,
+        replace :LinkedHashMap<&str, &str>,
+    ) -> Result<(), Box<dyn std::error::Error>> {
+        let find = Regex::new(find)?;
+        let in_replace = replace;
+        let mut replace :LinkedHashMap<RegexWrapper, String> = LinkedHashMap::new();
+        for (f, r) in in_replace {
+            replace.insert(RegexWrapper(Regex::new(f)?), r.to_string());
+        }
+
+        let contraction = Contraction { find, replace };
+        self.contractions.push(contraction);
+        Ok(())
     }
 
     /// Replace contractions with their long form

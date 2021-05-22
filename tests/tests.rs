@@ -191,3 +191,16 @@ fn remove__keep_others() -> Result<(), Box<dyn Error>> {
 
     Ok(())
 }
+
+#[test]
+fn add() -> Result<(), Box<dyn Error>> {
+    let mut contractions = Contractions::new();
+    assert_eq!("I’m happy", contractions.expand("I’m happy"));
+    let find = r#"\b(?i)i['’`]m(?-i)\b"#;
+    let mut replace = linked_hash_map::LinkedHashMap::new();
+    replace.insert(find.clone(), "I am");
+    contractions.add(find, replace)?;
+    assert_eq!("I am happy", contractions.expand("I’m happy"));
+
+    Ok(())
+}
