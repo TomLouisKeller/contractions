@@ -6,6 +6,10 @@ fix up this file and the data/expand/README.md
 ## Functionality
 
 - Add example in README.md
+- rename files(CONTRACTIONS_SINGLE_JSON,...) to be more obvious what they are.
+- only enter one string to add_from_json ??? or array? does it matter?
+- test partials
+- add partials via default+add_from_json
 - add() and remove() to change dataset
 - Remove She's, He's, It's
 - use and test partials

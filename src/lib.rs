@@ -96,6 +96,11 @@ pub struct Contractions {
 impl Default for Contractions {
     /// Returns the built in configuration for `Contractions`
     ///
+    /// # Example
+    /// ```
+    /// use contractions::Contractions;
+    /// let contractions = Contractions::new();
+    /// ```
     /// # Panics
     /// Only panics when the library internal configuration is faulty
     /// this ought to only happen during development
@@ -105,32 +110,65 @@ impl Default for Contractions {
 }
 
 impl Contractions {
-    /// Creates empty `Contractions
-    pub fn new() -> Self {
-        Contractions {
+    /// Creates empty `Contractions`
+    ///
+    /// # Example
+    /// ```
+    /// use contractions::{self, Contractions};
+    /// let contractions = Contractions::new();
+    /// ```
+    #[must_use]
+    pub const fn new() -> Self {
+        Self {
             contractions :vec![],
         }
     }
 
     /// Deserialize quoter from json
     ///
+    /// Convenience method for `Contractions::new()` `Contractions::add_from_json()`
+    ///
+    /// # Example
+    /// ```
+    /// use contractions::{self, Contractions};
+    /// let contractions = Contractions::from_json(&[contractions::CONTRACTIONS_SINGLE_JSON, contractions::CONTRACTIONS_SINGLE_NO_APOSTROPHE_JSON]);
+    /// ```
     /// # Errors
     /// Returns an Error if deserialization fails
     pub fn from_json(contractions_as_str :&[&str]) -> Result<Self, Box<dyn std::error::Error>> {
-        let mut contractions :Vec<Contraction> = Vec::new();
+        let mut contractions = Self::new();
         for s in contractions_as_str {
-            let mut contr_part :Vec<Contraction> = serde_json::from_str(s)?;
-            contractions.append(&mut contr_part);
+            contractions.add_from_json(s)?;
         }
-        debug!("Loaded contractions from json.\n{:#?}\n", contractions);
-        Ok(Self { contractions })
+        Ok(contractions)
+    }
+
+    /// Add contractions from a json string to an existing `Contractions` struct
+    ///
+    /// # Example
+    /// ```
+    /// use contractions::{self, Contractions};
+    /// let mut contractions = Contractions::new();
+    /// contractions.add_from_json(contractions::CONTRACTIONS_SINGLE_JSON);
+    /// ```
+    /// # Errors
+    /// Returns an Error if deserialization fails
+    pub fn add_from_json(
+        &mut self,
+        contractions_as_str :&str,
+    ) -> Result<(), Box<dyn std::error::Error>> {
+        let mut contr_part :Vec<Contraction> = serde_json::from_str(contractions_as_str)?;
+        debug!("Added contractions from json.\n{:#?}\n", contr_part);
+        self.contractions.append(&mut contr_part);
+        Ok(())
     }
 
     /// Replace contractions with their long form
     ///
     /// # Example
     /// ```
-    /// let contractions = contractions::Contractions::default();
+    /// use contractions::Contractions;
+    /// let contractions = Contractions::default();
     /// assert_eq!("I am your brother’s son", contractions.expand("I’m your brother’s son"));
     /// ```
     #[must_use]

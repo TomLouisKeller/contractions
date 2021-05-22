@@ -23,6 +23,12 @@ assert_eq!("I am sure you would have been fine.", contractions.expand("I’m sur
 assert_eq!("Are you sure?", contractions.expand("R u sure?"));
 ```
 
+```rust
+let mut contractions = Contractions::new();
+contractions.add_from_json(contractions::CONTRACTIONS_SINGLE_JSON);
+assert_eq!("I am sad you couldn’t’ve come.", contractions.expand("I’m sad you couldn’t’ve come."));
+```
+
 ## Problem cases (default data set):
 - Ain’t
   "The word ’ain’t’ is a contraction for am not, is not, are not, has not, and have not in the common English language vernacular. In some dialects ain’t is also used as a contraction of do not, does not, and did not." - https://en.wikipedia.org/wiki/Ain’t  

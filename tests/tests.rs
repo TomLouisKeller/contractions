@@ -121,7 +121,7 @@ fn expand__new() {
 }
 
 #[test]
-fn expand__from_json_by_hand() -> Result<(), Box<dyn Error>> {
+fn from_json__by_hand() -> Result<(), Box<dyn Error>> {
     let contractions_as_json = r#"
     [
         {
@@ -144,7 +144,7 @@ fn expand__from_json_by_hand() -> Result<(), Box<dyn Error>> {
 }
 
 #[test]
-fn expand__from_json_from_file() -> Result<(), Box<dyn Error>> {
+fn from_json__from_file() -> Result<(), Box<dyn Error>> {
     let contractions =
         Contractions::from_json(&[&contractions::CONTRACTIONS_SINGLE_NO_APOSTROPHE_JSON])?;
     assert_eq!(
@@ -154,6 +154,17 @@ fn expand__from_json_from_file() -> Result<(), Box<dyn Error>> {
     assert_eq!(
         contractions.expand("You mustn't do that!"),
         "You mustn't do that!"
+    );
+    Ok(())
+}
+
+#[test]
+fn add_from_json__from_file() -> Result<(), Box<dyn Error>> {
+    let mut contractions = Contractions::new();
+    contractions.add_from_json(&contractions::CONTRACTIONS_SINGLE_NO_APOSTROPHE_JSON)?;
+    assert_eq!(
+        contractions.expand("You mustnt do that!"),
+        "You must not do that!"
     );
     Ok(())
 }
