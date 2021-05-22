@@ -1,18 +1,15 @@
 
 # Contractions
 
+## **Notice**: `Contractions`’ API is not stabilized yet and still work in progress
+
+
 [![MIT licensed][mit-badge]][mit-url]
-
----
-
-**Notice**: `Contractions`’ API is not stabilized yet and still work in progress
-
----
 
 `Contractions` is a rust library to handle contractions in English.  
 So far only data sets to expand contractions are implemented.
 
-Expands "I’m" to "I am" etc.
+Expands "I’m" to "I am" etc.  
 The default data set has a replacement for all-lowercase, all-uppercase and first letter uppercase.
 
 ## Example
