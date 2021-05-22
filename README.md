@@ -22,7 +22,7 @@ assert_eq!("Are you sure?", contractions.apply("R u sure?"));
 
 ```rust
 let mut contractions = Contractions::new();
-contractions.add_from_json(contractions::CONTRACTIONS_SINGLE_JSON);
+contractions.add_from_json(contractions::SINGLE_CONTRACTIONS_JSON);
 assert_eq!("I am sad you couldn’t’ve come.", contractions.apply("I’m sad you couldn’t’ve come."));
 ```
 

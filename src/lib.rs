@@ -133,7 +133,7 @@ impl Contractions {
     /// # Example
     /// ```
     /// use contractions::{self, Contractions};
-    /// let contractions = Contractions::from_json(&[contractions::CONTRACTIONS_SINGLE_JSON, contractions::CONTRACTIONS_SINGLE_NO_APOSTROPHE_JSON]);
+    /// let contractions = Contractions::from_json(&[contractions::SINGLE_CONTRACTIONS_JSON, contractions::SINGLE_NO_APOSTROPHE_CONTRACTIONS_JSON]);
     /// ```
     /// # Errors
     /// Returns an Error if deserialization fails
@@ -151,7 +151,7 @@ impl Contractions {
     /// ```
     /// use contractions::{self, Contractions};
     /// let mut contractions = Contractions::new();
-    /// contractions.add_from_json(contractions::CONTRACTIONS_SINGLE_JSON);
+    /// contractions.add_from_json(contractions::SINGLE_CONTRACTIONS_JSON);
     /// ```
     ///
     /// # Errors
@@ -173,7 +173,7 @@ impl Contractions {
     /// use contractions::{self, Contractions};
     /// let mut contractions = Contractions::new();
     /// assert_eq!("I’m happy", contractions.apply("I’m happy"));
-    /// contractions.add_from_json(contractions::CONTRACTIONS_SINGLE_JSON);
+    /// contractions.add_from_json(contractions::SINGLE_CONTRACTIONS_JSON);
     /// assert_eq!("I am happy", contractions.apply("I’m happy"));
     /// contractions.remove("\\b(?i)i['’`]m(?-i)\\b");
     /// assert_eq!("I’m happy", contractions.apply("I’m happy"));
