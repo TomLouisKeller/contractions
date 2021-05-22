@@ -9,8 +9,8 @@
 
 ---
 
-`Contractions` is a rust library to expand contractions in English.  
-So far contractions can only be expanded.
+`Contractions` is a rust library to handle contractions in English.  
+So far only data sets to expand contractions are implemented.
 
 Expands "I’m" to "I am" etc.
 The default data set has a replacement for all-lowercase, all-uppercase and first letter uppercase.
@@ -19,14 +19,14 @@ The default data set has a replacement for all-lowercase, all-uppercase and firs
 
 ```rust
 let contractions = contractions::Contractions::default();
-assert_eq!("I am sure you would have been fine.", contractions.expand("I’m sure you’d’ve been fine."));
-assert_eq!("Are you sure?", contractions.expand("R u sure?"));
+assert_eq!("I am sure you would have been fine.", contractions.apply("I’m sure you’d’ve been fine."));
+assert_eq!("Are you sure?", contractions.apply("R u sure?"));
 ```
 
 ```rust
 let mut contractions = Contractions::new();
 contractions.add_from_json(contractions::CONTRACTIONS_SINGLE_JSON);
-assert_eq!("I am sad you couldn’t’ve come.", contractions.expand("I’m sad you couldn’t’ve come."));
+assert_eq!("I am sad you couldn’t’ve come.", contractions.apply("I’m sad you couldn’t’ve come."));
 ```
 
 ## Problem cases (default data set):

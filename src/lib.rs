@@ -86,8 +86,8 @@ impl Contraction {
 /// # Example
 /// ```
 /// let contractions = contractions::Contractions::default();
-/// assert_eq!("I am sure you would have been fine.", contractions.expand("I’m sure you’d’ve been fine."));
-/// assert_eq!("Are you sure?", contractions.expand("R u sure?"));
+/// assert_eq!("I am sure you would have been fine.", contractions.apply("I’m sure you’d’ve been fine."));
+/// assert_eq!("Are you sure?", contractions.apply("R u sure?"));
 /// ```
 pub struct Contractions {
     contractions :Vec<Contraction>,
@@ -170,11 +170,11 @@ impl Contractions {
     /// ```
     /// use contractions::{self, Contractions};
     /// let mut contractions = Contractions::new();
-    /// assert_eq!("I’m happy", contractions.expand("I’m happy"));
+    /// assert_eq!("I’m happy", contractions.apply("I’m happy"));
     /// contractions.add_from_json(contractions::CONTRACTIONS_SINGLE_JSON);
-    /// assert_eq!("I am happy", contractions.expand("I’m happy"));
+    /// assert_eq!("I am happy", contractions.apply("I’m happy"));
     /// contractions.remove("\\b(?i)i['’`]m(?-i)\\b");
-    /// assert_eq!("I’m happy", contractions.expand("I’m happy"));
+    /// assert_eq!("I’m happy", contractions.apply("I’m happy"));
     /// ```
     pub fn remove(&mut self, key :&str) {
         self.contractions.retain(|c| c.find.as_str() != key);
@@ -186,12 +186,12 @@ impl Contractions {
     /// ```
     /// use contractions::{self, Contractions};
     /// let mut contractions = Contractions::new();
-    /// assert_eq!("I’m happy", contractions.expand("I’m happy"));
+    /// assert_eq!("I’m happy", contractions.apply("I’m happy"));
     /// let find = r#"\b(?i)i['’`]m(?-i)\b"#;
     /// let mut replace = linked_hash_map::LinkedHashMap::new();
     /// replace.insert(find.clone(), "I am");
     /// contractions.add(find, replace);
-    /// assert_eq!("I am happy", contractions.expand("I’m happy"));
+    /// assert_eq!("I am happy", contractions.apply("I’m happy"));
     /// ```
     ///
     /// # Errors
@@ -220,10 +220,10 @@ impl Contractions {
     /// ```
     /// use contractions::Contractions;
     /// let contractions = Contractions::default();
-    /// assert_eq!("I am your brother’s son", contractions.expand("I’m your brother’s son"));
+    /// assert_eq!("I am your brother’s son", contractions.apply("I’m your brother’s son"));
     /// ```
     #[must_use]
-    pub fn expand(&self, input :&str) -> String {
+    pub fn apply(&self, input :&str) -> String {
         let mut output = input.to_string();
         for contraction in &self.contractions {
             if contraction.is_match(&output) {
