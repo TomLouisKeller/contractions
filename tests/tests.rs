@@ -146,7 +146,7 @@ fn from_json__by_hand() -> Result<(), Box<dyn Error>> {
 #[test]
 fn from_json__from_file() -> Result<(), Box<dyn Error>> {
     let contractions =
-        Contractions::from_json(&[&contractions::CONTRACTIONS_SINGLE_NO_APOSTROPHE_JSON])?;
+        Contractions::from_json(&[&contractions::EXPAND_SINGLE_NO_APOSTROPHE_CONTRACTIONS_JSON])?;
     assert_eq!(
         contractions.apply("You mustnt do that!"),
         "You must not do that!"
@@ -161,7 +161,7 @@ fn from_json__from_file() -> Result<(), Box<dyn Error>> {
 #[test]
 fn add_from_json__from_file() -> Result<(), Box<dyn Error>> {
     let mut contractions = Contractions::new();
-    contractions.add_from_json(&contractions::CONTRACTIONS_SINGLE_NO_APOSTROPHE_JSON)?;
+    contractions.add_from_json(&contractions::EXPAND_SINGLE_NO_APOSTROPHE_CONTRACTIONS_JSON)?;
     assert_eq!(
         contractions.apply("You mustnt do that!"),
         "You must not do that!"
@@ -173,7 +173,7 @@ fn add_from_json__from_file() -> Result<(), Box<dyn Error>> {
 fn remove() -> Result<(), Box<dyn Error>> {
     let mut contractions = Contractions::new();
     assert_eq!("I’m happy", contractions.apply("I’m happy"));
-    contractions.add_from_json(contractions::CONTRACTIONS_SINGLE_JSON)?;
+    contractions.add_from_json(contractions::EXPAND_SINGLE_CONTRACTIONS_JSON)?;
     assert_eq!("I am happy", contractions.apply("I’m happy"));
     contractions.remove(r#"\b(?i)i['’`]m(?-i)\b"#);
     assert_eq!("I’m happy", contractions.apply("I’m happy"));
@@ -184,7 +184,7 @@ fn remove() -> Result<(), Box<dyn Error>> {
 fn remove__keep_others() -> Result<(), Box<dyn Error>> {
     let mut contractions = Contractions::new();
     assert_eq!("I’ve stuff", contractions.apply("I’ve stuff"));
-    contractions.add_from_json(contractions::CONTRACTIONS_SINGLE_JSON)?;
+    contractions.add_from_json(contractions::EXPAND_SINGLE_CONTRACTIONS_JSON)?;
     assert_eq!("I have stuff", contractions.apply("I’ve stuff"));
     contractions.remove(r#"\b(?i)i['’`]m(?-i)\b"#);
     assert_eq!("I have stuff", contractions.apply("I’ve stuff"));
@@ -207,7 +207,7 @@ fn add() -> Result<(), Box<dyn Error>> {
 
 #[test]
 fn partials() -> Result<(), Box<dyn Error>> {
-    let contractions = Contractions::from_json(&[contractions::CONTRACTIONS_PARTIAL_JSON])?;
+    let contractions = Contractions::from_json(&[contractions::EXPAND_PARTIAL_CONTRACTIONS_JSON])?;
     assert_eq!("I am happy", contractions.apply("I’m happy"));
     Ok(())
 }

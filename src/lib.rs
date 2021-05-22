@@ -19,35 +19,37 @@ use serde::{
 };
 
 /// Contains slang terms which will be expanded/changed to their full form
-pub const SLANG_JSON :&str = include_str!("../data/expand/slang.json");
+pub const EXPAND_SLANG_JSON :&str = include_str!("../data/expand/slang.json");
 /// Contains contractions with one apostroph in json form (eg: I'm, I've, 'twas)
-pub const CONTRACTIONS_SINGLE_JSON :&str = include_str!("../data/expand/contractions_single.json");
+pub const EXPAND_SINGLE_CONTRACTIONS_JSON :&str =
+    include_str!("../data/expand/single_contractions.json");
 /// Contains contractions with two apostroph in json form (eg: Who'll've, Wouldn't've, Mustn't've)
-pub const CONTRACTIONS_DOUBLE_JSON :&str = include_str!("../data/expand/contractions_double.json");
+pub const EXPAND_DOUBLE_CONTRACTIONS_JSON :&str =
+    include_str!("../data/expand/double_contractions.json");
 /// Contains contractions with three apostroph in json form (Y'all'd've, 'twou'dn't)
-pub const CONTRACTIONS_TRIPPLE_JSON :&str =
-    include_str!("../data/expand/contractions_tripple.json");
+pub const EXPAND_TRIPPLE_CONTRACTIONS_JSON :&str =
+    include_str!("../data/expand/tripple_contractions.json");
 /// Contains most of `CONTRACTIONS_SINGLE_JSON` contractions but without apostroph
-pub const CONTRACTIONS_SINGLE_NO_APOSTROPHE_JSON :&str =
-    include_str!("../data/expand/contractions_single_no_apostroph.json");
+pub const EXPAND_SINGLE_NO_APOSTROPHE_CONTRACTIONS_JSON :&str =
+    include_str!("../data/expand/single_no_apostroph_contractions.json");
 /// Contains most of `CONTRACTIONS_DOUBLE_JSON` contractions but without apostroph
-pub const CONTRACTIONS_DOUBLE_NO_APOSTROPHE_JSON :&str =
-    include_str!("../data/expand/contractions_double_no_apostroph.json");
+pub const EXPAND_DOUBLE_NO_APOSTROPHE_CONTRACTIONS_JSON :&str =
+    include_str!("../data/expand/double_no_apostroph_contractions.json");
 /// Contains partial contractions in json form. (eg: 'm, 've, n't, 're)
-pub const CONTRACTIONS_PARTIAL_JSON :&str =
-    include_str!("../data/expand/contractions_partial.json");
+pub const EXPAND_PARTIAL_CONTRACTIONS_JSON :&str =
+    include_str!("../data/expand/partial_contractions.json");
 
 /// The list of all json strings.
 ///
 /// The order used to matter, but does no longer.
 /// The order is preserved and will be processed from top to bottom.
 pub const CONTRACTIONS_JSON_ORDER :&[&str] = &[
-    SLANG_JSON,
-    CONTRACTIONS_DOUBLE_NO_APOSTROPHE_JSON,
-    CONTRACTIONS_SINGLE_NO_APOSTROPHE_JSON,
-    CONTRACTIONS_TRIPPLE_JSON,
-    CONTRACTIONS_DOUBLE_JSON,
-    CONTRACTIONS_SINGLE_JSON,
+    EXPAND_SLANG_JSON,
+    EXPAND_DOUBLE_NO_APOSTROPHE_CONTRACTIONS_JSON,
+    EXPAND_SINGLE_NO_APOSTROPHE_CONTRACTIONS_JSON,
+    EXPAND_TRIPPLE_CONTRACTIONS_JSON,
+    EXPAND_DOUBLE_CONTRACTIONS_JSON,
+    EXPAND_SINGLE_CONTRACTIONS_JSON,
 ];
 
 /// Contraction holds search term and the replacement-pairs
