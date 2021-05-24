@@ -1,4 +1,4 @@
-//! `Contractions` is a library to handle contractions
+//! [`contractions`](https://docs.rs/contractions) is a library to handle contractions
 #![deny(clippy::all)]
 #![deny(clippy::pedantic)]
 #![deny(clippy::nursery)]
@@ -41,7 +41,6 @@ pub const EXPAND_PARTIAL_CONTRACTIONS_JSON :&str =
 
 /// The list of all json strings.
 ///
-/// The order used to matter, but does no longer.
 /// The order is preserved and will be processed from top to bottom.
 pub const CONTRACTIONS_JSON_ORDER :&[&str] = &[
     EXPAND_SLANG_JSON,
@@ -52,7 +51,7 @@ pub const CONTRACTIONS_JSON_ORDER :&[&str] = &[
     EXPAND_SINGLE_CONTRACTIONS_JSON,
 ];
 
-/// Contraction holds search term and the replacement-pairs
+/// [`Contraction`](struct.Contraction.html) holds search term and the replacement-pairs
 #[derive(Debug, Serialize, Deserialize)]
 struct Contraction {
     #[serde(with = "serde_regex")]
@@ -81,9 +80,9 @@ impl Contraction {
     }
 }
 
-/// Main actor in the `contractions` crate
+/// Main actor in the [`contractions`](https://docs.rs/contractions) crate
 ///
-/// Stores `Contraction` in a `Vec`
+/// Stores [`Contractions`](struct.Contractions.html) in a [`Vec`](https://doc.rust-lang.org/std/vec/struct.Vec.html)
 ///
 /// # Example
 /// ```
@@ -96,7 +95,7 @@ pub struct Contractions {
 }
 
 impl Default for Contractions {
-    /// Returns the built in configuration for `Contractions`
+    /// Returns the built in configuration for [`Contractions`](struct.Contractions.html)
     ///
     /// # Example
     /// ```
@@ -112,7 +111,7 @@ impl Default for Contractions {
 }
 
 impl Contractions {
-    /// Creates empty `Contractions`
+    /// Creates empty [`Contractions`](struct.Contractions.html)
     ///
     /// # Example
     /// ```
@@ -126,9 +125,10 @@ impl Contractions {
         }
     }
 
-    /// Deserialize quoter from json
+    /// Deserialize `Contraction` from json
     ///
-    /// Convenience method for `Contractions::new()` `Contractions::add_from_json()`
+    /// Convenience method that chains [`Contractions::new()`](struct.Contractions.html#method.new)
+    /// and [`Contractions::add_from_json()`](struct.Contractions.html#method.add_from_json)
     ///
     /// # Example
     /// ```
@@ -145,7 +145,8 @@ impl Contractions {
         Ok(contractions)
     }
 
-    /// Add contractions from a json string to an existing `Contractions` struct
+    /// Add `Contraction`s from a json string to an existing
+    /// [`Contractions`](struct.Contractions.html) struct
     ///
     /// # Example
     /// ```
@@ -166,7 +167,9 @@ impl Contractions {
         Ok(())
     }
 
-    /// Remove a contraction from `Contractions`
+    /// Remove a `Contraction` from [`Contractions`](struct.Contractions.html)
+    ///
+    /// Provide the exact `find` key to delete the corresponding `Contraction`
     ///
     /// # Example
     /// ```
@@ -182,7 +185,7 @@ impl Contractions {
         self.contractions.retain(|c| c.find.as_str() != key);
     }
 
-    /// Add a contraction to `Contractions`
+    /// Add a contraction to [`Contractions`](struct.Contractions.html)
     ///
     /// # Example
     /// ```
@@ -191,7 +194,9 @@ impl Contractions {
     /// assert_eq!("I’m happy", contractions.apply("I’m happy"));
     /// let find = r#"\b(?i)i['’`]m(?-i)\b"#;
     /// let mut replace = linked_hash_map::LinkedHashMap::new();
-    /// replace.insert(find.clone(), "I am");
+    /// replace.insert(r#"\bi['’`]m\b"#, "i am");
+    /// replace.insert(r#"\bI['’`]m\b"#, "I am");
+    /// replace.insert(r#"\bI['’`]M\b"#, "I AM");
     /// contractions.add(find, replace);
     /// assert_eq!("I am happy", contractions.apply("I’m happy"));
     /// ```
