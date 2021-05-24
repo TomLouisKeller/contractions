@@ -1,7 +1,7 @@
 
 # Contractions
 
-## **Notice**: `Contractions`’ API is not stabilized yet and still work in progress
+**Notice**: `Contractions`’ API is not stabilized yet and still work in progress
 
 
 [![MIT licensed][mit-badge]][mit-url]
