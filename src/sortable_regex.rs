@@ -15,12 +15,13 @@ use serde::{
     Serializer,
 };
 
-/// [`RegexWrapper`](struct.RegexWrapper.html) wraps Regex in order for it to be usable in
+/// [`SortableRegex`](struct.SortableRegex.html) wraps Regex in order for it to be usable in
 /// [`HashMap`](https://doc.rust-lang.org/std/collections/struct.HashMap.html), [`LinkedHashMap`](https://docs.rs/linked-hash-map/0.5.4/linked_hash_map/) etc.
 ///
-/// [`RegexWrapper`](struct.RegexWrapper.html) implements [`Eq`](https://doc.rust-lang.org/std/cmp/trait.Eq.html), [`PartialEq`](https://doc.rust-lang.org/std/cmp/trait.PartialEq.html) and [`Hash`](https://doc.rust-lang.org/std/hash/trait.Hash.html) so it can be used in [`HashMap`](https://doc.rust-lang.org/std/collections/struct.HashMap.html),
-/// [`LinkedHashMap`](https://docs.rs/linked-hash-map/0.5.4/linked_hash_map/) etc [`RegexWrapper`](struct.RegexWrapper.html) implements [`Deserialize`](https://docs.serde.rs/serde/trait.Deserialize.html) and [`Serialize`](https://docs.serde.rs/serde/trait.Serialize.html) so it can be
-/// directly generated via [`Contraction`](struct.Contraction.html)
+/// [`SortableRegex`](struct.SortableRegex.html) implements [`Eq`](https://doc.rust-lang.org/std/cmp/trait.Eq.html), [`PartialEq`](https://doc.rust-lang.org/std/cmp/trait.PartialEq.html) and [`Hash`](https://doc.rust-lang.org/std/hash/trait.Hash.html) so it can be used in [`HashMap`](https://doc.rust-lang.org/std/collections/struct.HashMap.html),
+/// [`LinkedHashMap`](https://docs.rs/linked-hash-map/0.5.4/linked_hash_map/) etc
+/// [`SortableRegex`](struct.SortableRegex.html) implements [`Deserialize`](https://docs.serde.rs/serde/trait.Deserialize.html) and [`Serialize`](https://docs.serde.rs/serde/trait.Serialize.html) so it can be
+/// directly generated via [`Contractions`](struct.Contractions.html)
 #[derive(Debug)]
 pub struct SortableRegex(pub Regex);
 
