@@ -6,7 +6,7 @@
 
 [![MIT licensed][mit-badge]][mit-url]
 
-`Contractions` is a rust library to handle contractions in English.  
+`contractions` is a rust library to handle contractions in English.  
 So far only data sets to expand contractions are implemented.
 
 Expands "I’m" to "I am" etc.  

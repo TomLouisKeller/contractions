@@ -1,4 +1,24 @@
 //! [`contractions`](https://docs.rs/contractions) is a library to handle contractions
+//! So far only data sets to expand contractions are implemented.
+//!
+//! Expands "I’m" to "I am" etc.
+//! The default data set has a replacement for all-lowercase, all-uppercase and first letter
+//! uppercase.
+//!
+//! ## Example
+//!
+//! ```rust
+//! let contractions = contractions::Contractions::default();
+//! assert_eq!("I am sure you would have been fine.", contractions.apply("I’m sure you’d’ve been fine."));
+//! assert_eq!("Are you sure?", contractions.apply("R u sure?"));
+//! ```
+//!
+//! ```rust
+//! let mut contractions = Contractions::new();
+//! contractions.add_from_json(contractions::SINGLE_CONTRACTIONS_JSON);
+//! assert_eq!("I am sad you couldn’t’ve come.", contractions.apply("I’m sad you couldn’t’ve come."));
+//! ```
+
 #![deny(clippy::all)]
 #![deny(clippy::pedantic)]
 #![deny(clippy::nursery)]
