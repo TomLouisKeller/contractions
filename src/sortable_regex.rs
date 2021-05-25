@@ -22,23 +22,23 @@ use serde::{
 /// [`LinkedHashMap`](https://docs.rs/linked-hash-map/0.5.4/linked_hash_map/) etc [`RegexWrapper`](struct.RegexWrapper.html) implements [`Deserialize`](https://docs.serde.rs/serde/trait.Deserialize.html) and [`Serialize`](https://docs.serde.rs/serde/trait.Serialize.html) so it can be
 /// directly generated via [`Contraction`](struct.Contraction.html)
 #[derive(Debug)]
-pub struct RegexWrapper(pub Regex);
+pub struct SortableRegex(pub Regex);
 
-impl PartialEq for RegexWrapper {
+impl PartialEq for SortableRegex {
     fn eq(&self, other :&Self) -> bool {
         self.0.as_str() == other.0.as_str()
     }
 }
 
-impl Eq for RegexWrapper {}
+impl Eq for SortableRegex {}
 
-impl Hash for RegexWrapper {
+impl Hash for SortableRegex {
     fn hash<H :Hasher>(&self, state :&mut H) {
         self.0.as_str().hash(state);
     }
 }
 
-impl<'de> Deserialize<'de> for RegexWrapper {
+impl<'de> Deserialize<'de> for SortableRegex {
     fn deserialize<D>(d :D) -> Result<Self, D::Error>
     where
         D : Deserializer<'de>,
@@ -52,7 +52,7 @@ impl<'de> Deserialize<'de> for RegexWrapper {
     }
 }
 
-impl Serialize for RegexWrapper {
+impl Serialize for SortableRegex {
     fn serialize<S>(&self, serializer :S) -> Result<S::Ok, S::Error>
     where
         S : Serializer,

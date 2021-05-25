@@ -31,12 +31,12 @@ extern crate log;
 use linked_hash_map::LinkedHashMap;
 use regex::Regex;
 
-mod regex_wrapper;
-use regex_wrapper::RegexWrapper;
+mod sortable_regex;
 use serde::{
     Deserialize,
     Serialize,
 };
+use sortable_regex::SortableRegex;
 
 /// Contains slang terms which will be expanded/changed to their full form
 pub const EXPAND_SLANG_JSON :&str = include_str!("../data/expand/slang.json");
@@ -76,7 +76,7 @@ pub const CONTRACTIONS_JSON_ORDER :&[&str] = &[
 struct Contraction {
     #[serde(with = "serde_regex")]
     find :Regex,
-    replace :LinkedHashMap<RegexWrapper, String>,
+    replace :LinkedHashMap<SortableRegex, String>,
 }
 
 impl Contraction {
@@ -232,9 +232,9 @@ impl Contractions {
     ) -> Result<(), Box<dyn std::error::Error>> {
         let find = Regex::new(find)?;
         let in_replace = replace;
-        let mut replace :LinkedHashMap<RegexWrapper, String> = LinkedHashMap::new();
+        let mut replace :LinkedHashMap<SortableRegex, String> = LinkedHashMap::new();
         for (f, r) in in_replace {
-            replace.insert(RegexWrapper(Regex::new(f)?), r.to_string());
+            replace.insert(SortableRegex(Regex::new(f)?), r.to_string());
         }
 
         let contraction = Contraction { find, replace };
