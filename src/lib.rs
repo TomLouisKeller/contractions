@@ -110,6 +110,7 @@ impl Contraction {
 /// assert_eq!("I am sure you would have been fine.", contractions.apply("I’m sure you’d’ve been fine."));
 /// assert_eq!("Are you sure?", contractions.apply("R u sure?"));
 /// ```
+#[derive(Debug)]
 pub struct Contractions {
     contractions :Vec<Contraction>,
 }
