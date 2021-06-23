@@ -3,10 +3,12 @@ use std::error::Error;
 
 use contractions::Contractions;
 
+type TestResult = core::result::Result<(), Box<dyn Error>>;
+
 // apply()
 
 #[test]
-fn apply__single_apostroph() -> Result<(), Box<dyn Error>> {
+fn apply__single_apostroph() -> TestResult {
     let contractions = Contractions::default();
     assert_eq!(
         contractions.apply("i’m happy to meet you"),
@@ -16,7 +18,7 @@ fn apply__single_apostroph() -> Result<(), Box<dyn Error>> {
 }
 
 #[test]
-fn apply__double_apostroph() -> Result<(), Box<dyn Error>> {
+fn apply__double_apostroph() -> TestResult {
     let contractions = Contractions::default();
     assert_eq!(
         contractions.apply("i’m’a head out"),
@@ -26,28 +28,28 @@ fn apply__double_apostroph() -> Result<(), Box<dyn Error>> {
 }
 
 #[test]
-fn apply__double_apostroph_would_have() -> Result<(), Box<dyn Error>> {
+fn apply__double_apostroph_would_have() -> TestResult {
     let contractions = Contractions::default();
     assert_eq!(contractions.apply("it’d’ve"), "it would have");
     Ok(())
 }
 
 #[test]
-fn apply__double_apostroph_will_have() -> Result<(), Box<dyn Error>> {
+fn apply__double_apostroph_will_have() -> TestResult {
     let contractions = Contractions::default();
     assert_eq!(contractions.apply("he’ll’ve"), "he will have");
     Ok(())
 }
 
 #[test]
-fn apply__double_apostroph_are() -> Result<(), Box<dyn Error>> {
+fn apply__double_apostroph_are() -> TestResult {
     let contractions = Contractions::default();
     assert_eq!(contractions.apply("you’ren’t"), "you are not");
     Ok(())
 }
 
 #[test]
-fn apply__multiple_terms() -> Result<(), Box<dyn Error>> {
+fn apply__multiple_terms() -> TestResult {
     let contractions = Contractions::default();
     assert_eq!(
         contractions.apply("i’m gonna make you an offer you can’t refuse"),
@@ -57,14 +59,14 @@ fn apply__multiple_terms() -> Result<(), Box<dyn Error>> {
 }
 
 #[test]
-fn apply__period_after_contraction() -> Result<(), Box<dyn Error>> {
+fn apply__period_after_contraction() -> TestResult {
     let contractions = Contractions::default();
     assert_eq!(contractions.apply("I can’t."), "I can not.");
     Ok(())
 }
 
 #[test]
-fn apply__capitalization() -> Result<(), Box<dyn Error>> {
+fn apply__capitalization() -> TestResult {
     let contractions = Contractions::default();
     assert_eq!(contractions.apply("Can’t"), "Can not");
     Ok(())
@@ -72,7 +74,7 @@ fn apply__capitalization() -> Result<(), Box<dyn Error>> {
 
 /// Possessives are "Tom’s car", "England’s navy" - make sure we don’t remove those ’s
 #[test]
-fn apply__dont_replace_possessives() -> Result<(), Box<dyn Error>> {
+fn apply__dont_replace_possessives() -> TestResult {
     let contractions = Contractions::default();
     assert_eq!(
         contractions.apply("Your brother’s son"),
@@ -83,7 +85,7 @@ fn apply__dont_replace_possessives() -> Result<(), Box<dyn Error>> {
 
 /// Possessives are "Tom’s car", "England’s navy" - make sure we don’t remove those ’s
 #[test]
-fn apply__slang() -> Result<(), Box<dyn Error>> {
+fn apply__slang() -> TestResult {
     let contractions = Contractions::default();
     assert_eq!(contractions.apply("r u ok?"), "are you ok?");
     Ok(())
@@ -91,7 +93,7 @@ fn apply__slang() -> Result<(), Box<dyn Error>> {
 
 /// Don’t split Adelphe’s into Adelp he is
 #[test]
-fn apply__do_not_replace_partials_where_not_intended() -> Result<(), Box<dyn Error>> {
+fn apply__do_not_replace_partials_where_not_intended() -> TestResult {
     let contractions = Contractions::default();
     assert_eq!(
         contractions.apply("Adelphe’s car is broken"),
@@ -101,14 +103,14 @@ fn apply__do_not_replace_partials_where_not_intended() -> Result<(), Box<dyn Err
 }
 
 #[test]
-fn apply__single_quotation_mark() -> Result<(), Box<dyn Error>> {
+fn apply__single_quotation_mark() -> TestResult {
     let contractions = Contractions::default();
     assert_eq!(contractions.apply("I'm fine"), "I am fine");
     Ok(())
 }
 
 #[test]
-fn apply__grave_accent() -> Result<(), Box<dyn Error>> {
+fn apply__grave_accent() -> TestResult {
     let contractions = Contractions::default();
     assert_eq!(contractions.apply("I`m fine"), "I am fine");
     Ok(())
@@ -121,7 +123,7 @@ fn apply__new() {
 }
 
 #[test]
-fn from_json__by_hand() -> Result<(), Box<dyn Error>> {
+fn from_json__by_hand() -> TestResult {
     let contractions_as_json = r#"
     [
         {
@@ -144,7 +146,7 @@ fn from_json__by_hand() -> Result<(), Box<dyn Error>> {
 }
 
 #[test]
-fn from_json__from_file() -> Result<(), Box<dyn Error>> {
+fn from_json__from_file() -> TestResult {
     let contractions =
         Contractions::from_json(&[&contractions::EXPAND_SINGLE_NO_APOSTROPHE_CONTRACTIONS_JSON])?;
     assert_eq!(
@@ -159,7 +161,7 @@ fn from_json__from_file() -> Result<(), Box<dyn Error>> {
 }
 
 #[test]
-fn add_from_json__from_file() -> Result<(), Box<dyn Error>> {
+fn add_from_json__from_file() -> TestResult {
     let mut contractions = Contractions::new();
     contractions.add_from_json(&contractions::EXPAND_SINGLE_NO_APOSTROPHE_CONTRACTIONS_JSON)?;
     assert_eq!(
@@ -170,7 +172,7 @@ fn add_from_json__from_file() -> Result<(), Box<dyn Error>> {
 }
 
 #[test]
-fn remove() -> Result<(), Box<dyn Error>> {
+fn remove() -> TestResult {
     let mut contractions = Contractions::new();
     assert_eq!("I’m happy", contractions.apply("I’m happy"));
     contractions.add_from_json(contractions::EXPAND_SINGLE_CONTRACTIONS_JSON)?;
@@ -181,7 +183,7 @@ fn remove() -> Result<(), Box<dyn Error>> {
 }
 
 #[test]
-fn remove__keep_others() -> Result<(), Box<dyn Error>> {
+fn remove__keep_others() -> TestResult {
     let mut contractions = Contractions::new();
     assert_eq!("I’ve stuff", contractions.apply("I’ve stuff"));
     contractions.add_from_json(contractions::EXPAND_SINGLE_CONTRACTIONS_JSON)?;
@@ -193,7 +195,7 @@ fn remove__keep_others() -> Result<(), Box<dyn Error>> {
 }
 
 #[test]
-fn add() -> Result<(), Box<dyn Error>> {
+fn add() -> TestResult {
     let mut contractions = Contractions::new();
     assert_eq!("I’m happy", contractions.apply("I’m happy"));
     let find = r#"\b(?i)i['’`]m(?-i)\b"#;
@@ -206,7 +208,7 @@ fn add() -> Result<(), Box<dyn Error>> {
 }
 
 #[test]
-fn partials() -> Result<(), Box<dyn Error>> {
+fn partials() -> TestResult {
     let contractions = Contractions::from_json(&[contractions::EXPAND_PARTIAL_CONTRACTIONS_JSON])?;
     assert_eq!("I am happy", contractions.apply("I’m happy"));
     Ok(())
