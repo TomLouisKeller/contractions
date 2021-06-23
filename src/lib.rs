@@ -199,7 +199,7 @@ impl Contractions {
     /// assert_eq!("I’m happy", contractions.apply("I’m happy"));
     /// contractions.add_from_json(contractions::EXPAND_SINGLE_CONTRACTIONS_JSON);
     /// assert_eq!("I am happy", contractions.apply("I’m happy"));
-    /// contractions.remove("\\b(?i)i['’`]m(?-i)\\b");
+    /// contractions.remove("\\b(?i)i['’`]m\\b");
     /// assert_eq!("I’m happy", contractions.apply("I’m happy"));
     /// ```
     pub fn remove(&mut self, key :&str) {

@@ -1,956 +1,956 @@
 [
   {
-    "find": "\\b(?i)im(?-i)\\b",
+    "find": "\\b(?i)im\\b",
     "replace": {
       "\\bim\\b": "i am",
       "\\bIm\\b": "I am",
       "\\bIM\\b": "I AM",
-      "\\b(?i)im(?-i)\\b": "i am"
+      "\\b(?i)im\\b": "i am"
     }
   },
   {
-    "find": "\\b(?i)ive(?-i)\\b",
+    "find": "\\b(?i)ive\\b",
     "replace": {
       "\\bive\\b": "i have",
       "\\bIve\\b": "I have",
       "\\bIVE\\b": "I HAVE",
-      "\\b(?i)ive(?-i)\\b": "i have"
+      "\\b(?i)ive\\b": "i have"
     }
   },
   {
-    "find": "\\b(?i)id(?-i)\\b",
+    "find": "\\b(?i)id\\b",
     "replace": {
       "\\bid\\b": "i would",
       "\\bId\\b": "I would",
       "\\bID\\b": "I WOULD",
-      "\\b(?i)id(?-i)\\b": "i would"
+      "\\b(?i)id\\b": "i would"
     }
   },
   {
-    "find": "\\b(?i)amnt(?-i)\\b",
+    "find": "\\b(?i)amnt\\b",
     "replace": {
       "\\bamnt\\b": "am not",
       "\\bAmnt\\b": "Am not",
       "\\bAMNT\\b": "AM NOT",
-      "\\b(?i)amnt(?-i)\\b": "am not"
+      "\\b(?i)amnt\\b": "am not"
     }
   },
   {
-    "find": "\\b(?i)aint(?-i)\\b",
+    "find": "\\b(?i)aint\\b",
     "replace": {
       "\\baint\\b": "are not",
       "\\bAint\\b": "Are not",
       "\\bAINT\\b": "ARE NOT",
-      "\\b(?i)aint(?-i)\\b": "are not"
+      "\\b(?i)aint\\b": "are not"
     }
   },
   {
-    "find": "\\b(?i)arent(?-i)\\b",
+    "find": "\\b(?i)arent\\b",
     "replace": {
       "\\barent\\b": "are not",
       "\\bArent\\b": "Are not",
       "\\bARENT\\b": "ARE NOT",
-      "\\b(?i)arent(?-i)\\b": "are not"
+      "\\b(?i)arent\\b": "are not"
     }
   },
   {
-    "find": "\\b(?i)cant(?-i)\\b",
+    "find": "\\b(?i)cant\\b",
     "replace": {
       "\\bcant\\b": "can not",
       "\\bCant\\b": "Can not",
       "\\bCANT\\b": "CAN NOT",
-      "\\b(?i)cant(?-i)\\b": "can not"
+      "\\b(?i)cant\\b": "can not"
     }
   },
   {
-    "find": "\\b(?i)couldve(?-i)\\b",
+    "find": "\\b(?i)couldve\\b",
     "replace": {
       "\\bcouldve\\b": "could have",
       "\\bCouldve\\b": "Could have",
       "\\bCOULDVE\\b": "COULD HAVE",
-      "\\b(?i)couldve(?-i)\\b": "could have"
+      "\\b(?i)couldve\\b": "could have"
     }
   },
   {
-    "find": "\\b(?i)couldnt(?-i)\\b",
+    "find": "\\b(?i)couldnt\\b",
     "replace": {
       "\\bcouldnt\\b": "could not",
       "\\bCouldnt\\b": "Could not",
       "\\bCOULDNT\\b": "COULD NOT",
-      "\\b(?i)couldnt(?-i)\\b": "could not"
+      "\\b(?i)couldnt\\b": "could not"
     }
   },
   {
-    "find": "\\b(?i)darent(?-i)\\b",
+    "find": "\\b(?i)darent\\b",
     "replace": {
       "\\bdarent\\b": "dare not",
       "\\bDarent\\b": "Dare not",
       "\\bDARENT\\b": "DARE NOT",
-      "\\b(?i)darent(?-i)\\b": "dare not"
+      "\\b(?i)darent\\b": "dare not"
     }
   },
   {
-    "find": "\\b(?i)daresnt(?-i)\\b",
+    "find": "\\b(?i)daresnt\\b",
     "replace": {
       "\\bdaresnt\\b": "dare not",
       "\\bDaresnt\\b": "Dare not",
       "\\bDARESNT\\b": "DARE NOT",
-      "\\b(?i)daresnt(?-i)\\b": "dare not"
+      "\\b(?i)daresnt\\b": "dare not"
     }
   },
   {
-    "find": "\\b(?i)dasnt(?-i)\\b",
+    "find": "\\b(?i)dasnt\\b",
     "replace": {
       "\\bdasnt\\b": "dare not",
       "\\bDasnt\\b": "Dare not",
       "\\bDASNT\\b": "DARE NOT",
-      "\\b(?i)dasnt(?-i)\\b": "dare not"
+      "\\b(?i)dasnt\\b": "dare not"
     }
   },
   {
-    "find": "\\b(?i)didnt(?-i)\\b",
+    "find": "\\b(?i)didnt\\b",
     "replace": {
       "\\bdidnt\\b": "did not",
       "\\bDidnt\\b": "Did not",
       "\\bDIDNT\\b": "DID NOT",
-      "\\b(?i)didnt(?-i)\\b": "did not"
+      "\\b(?i)didnt\\b": "did not"
     }
   },
   {
-    "find": "\\b(?i)dont(?-i)\\b",
+    "find": "\\b(?i)dont\\b",
     "replace": {
       "\\bdont\\b": "do not",
       "\\bDont\\b": "Do not",
       "\\bDONT\\b": "DO NOT",
-      "\\b(?i)dont(?-i)\\b": "do not"
+      "\\b(?i)dont\\b": "do not"
     }
   },
   {
-    "find": "\\b(?i)doesnt(?-i)\\b",
+    "find": "\\b(?i)doesnt\\b",
     "replace": {
       "\\bdoesnt\\b": "does not",
       "\\bDoesnt\\b": "Does not",
       "\\bDOESNT\\b": "DOES NOT",
-      "\\b(?i)doesnt(?-i)\\b": "does not"
+      "\\b(?i)doesnt\\b": "does not"
     }
   },
   {
-    "find": "\\b(?i)eer(?-i)\\b",
+    "find": "\\b(?i)eer\\b",
     "replace": {
       "\\beer\\b": "ever",
       "\\bEer\\b": "Ever",
       "\\bEER\\b": "EVER",
-      "\\b(?i)eer(?-i)\\b": "ever"
+      "\\b(?i)eer\\b": "ever"
     }
   },
   {
-    "find": "\\b(?i)everyones(?-i)\\b",
+    "find": "\\b(?i)everyones\\b",
     "replace": {
       "\\beveryones\\b": "everyone is",
       "\\bEveryones\\b": "Everyone is",
       "\\bEVERYONES\\b": "EVERYONE IS",
-      "\\b(?i)everyones(?-i)\\b": "everyone is"
+      "\\b(?i)everyones\\b": "everyone is"
     }
   },
   {
-    "find": "\\b(?i)gont(?-i)\\b",
+    "find": "\\b(?i)gont\\b",
     "replace": {
       "\\bgont\\b": "go not",
       "\\bGont\\b": "Go not",
       "\\bGONT\\b": "GO NOT",
-      "\\b(?i)gont(?-i)\\b": "go not"
+      "\\b(?i)gont\\b": "go not"
     }
   },
   {
-    "find": "\\b(?i)hadnt(?-i)\\b",
+    "find": "\\b(?i)hadnt\\b",
     "replace": {
       "\\bhadnt\\b": "had not",
       "\\bHadnt\\b": "Had not",
       "\\bHADNT\\b": "HAD NOT",
-      "\\b(?i)hadnt(?-i)\\b": "had not"
+      "\\b(?i)hadnt\\b": "had not"
     }
   },
   {
-    "find": "\\b(?i)hasnt(?-i)\\b",
+    "find": "\\b(?i)hasnt\\b",
     "replace": {
       "\\bhasnt\\b": "has not",
       "\\bHasnt\\b": "Has not",
       "\\bHASNT\\b": "HAS NOT",
-      "\\b(?i)hasnt(?-i)\\b": "has not"
+      "\\b(?i)hasnt\\b": "has not"
     }
   },
   {
-    "find": "\\b(?i)havent(?-i)\\b",
+    "find": "\\b(?i)havent\\b",
     "replace": {
       "\\bhavent\\b": "have not",
       "\\bHavent\\b": "Have not",
       "\\bHAVENT\\b": "HAVE NOT",
-      "\\b(?i)havent(?-i)\\b": "have not"
+      "\\b(?i)havent\\b": "have not"
     }
   },
   {
-    "find": "\\b(?i)heve(?-i)\\b",
+    "find": "\\b(?i)heve\\b",
     "replace": {
       "\\bheve\\b": "he have",
       "\\bHeve\\b": "He have",
       "\\bHEVE\\b": "HE HAVE",
-      "\\b(?i)heve(?-i)\\b": "he have"
+      "\\b(?i)heve\\b": "he have"
     }
   },
   {
-    "find": "\\b(?i)hes(?-i)\\b",
+    "find": "\\b(?i)hes\\b",
     "replace": {
       "\\bhes\\b": "he is",
       "\\bHes\\b": "He is",
       "\\bHES\\b": "HE IS",
-      "\\b(?i)hes(?-i)\\b": "he is"
+      "\\b(?i)hes\\b": "he is"
     }
   },
   {
-    "find": "\\b(?i)hed(?-i)\\b",
+    "find": "\\b(?i)hed\\b",
     "replace": {
       "\\bhed\\b": "he would",
       "\\bHed\\b": "He would",
       "\\bHED\\b": "HE WOULD",
-      "\\b(?i)hed(?-i)\\b": "he would"
+      "\\b(?i)hed\\b": "he would"
     }
   },
   {
-    "find": "\\b(?i)heres(?-i)\\b",
+    "find": "\\b(?i)heres\\b",
     "replace": {
       "\\bheres\\b": "here is",
       "\\bHeres\\b": "Here is",
       "\\bHERES\\b": "HERE IS",
-      "\\b(?i)heres(?-i)\\b": "here is"
+      "\\b(?i)heres\\b": "here is"
     }
   },
   {
-    "find": "\\b(?i)howre(?-i)\\b",
+    "find": "\\b(?i)howre\\b",
     "replace": {
       "\\bhowre\\b": "how are",
       "\\bHowre\\b": "How are",
       "\\bHOWRE\\b": "HOW ARE",
-      "\\b(?i)howre(?-i)\\b": "how are"
+      "\\b(?i)howre\\b": "how are"
     }
   },
   {
-    "find": "\\b(?i)howd(?-i)\\b",
+    "find": "\\b(?i)howd\\b",
     "replace": {
       "\\bhowd\\b": "how did",
       "\\bHowd\\b": "How did",
       "\\bHOWD\\b": "HOW DID",
-      "\\b(?i)howd(?-i)\\b": "how did"
+      "\\b(?i)howd\\b": "how did"
     }
   },
   {
-    "find": "\\b(?i)hows(?-i)\\b",
+    "find": "\\b(?i)hows\\b",
     "replace": {
       "\\bhows\\b": "how is",
       "\\bHows\\b": "How is",
       "\\bHOWS\\b": "HOW IS",
-      "\\b(?i)hows(?-i)\\b": "how is"
+      "\\b(?i)hows\\b": "how is"
     }
   },
   {
-    "find": "\\b(?i)howll(?-i)\\b",
+    "find": "\\b(?i)howll\\b",
     "replace": {
       "\\bhowll\\b": "how will",
       "\\bHowll\\b": "How will",
       "\\bHOWLL\\b": "HOW WILL",
-      "\\b(?i)howll(?-i)\\b": "how will"
+      "\\b(?i)howll\\b": "how will"
     }
   },
   {
-    "find": "\\b(?i)isnt(?-i)\\b",
+    "find": "\\b(?i)isnt\\b",
     "replace": {
       "\\bisnt\\b": "is not",
       "\\bIsnt\\b": "Is not",
       "\\bISNT\\b": "IS NOT",
-      "\\b(?i)isnt(?-i)\\b": "is not"
+      "\\b(?i)isnt\\b": "is not"
     }
   },
   {
-    "find": "\\b(?i)its(?-i)\\b",
+    "find": "\\b(?i)its\\b",
     "replace": {
       "\\bits\\b": "it is",
       "\\bIts\\b": "It is",
       "\\bITS\\b": "IT IS",
-      "\\b(?i)its(?-i)\\b": "it is"
+      "\\b(?i)its\\b": "it is"
     }
   },
   {
-    "find": "\\b(?i)itll(?-i)\\b",
+    "find": "\\b(?i)itll\\b",
     "replace": {
       "\\bitll\\b": "it will",
       "\\bItll\\b": "It will",
       "\\bITLL\\b": "IT WILL",
-      "\\b(?i)itll(?-i)\\b": "it will"
+      "\\b(?i)itll\\b": "it will"
     }
   },
   {
-    "find": "\\b(?i)itd(?-i)\\b",
+    "find": "\\b(?i)itd\\b",
     "replace": {
       "\\bitd\\b": "it would",
       "\\bItd\\b": "It would",
       "\\bITD\\b": "IT WOULD",
-      "\\b(?i)itd(?-i)\\b": "it would"
+      "\\b(?i)itd\\b": "it would"
     }
   },
   {
-    "find": "\\b(?i)maam(?-i)\\b",
+    "find": "\\b(?i)maam\\b",
     "replace": {
       "\\bmaam\\b": "madam",
       "\\bMaam\\b": "Madam",
       "\\bMAAM\\b": "MADAM",
-      "\\b(?i)maam(?-i)\\b": "madam"
+      "\\b(?i)maam\\b": "madam"
     }
   },
   {
-    "find": "\\b(?i)mayve(?-i)\\b",
+    "find": "\\b(?i)mayve\\b",
     "replace": {
       "\\bmayve\\b": "may have",
       "\\bMayve\\b": "May have",
       "\\bMAYVE\\b": "MAY HAVE",
-      "\\b(?i)mayve(?-i)\\b": "may have"
+      "\\b(?i)mayve\\b": "may have"
     }
   },
   {
-    "find": "\\b(?i)maynt(?-i)\\b",
+    "find": "\\b(?i)maynt\\b",
     "replace": {
       "\\bmaynt\\b": "may not",
       "\\bMaynt\\b": "May not",
       "\\bMAYNT\\b": "MAY NOT",
-      "\\b(?i)maynt(?-i)\\b": "may not"
+      "\\b(?i)maynt\\b": "may not"
     }
   },
   {
-    "find": "\\b(?i)mightve(?-i)\\b",
+    "find": "\\b(?i)mightve\\b",
     "replace": {
       "\\bmightve\\b": "might have",
       "\\bMightve\\b": "Might have",
       "\\bMIGHTVE\\b": "MIGHT HAVE",
-      "\\b(?i)mightve(?-i)\\b": "might have"
+      "\\b(?i)mightve\\b": "might have"
     }
   },
   {
-    "find": "\\b(?i)mightnt(?-i)\\b",
+    "find": "\\b(?i)mightnt\\b",
     "replace": {
       "\\bmightnt\\b": "might not",
       "\\bMightnt\\b": "Might not",
       "\\bMIGHTNT\\b": "MIGHT NOT",
-      "\\b(?i)mightnt(?-i)\\b": "might not"
+      "\\b(?i)mightnt\\b": "might not"
     }
   },
   {
-    "find": "\\b(?i)mustve(?-i)\\b",
+    "find": "\\b(?i)mustve\\b",
     "replace": {
       "\\bmustve\\b": "must have",
       "\\bMustve\\b": "Must have",
       "\\bMUSTVE\\b": "MUST HAVE",
-      "\\b(?i)mustve(?-i)\\b": "must have"
+      "\\b(?i)mustve\\b": "must have"
     }
   },
   {
-    "find": "\\b(?i)mustnt(?-i)\\b",
+    "find": "\\b(?i)mustnt\\b",
     "replace": {
       "\\bmustnt\\b": "must not",
       "\\bMustnt\\b": "Must not",
       "\\bMUSTNT\\b": "MUST NOT",
-      "\\b(?i)mustnt(?-i)\\b": "must not"
+      "\\b(?i)mustnt\\b": "must not"
     }
   },
   {
-    "find": "\\b(?i)neednt(?-i)\\b",
+    "find": "\\b(?i)neednt\\b",
     "replace": {
       "\\bneednt\\b": "need not",
       "\\bNeednt\\b": "Need not",
       "\\bNEEDNT\\b": "NEED NOT",
-      "\\b(?i)neednt(?-i)\\b": "need not"
+      "\\b(?i)neednt\\b": "need not"
     }
   },
   {
-    "find": "\\b(?i)neer(?-i)\\b",
+    "find": "\\b(?i)neer\\b",
     "replace": {
       "\\bneer\\b": "never",
       "\\bNeer\\b": "Never",
       "\\bNEER\\b": "NEVER",
-      "\\b(?i)neer(?-i)\\b": "never"
+      "\\b(?i)neer\\b": "never"
     }
   },
   {
-    "find": "\\b(?i)ol(?-i)\\b",
+    "find": "\\b(?i)ol\\b",
     "replace": {
       "\\bol\\b": "old",
       "\\bOl\\b": "Old",
       "\\bOL\\b": "OLD",
-      "\\b(?i)ol(?-i)\\b": "old"
+      "\\b(?i)ol\\b": "old"
     }
   },
   {
-    "find": "\\b(?i)lil(?-i)\\b",
+    "find": "\\b(?i)lil\\b",
     "replace": {
       "\\blil\\b": "little",
       "\\bLil\\b": "Little",
       "\\bLIL\\b": "LITTLE",
-      "\\b(?i)lil(?-i)\\b": "little"
+      "\\b(?i)lil\\b": "little"
     }
   },
   {
-    "find": "\\b(?i)oughtnt(?-i)\\b",
+    "find": "\\b(?i)oughtnt\\b",
     "replace": {
       "\\boughtnt\\b": "ought not",
       "\\bOughtnt\\b": "Ought not",
       "\\bOUGHTNT\\b": "OUGHT NOT",
-      "\\b(?i)oughtnt(?-i)\\b": "ought not"
+      "\\b(?i)oughtnt\\b": "ought not"
     }
   },
   {
-    "find": "\\b(?i)oer(?-i)\\b",
+    "find": "\\b(?i)oer\\b",
     "replace": {
       "\\boer\\b": "over",
       "\\bOer\\b": "Over",
       "\\bOER\\b": "OVER",
-      "\\b(?i)oer(?-i)\\b": "over"
+      "\\b(?i)oer\\b": "over"
     }
   },
   {
-    "find": "\\b(?i)shant(?-i)\\b",
+    "find": "\\b(?i)shant\\b",
     "replace": {
       "\\bshant\\b": "shall not",
       "\\bShant\\b": "Shall not",
       "\\bSHANT\\b": "SHALL NOT",
-      "\\b(?i)shant(?-i)\\b": "shall not"
+      "\\b(?i)shant\\b": "shall not"
     }
   },
   {
-    "find": "\\b(?i)shallnt(?-i)\\b",
+    "find": "\\b(?i)shallnt\\b",
     "replace": {
       "\\bshallnt\\b": "shall not",
       "\\bShallnt\\b": "Shall not",
       "\\bSHALLNT\\b": "SHALL NOT",
-      "\\b(?i)shallnt(?-i)\\b": "shall not"
+      "\\b(?i)shallnt\\b": "shall not"
     }
   },
   {
-    "find": "\\b(?i)shes(?-i)\\b",
+    "find": "\\b(?i)shes\\b",
     "replace": {
       "\\bshes\\b": "she is",
       "\\bShes\\b": "She is",
       "\\bSHES\\b": "SHE IS",
-      "\\b(?i)shes(?-i)\\b": "she is"
+      "\\b(?i)shes\\b": "she is"
     }
   },
   {
-    "find": "\\b(?i)shed(?-i)\\b",
+    "find": "\\b(?i)shed\\b",
     "replace": {
       "\\bshed\\b": "she would",
       "\\bShed\\b": "She would",
       "\\bSHED\\b": "SHE WOULD",
-      "\\b(?i)shed(?-i)\\b": "she would"
+      "\\b(?i)shed\\b": "she would"
     }
   },
   {
-    "find": "\\b(?i)shouldve(?-i)\\b",
+    "find": "\\b(?i)shouldve\\b",
     "replace": {
       "\\bshouldve\\b": "should have",
       "\\bShouldve\\b": "Should have",
       "\\bSHOULDVE\\b": "SHOULD HAVE",
-      "\\b(?i)shouldve(?-i)\\b": "should have"
+      "\\b(?i)shouldve\\b": "should have"
     }
   },
   {
-    "find": "\\b(?i)shouldnt(?-i)\\b",
+    "find": "\\b(?i)shouldnt\\b",
     "replace": {
       "\\bshouldnt\\b": "should not",
       "\\bShouldnt\\b": "Should not",
       "\\bSHOULDNT\\b": "SHOULD NOT",
-      "\\b(?i)shouldnt(?-i)\\b": "should not"
+      "\\b(?i)shouldnt\\b": "should not"
     }
   },
   {
-    "find": "\\b(?i)sove(?-i)\\b",
+    "find": "\\b(?i)sove\\b",
     "replace": {
       "\\bsove\\b": "so have",
       "\\bSove\\b": "So have",
       "\\bSOVE\\b": "SO HAVE",
-      "\\b(?i)sove(?-i)\\b": "so have"
+      "\\b(?i)sove\\b": "so have"
     }
   },
   {
-    "find": "\\b(?i)somebodys(?-i)\\b",
+    "find": "\\b(?i)somebodys\\b",
     "replace": {
       "\\bsomebodys\\b": "somebody is",
       "\\bSomebodys\\b": "Somebody is",
       "\\bSOMEBODYS\\b": "SOMEBODY IS",
-      "\\b(?i)somebodys(?-i)\\b": "somebody is"
+      "\\b(?i)somebodys\\b": "somebody is"
     }
   },
   {
-    "find": "\\b(?i)someones(?-i)\\b",
+    "find": "\\b(?i)someones\\b",
     "replace": {
       "\\bsomeones\\b": "someone is",
       "\\bSomeones\\b": "Someone is",
       "\\bSOMEONES\\b": "SOMEONE IS",
-      "\\b(?i)someones(?-i)\\b": "someone is"
+      "\\b(?i)someones\\b": "someone is"
     }
   },
   {
-    "find": "\\b(?i)somethings(?-i)\\b",
+    "find": "\\b(?i)somethings\\b",
     "replace": {
       "\\bsomethings\\b": "something is",
       "\\bSomethings\\b": "Something is",
       "\\bSOMETHINGS\\b": "SOMETHING IS",
-      "\\b(?i)somethings(?-i)\\b": "something is"
+      "\\b(?i)somethings\\b": "something is"
     }
   },
   {
-    "find": "\\b(?i)thatre(?-i)\\b",
+    "find": "\\b(?i)thatre\\b",
     "replace": {
       "\\bthatre\\b": "that are",
       "\\bThatre\\b": "That are",
       "\\bTHATRE\\b": "THAT ARE",
-      "\\b(?i)thatre(?-i)\\b": "that are"
+      "\\b(?i)thatre\\b": "that are"
     }
   },
   {
-    "find": "\\b(?i)thats(?-i)\\b",
+    "find": "\\b(?i)thats\\b",
     "replace": {
       "\\bthats\\b": "that is",
       "\\bThats\\b": "That is",
       "\\bTHATS\\b": "THAT IS",
-      "\\b(?i)thats(?-i)\\b": "that is"
+      "\\b(?i)thats\\b": "that is"
     }
   },
   {
-    "find": "\\b(?i)thatll(?-i)\\b",
+    "find": "\\b(?i)thatll\\b",
     "replace": {
       "\\bthatll\\b": "that will",
       "\\bThatll\\b": "That will",
       "\\bTHATLL\\b": "THAT WILL",
-      "\\b(?i)thatll(?-i)\\b": "that will"
+      "\\b(?i)thatll\\b": "that will"
     }
   },
   {
-    "find": "\\b(?i)thatd(?-i)\\b",
+    "find": "\\b(?i)thatd\\b",
     "replace": {
       "\\bthatd\\b": "that would",
       "\\bThatd\\b": "That would",
       "\\bTHATD\\b": "THAT WOULD",
-      "\\b(?i)thatd(?-i)\\b": "that would"
+      "\\b(?i)thatd\\b": "that would"
     }
   },
   {
-    "find": "\\b(?i)em(?-i)\\b",
+    "find": "\\b(?i)em\\b",
     "replace": {
       "\\bem\\b": "them",
       "\\bEm\\b": "Them",
       "\\bEM\\b": "THEM",
-      "\\b(?i)em(?-i)\\b": "them"
+      "\\b(?i)em\\b": "them"
     }
   },
   {
-    "find": "\\b(?i)therere(?-i)\\b",
+    "find": "\\b(?i)therere\\b",
     "replace": {
       "\\btherere\\b": "there are",
       "\\bTherere\\b": "There are",
       "\\bTHERERE\\b": "THERE ARE",
-      "\\b(?i)therere(?-i)\\b": "there are"
+      "\\b(?i)therere\\b": "there are"
     }
   },
   {
-    "find": "\\b(?i)theres(?-i)\\b",
+    "find": "\\b(?i)theres\\b",
     "replace": {
       "\\btheres\\b": "there is",
       "\\bTheres\\b": "There is",
       "\\bTHERES\\b": "THERE IS",
-      "\\b(?i)theres(?-i)\\b": "there is"
+      "\\b(?i)theres\\b": "there is"
     }
   },
   {
-    "find": "\\b(?i)therell(?-i)\\b",
+    "find": "\\b(?i)therell\\b",
     "replace": {
       "\\btherell\\b": "there will",
       "\\bTherell\\b": "There will",
       "\\bTHERELL\\b": "THERE WILL",
-      "\\b(?i)therell(?-i)\\b": "there will"
+      "\\b(?i)therell\\b": "there will"
     }
   },
   {
-    "find": "\\b(?i)thered(?-i)\\b",
+    "find": "\\b(?i)thered\\b",
     "replace": {
       "\\bthered\\b": "there would",
       "\\bThered\\b": "There would",
       "\\bTHERED\\b": "THERE WOULD",
-      "\\b(?i)thered(?-i)\\b": "there would"
+      "\\b(?i)thered\\b": "there would"
     }
   },
   {
-    "find": "\\b(?i)thesere(?-i)\\b",
+    "find": "\\b(?i)thesere\\b",
     "replace": {
       "\\bthesere\\b": "these are",
       "\\bThesere\\b": "These are",
       "\\bTHESERE\\b": "THESE ARE",
-      "\\b(?i)thesere(?-i)\\b": "these are"
+      "\\b(?i)thesere\\b": "these are"
     }
   },
   {
-    "find": "\\b(?i)theyre(?-i)\\b",
+    "find": "\\b(?i)theyre\\b",
     "replace": {
       "\\btheyre\\b": "they are",
       "\\bTheyre\\b": "They are",
       "\\bTHEYRE\\b": "THEY ARE",
-      "\\b(?i)theyre(?-i)\\b": "they are"
+      "\\b(?i)theyre\\b": "they are"
     }
   },
   {
-    "find": "\\b(?i)theyve(?-i)\\b",
+    "find": "\\b(?i)theyve\\b",
     "replace": {
       "\\btheyve\\b": "they have",
       "\\bTheyve\\b": "They have",
       "\\bTHEYVE\\b": "THEY HAVE",
-      "\\b(?i)theyve(?-i)\\b": "they have"
+      "\\b(?i)theyve\\b": "they have"
     }
   },
   {
-    "find": "\\b(?i)theyll(?-i)\\b",
+    "find": "\\b(?i)theyll\\b",
     "replace": {
       "\\btheyll\\b": "they will",
       "\\bTheyll\\b": "They will",
       "\\bTHEYLL\\b": "THEY WILL",
-      "\\b(?i)theyll(?-i)\\b": "they will"
+      "\\b(?i)theyll\\b": "they will"
     }
   },
   {
-    "find": "\\b(?i)theyd(?-i)\\b",
+    "find": "\\b(?i)theyd\\b",
     "replace": {
       "\\btheyd\\b": "they would",
       "\\bTheyd\\b": "They would",
       "\\bTHEYD\\b": "THEY WOULD",
-      "\\b(?i)theyd(?-i)\\b": "they would"
+      "\\b(?i)theyd\\b": "they would"
     }
   },
   {
-    "find": "\\b(?i)thosere(?-i)\\b",
+    "find": "\\b(?i)thosere\\b",
     "replace": {
       "\\bthosere\\b": "those are",
       "\\bThosere\\b": "Those are",
       "\\bTHOSERE\\b": "THOSE ARE",
-      "\\b(?i)thosere(?-i)\\b": "those are"
+      "\\b(?i)thosere\\b": "those are"
     }
   },
   {
-    "find": "\\b(?i)wasnt(?-i)\\b",
+    "find": "\\b(?i)wasnt\\b",
     "replace": {
       "\\bwasnt\\b": "was not",
       "\\bWasnt\\b": "Was not",
       "\\bWASNT\\b": "WAS NOT",
-      "\\b(?i)wasnt(?-i)\\b": "was not"
+      "\\b(?i)wasnt\\b": "was not"
     }
   },
   {
-    "find": "\\b(?i)weve(?-i)\\b",
+    "find": "\\b(?i)weve\\b",
     "replace": {
       "\\bweve\\b": "we have",
       "\\bWeve\\b": "We have",
       "\\bWEVE\\b": "WE HAVE",
-      "\\b(?i)weve(?-i)\\b": "we have"
+      "\\b(?i)weve\\b": "we have"
     }
   },
   {
-    "find": "\\b(?i)wed(?-i)\\b",
+    "find": "\\b(?i)wed\\b",
     "replace": {
       "\\bwed\\b": "we would",
       "\\bWed\\b": "We would",
       "\\bWED\\b": "WE WOULD",
-      "\\b(?i)wed(?-i)\\b": "we would"
+      "\\b(?i)wed\\b": "we would"
     }
   },
   {
-    "find": "\\b(?i)werent(?-i)\\b",
+    "find": "\\b(?i)werent\\b",
     "replace": {
       "\\bwerent\\b": "were not",
       "\\bWerent\\b": "Were not",
       "\\bWERENT\\b": "WERE NOT",
-      "\\b(?i)werent(?-i)\\b": "were not"
+      "\\b(?i)werent\\b": "were not"
     }
   },
   {
-    "find": "\\b(?i)whatre(?-i)\\b",
+    "find": "\\b(?i)whatre\\b",
     "replace": {
       "\\bwhatre\\b": "what are",
       "\\bWhatre\\b": "What are",
       "\\bWHATRE\\b": "WHAT ARE",
-      "\\b(?i)whatre(?-i)\\b": "what are"
+      "\\b(?i)whatre\\b": "what are"
     }
   },
   {
-    "find": "\\b(?i)whatd(?-i)\\b",
+    "find": "\\b(?i)whatd\\b",
     "replace": {
       "\\bwhatd\\b": "what did",
       "\\bWhatd\\b": "What did",
       "\\bWHATD\\b": "WHAT DID",
-      "\\b(?i)whatd(?-i)\\b": "what did"
+      "\\b(?i)whatd\\b": "what did"
     }
   },
   {
-    "find": "\\b(?i)whatve(?-i)\\b",
+    "find": "\\b(?i)whatve\\b",
     "replace": {
       "\\bwhatve\\b": "what have",
       "\\bWhatve\\b": "What have",
       "\\bWHATVE\\b": "WHAT HAVE",
-      "\\b(?i)whatve(?-i)\\b": "what have"
+      "\\b(?i)whatve\\b": "what have"
     }
   },
   {
-    "find": "\\b(?i)whats(?-i)\\b",
+    "find": "\\b(?i)whats\\b",
     "replace": {
       "\\bwhats\\b": "what is",
       "\\bWhats\\b": "What is",
       "\\bWHATS\\b": "WHAT IS",
-      "\\b(?i)whats(?-i)\\b": "what is"
+      "\\b(?i)whats\\b": "what is"
     }
   },
   {
-    "find": "\\b(?i)whatll(?-i)\\b",
+    "find": "\\b(?i)whatll\\b",
     "replace": {
       "\\bwhatll\\b": "what will",
       "\\bWhatll\\b": "What will",
       "\\bWHATLL\\b": "WHAT WILL",
-      "\\b(?i)whatll(?-i)\\b": "what will"
+      "\\b(?i)whatll\\b": "what will"
     }
   },
   {
-    "find": "\\b(?i)whenve(?-i)\\b",
+    "find": "\\b(?i)whenve\\b",
     "replace": {
       "\\bwhenve\\b": "when have",
       "\\bWhenve\\b": "When have",
       "\\bWHENVE\\b": "WHEN HAVE",
-      "\\b(?i)whenve(?-i)\\b": "when have"
+      "\\b(?i)whenve\\b": "when have"
     }
   },
   {
-    "find": "\\b(?i)whens(?-i)\\b",
+    "find": "\\b(?i)whens\\b",
     "replace": {
       "\\bwhens\\b": "when is",
       "\\bWhens\\b": "When is",
       "\\bWHENS\\b": "WHEN IS",
-      "\\b(?i)whens(?-i)\\b": "when is"
+      "\\b(?i)whens\\b": "when is"
     }
   },
   {
-    "find": "\\b(?i)wherere(?-i)\\b",
+    "find": "\\b(?i)wherere\\b",
     "replace": {
       "\\bwherere\\b": "where are",
       "\\bWherere\\b": "Where are",
       "\\bWHERERE\\b": "WHERE ARE",
-      "\\b(?i)wherere(?-i)\\b": "where are"
+      "\\b(?i)wherere\\b": "where are"
     }
   },
   {
-    "find": "\\b(?i)whered(?-i)\\b",
+    "find": "\\b(?i)whered\\b",
     "replace": {
       "\\bwhered\\b": "where did",
       "\\bWhered\\b": "Where did",
       "\\bWHERED\\b": "WHERE DID",
-      "\\b(?i)whered(?-i)\\b": "where did"
+      "\\b(?i)whered\\b": "where did"
     }
   },
   {
-    "find": "\\b(?i)whereve(?-i)\\b",
+    "find": "\\b(?i)whereve\\b",
     "replace": {
       "\\bwhereve\\b": "where have",
       "\\bWhereve\\b": "Where have",
       "\\bWHEREVE\\b": "WHERE HAVE",
-      "\\b(?i)whereve(?-i)\\b": "where have"
+      "\\b(?i)whereve\\b": "where have"
     }
   },
   {
-    "find": "\\b(?i)wheres(?-i)\\b",
+    "find": "\\b(?i)wheres\\b",
     "replace": {
       "\\bwheres\\b": "where is",
       "\\bWheres\\b": "Where is",
       "\\bWHERES\\b": "WHERE IS",
-      "\\b(?i)wheres(?-i)\\b": "where is"
+      "\\b(?i)wheres\\b": "where is"
     }
   },
   {
-    "find": "\\b(?i)whichs(?-i)\\b",
+    "find": "\\b(?i)whichs\\b",
     "replace": {
       "\\bwhichs\\b": "which is",
       "\\bWhichs\\b": "Which is",
       "\\bWHICHS\\b": "WHICH IS",
-      "\\b(?i)whichs(?-i)\\b": "which is"
+      "\\b(?i)whichs\\b": "which is"
     }
   },
   {
-    "find": "\\b(?i)whove(?-i)\\b",
+    "find": "\\b(?i)whove\\b",
     "replace": {
       "\\bwhove\\b": "who have",
       "\\bWhove\\b": "Who have",
       "\\bWHOVE\\b": "WHO HAVE",
-      "\\b(?i)whove(?-i)\\b": "who have"
+      "\\b(?i)whove\\b": "who have"
     }
   },
   {
-    "find": "\\b(?i)whos(?-i)\\b",
+    "find": "\\b(?i)whos\\b",
     "replace": {
       "\\bwhos\\b": "who is",
       "\\bWhos\\b": "Who is",
       "\\bWHOS\\b": "WHO IS",
-      "\\b(?i)whos(?-i)\\b": "who is"
+      "\\b(?i)whos\\b": "who is"
     }
   },
   {
-    "find": "\\b(?i)wholl(?-i)\\b",
+    "find": "\\b(?i)wholl\\b",
     "replace": {
       "\\bwholl\\b": "who will",
       "\\bWholl\\b": "Who will",
       "\\bWHOLL\\b": "WHO WILL",
-      "\\b(?i)wholl(?-i)\\b": "who will"
+      "\\b(?i)wholl\\b": "who will"
     }
   },
   {
-    "find": "\\b(?i)whod(?-i)\\b",
+    "find": "\\b(?i)whod\\b",
     "replace": {
       "\\bwhod\\b": "who would",
       "\\bWhod\\b": "Who would",
       "\\bWHOD\\b": "WHO WOULD",
-      "\\b(?i)whod(?-i)\\b": "who would"
+      "\\b(?i)whod\\b": "who would"
     }
   },
   {
-    "find": "\\b(?i)whyre(?-i)\\b",
+    "find": "\\b(?i)whyre\\b",
     "replace": {
       "\\bwhyre\\b": "why are",
       "\\bWhyre\\b": "Why are",
       "\\bWHYRE\\b": "WHY ARE",
-      "\\b(?i)whyre(?-i)\\b": "why are"
+      "\\b(?i)whyre\\b": "why are"
     }
   },
   {
-    "find": "\\b(?i)whyd(?-i)\\b",
+    "find": "\\b(?i)whyd\\b",
     "replace": {
       "\\bwhyd\\b": "why did",
       "\\bWhyd\\b": "Why did",
       "\\bWHYD\\b": "WHY DID",
-      "\\b(?i)whyd(?-i)\\b": "why did"
+      "\\b(?i)whyd\\b": "why did"
     }
   },
   {
-    "find": "\\b(?i)whyve(?-i)\\b",
+    "find": "\\b(?i)whyve\\b",
     "replace": {
       "\\bwhyve\\b": "why have",
       "\\bWhyve\\b": "Why have",
       "\\bWHYVE\\b": "WHY HAVE",
-      "\\b(?i)whyve(?-i)\\b": "why have"
+      "\\b(?i)whyve\\b": "why have"
     }
   },
   {
-    "find": "\\b(?i)whys(?-i)\\b",
+    "find": "\\b(?i)whys\\b",
     "replace": {
       "\\bwhys\\b": "why is",
       "\\bWhys\\b": "Why is",
       "\\bWHYS\\b": "WHY IS",
-      "\\b(?i)whys(?-i)\\b": "why is"
+      "\\b(?i)whys\\b": "why is"
     }
   },
   {
-    "find": "\\b(?i)willve(?-i)\\b",
+    "find": "\\b(?i)willve\\b",
     "replace": {
       "\\bwillve\\b": "will have",
       "\\bWillve\\b": "Will have",
       "\\bWILLVE\\b": "WILL HAVE",
-      "\\b(?i)willve(?-i)\\b": "will have"
+      "\\b(?i)willve\\b": "will have"
     }
   },
   {
-    "find": "\\b(?i)wont(?-i)\\b",
+    "find": "\\b(?i)wont\\b",
     "replace": {
       "\\bwont\\b": "will not",
       "\\bWont\\b": "Will not",
       "\\bWONT\\b": "WILL NOT",
-      "\\b(?i)wont(?-i)\\b": "will not"
+      "\\b(?i)wont\\b": "will not"
     }
   },
   {
-    "find": "\\b(?i)wouldve(?-i)\\b",
+    "find": "\\b(?i)wouldve\\b",
     "replace": {
       "\\bwouldve\\b": "would have",
       "\\bWouldve\\b": "Would have",
       "\\bWOULDVE\\b": "WOULD HAVE",
-      "\\b(?i)wouldve(?-i)\\b": "would have"
+      "\\b(?i)wouldve\\b": "would have"
     }
   },
   {
-    "find": "\\b(?i)wouldnt(?-i)\\b",
+    "find": "\\b(?i)wouldnt\\b",
     "replace": {
       "\\bwouldnt\\b": "would not",
       "\\bWouldnt\\b": "Would not",
       "\\bWOULDNT\\b": "WOULD NOT",
-      "\\b(?i)wouldnt(?-i)\\b": "would not"
+      "\\b(?i)wouldnt\\b": "would not"
     }
   },
   {
-    "find": "\\b(?i)yall(?-i)\\b",
+    "find": "\\b(?i)yall\\b",
     "replace": {
       "\\byall\\b": "you all",
       "\\bYall\\b": "You all",
       "\\bYALL\\b": "YOU ALL",
-      "\\b(?i)yall(?-i)\\b": "you all"
+      "\\b(?i)yall\\b": "you all"
     }
   },
   {
-    "find": "\\b(?i)youre(?-i)\\b",
+    "find": "\\b(?i)youre\\b",
     "replace": {
       "\\byoure\\b": "you are",
       "\\bYoure\\b": "You are",
       "\\bYOURE\\b": "YOU ARE",
-      "\\b(?i)youre(?-i)\\b": "you are"
+      "\\b(?i)youre\\b": "you are"
     }
   },
   {
-    "find": "\\b(?i)youve(?-i)\\b",
+    "find": "\\b(?i)youve\\b",
     "replace": {
       "\\byouve\\b": "you have",
       "\\bYouve\\b": "You have",
       "\\bYOUVE\\b": "YOU HAVE",
-      "\\b(?i)youve(?-i)\\b": "you have"
+      "\\b(?i)youve\\b": "you have"
     }
   },
   {
-    "find": "\\b(?i)youll(?-i)\\b",
+    "find": "\\b(?i)youll\\b",
     "replace": {
       "\\byoull\\b": "you will",
       "\\bYoull\\b": "You will",
       "\\bYOULL\\b": "YOU WILL",
-      "\\b(?i)youll(?-i)\\b": "you will"
+      "\\b(?i)youll\\b": "you will"
     }
   },
   {
-    "find": "\\b(?i)youd(?-i)\\b",
+    "find": "\\b(?i)youd\\b",
     "replace": {
       "\\byoud\\b": "you would",
       "\\bYoud\\b": "You would",
       "\\bYOUD\\b": "YOU WOULD",
-      "\\b(?i)youd(?-i)\\b": "you would"
+      "\\b(?i)youd\\b": "you would"
     }
   },
   {
-    "find": "\\b(?i)tis(?-i)\\b",
+    "find": "\\b(?i)tis\\b",
     "replace": {
       "\\btis\\b": "it is",
       "\\bTis\\b": "It is",
       "\\bTIS\\b": "IT IS",
-      "\\b(?i)tis(?-i)\\b": "it is"
+      "\\b(?i)tis\\b": "it is"
     }
   },
   {
-    "find": "\\b(?i)twas(?-i)\\b",
+    "find": "\\b(?i)twas\\b",
     "replace": {
       "\\btwas\\b": "it was",
       "\\bTwas\\b": "It was",
       "\\bTWAS\\b": "IT WAS",
-      "\\b(?i)twas(?-i)\\b": "it was"
+      "\\b(?i)twas\\b": "it was"
     }
   }
 ]

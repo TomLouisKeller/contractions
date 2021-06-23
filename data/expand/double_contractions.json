@@ -1,551 +1,551 @@
 [
   {
-    "find": "\\b(?i)i['’`]m['’`]a(?-i)\\b",
+    "find": "\\b(?i)i['’`]m['’`]a\\b",
     "replace": {
       "\\bi['’`]m['’`]a\\b": "i am about to",
       "\\bI['’`]m['’`]a\\b": "I am about to",
       "\\bI['’`]M['’`]A\\b": "I AM ABOUT TO",
-      "\\b(?i)i['’`]m['’`]a(?-i)\\b": "i am about to"
+      "\\b(?i)i['’`]m['’`]a\\b": "i am about to"
     }
   },
   {
-    "find": "\\b(?i)i['’`]m['’`]o(?-i)\\b",
+    "find": "\\b(?i)i['’`]m['’`]o\\b",
     "replace": {
       "\\bi['’`]m['’`]o\\b": "i am going to",
       "\\bI['’`]m['’`]o\\b": "I am going to",
       "\\bI['’`]M['’`]O\\b": "I AM GOING TO",
-      "\\b(?i)i['’`]m['’`]o(?-i)\\b": "i am going to"
+      "\\b(?i)i['’`]m['’`]o\\b": "i am going to"
     }
   },
   {
-    "find": "\\b(?i)i['’`]ll['’`]ve(?-i)\\b",
+    "find": "\\b(?i)i['’`]ll['’`]ve\\b",
     "replace": {
       "\\bi['’`]ll['’`]ve\\b": "i will have",
       "\\bI['’`]ll['’`]ve\\b": "I will have",
       "\\bI['’`]LL['’`]VE\\b": "I WILL HAVE",
-      "\\b(?i)i['’`]ll['’`]ve(?-i)\\b": "i will have"
+      "\\b(?i)i['’`]ll['’`]ve\\b": "i will have"
     }
   },
   {
-    "find": "\\b(?i)i['’`]d['’`]ve(?-i)\\b",
+    "find": "\\b(?i)i['’`]d['’`]ve\\b",
     "replace": {
       "\\bi['’`]d['’`]ve\\b": "i would have",
       "\\bI['’`]d['’`]ve\\b": "I would have",
       "\\bI['’`]D['’`]VE\\b": "I WOULD HAVE",
-      "\\b(?i)i['’`]d['’`]ve(?-i)\\b": "i would have"
+      "\\b(?i)i['’`]d['’`]ve\\b": "i would have"
     }
   },
   {
-    "find": "\\b(?i)how['’`]d['’`]y(?-i)\\b",
+    "find": "\\b(?i)how['’`]d['’`]y\\b",
     "replace": {
       "\\bhow['’`]d['’`]y\\b": "how do you",
       "\\bHow['’`]d['’`]y\\b": "How do you",
       "\\bHOW['’`]D['’`]Y\\b": "HOW DO YOU",
-      "\\b(?i)how['’`]d['’`]y(?-i)\\b": "how do you"
+      "\\b(?i)how['’`]d['’`]y\\b": "how do you"
     }
   },
   {
-    "find": "\\b(?i)it['’`]ll['’`]ve(?-i)\\b",
+    "find": "\\b(?i)it['’`]ll['’`]ve\\b",
     "replace": {
       "\\bit['’`]ll['’`]ve\\b": "it will have",
       "\\bIt['’`]ll['’`]ve\\b": "It will have",
       "\\bIT['’`]LL['’`]VE\\b": "IT WILL HAVE",
-      "\\b(?i)it['’`]ll['’`]ve(?-i)\\b": "it will have"
+      "\\b(?i)it['’`]ll['’`]ve\\b": "it will have"
     }
   },
   {
-    "find": "\\b(?i)needn['’`]t['’`]ve(?-i)\\b",
+    "find": "\\b(?i)needn['’`]t['’`]ve\\b",
     "replace": {
       "\\bneedn['’`]t['’`]ve\\b": "need not have",
       "\\bNeedn['’`]t['’`]ve\\b": "Need not have",
       "\\bNEEDN['’`]T['’`]VE\\b": "NEED NOT HAVE",
-      "\\b(?i)needn['’`]t['’`]ve(?-i)\\b": "need not have"
+      "\\b(?i)needn['’`]t['’`]ve\\b": "need not have"
     }
   },
   {
-    "find": "\\b(?i)there['’`]d['’`]ve(?-i)\\b",
+    "find": "\\b(?i)there['’`]d['’`]ve\\b",
     "replace": {
       "\\bthere['’`]d['’`]ve\\b": "there would have",
       "\\bThere['’`]d['’`]ve\\b": "There would have",
       "\\bTHERE['’`]D['’`]VE\\b": "THERE WOULD HAVE",
-      "\\b(?i)there['’`]d['’`]ve(?-i)\\b": "there would have"
+      "\\b(?i)there['’`]d['’`]ve\\b": "there would have"
     }
   },
   {
-    "find": "\\b(?i)['’`]e['’`]ll(?-i)\\b",
+    "find": "\\b(?i)['’`]e['’`]ll\\b",
     "replace": {
       "\\b['’`]e['’`]ll\\b": "he will",
       "\\b['’`]E['’`]ll\\b": "He will",
       "\\b['’`]E['’`]LL\\b": "HE WILL",
-      "\\b(?i)['’`]e['’`]ll(?-i)\\b": "he will"
+      "\\b(?i)['’`]e['’`]ll\\b": "he will"
     }
   },
   {
-    "find": "\\b(?i)['’`]e['’`]s(?-i)\\b",
+    "find": "\\b(?i)['’`]e['’`]s\\b",
     "replace": {
       "\\b['’`]e['’`]s\\b": "he is",
       "\\b['’`]E['’`]s\\b": "He is",
       "\\b['’`]E['’`]S\\b": "HE IS",
-      "\\b(?i)['’`]e['’`]s(?-i)\\b": "he is"
+      "\\b(?i)['’`]e['’`]s\\b": "he is"
     }
   },
   {
-    "find": "\\b(?i)['’`]tisn['’`]t(?-i)\\b",
+    "find": "\\b(?i)['’`]tisn['’`]t\\b",
     "replace": {
       "\\b['’`]tisn['’`]t\\b": "it is not",
       "\\b['’`]Tisn['’`]t\\b": "It is not",
       "\\b['’`]TISN['’`]T\\b": "IT IS NOT",
-      "\\b(?i)['’`]tisn['’`]t(?-i)\\b": "it is not"
+      "\\b(?i)['’`]tisn['’`]t\\b": "it is not"
     }
   },
   {
-    "find": "\\b(?i)['’`]twasn['’`]t(?-i)\\b",
+    "find": "\\b(?i)['’`]twasn['’`]t\\b",
     "replace": {
       "\\b['’`]twasn['’`]t\\b": "it was not",
       "\\b['’`]Twasn['’`]t\\b": "It was not",
       "\\b['’`]TWASN['’`]T\\b": "IT WAS NOT",
-      "\\b(?i)['’`]twasn['’`]t(?-i)\\b": "it was not"
+      "\\b(?i)['’`]twasn['’`]t\\b": "it was not"
     }
   },
   {
-    "find": "\\b(?i)['’`]twon['’`]t(?-i)\\b",
+    "find": "\\b(?i)['’`]twon['’`]t\\b",
     "replace": {
       "\\b['’`]twon['’`]t\\b": "it will not",
       "\\b['’`]Twon['’`]t\\b": "It will not",
       "\\b['’`]TWON['’`]T\\b": "IT WILL NOT",
-      "\\b(?i)['’`]twon['’`]t(?-i)\\b": "it will not"
+      "\\b(?i)['’`]twon['’`]t\\b": "it will not"
     }
   },
   {
-    "find": "\\b(?i)['’`]twou['’`]d(?-i)\\b",
+    "find": "\\b(?i)['’`]twou['’`]d\\b",
     "replace": {
       "\\b['’`]twou['’`]d\\b": "it would",
       "\\b['’`]Twou['’`]d\\b": "It would",
       "\\b['’`]TWOU['’`]D\\b": "IT WOULD",
-      "\\b(?i)['’`]twou['’`]d(?-i)\\b": "it would"
+      "\\b(?i)['’`]twou['’`]d\\b": "it would"
     }
   },
   {
-    "find": "\\b(?i)['’`]twouldn['’`]t(?-i)\\b",
+    "find": "\\b(?i)['’`]twouldn['’`]t\\b",
     "replace": {
       "\\b['’`]twouldn['’`]t\\b": "it would not",
       "\\b['’`]Twouldn['’`]t\\b": "It would not",
       "\\b['’`]TWOULDN['’`]T\\b": "IT WOULD NOT",
-      "\\b(?i)['’`]twouldn['’`]t(?-i)\\b": "it would not"
+      "\\b(?i)['’`]twouldn['’`]t\\b": "it would not"
     }
   },
   {
-    "find": "\\b(?i)can['’`]t['’`]ve(?-i)\\b",
+    "find": "\\b(?i)can['’`]t['’`]ve\\b",
     "replace": {
       "\\bcan['’`]t['’`]ve\\b": "can not have",
       "\\bCan['’`]t['’`]ve\\b": "Can not have",
       "\\bCAN['’`]T['’`]VE\\b": "CAN NOT HAVE",
-      "\\b(?i)can['’`]t['’`]ve(?-i)\\b": "can not have"
+      "\\b(?i)can['’`]t['’`]ve\\b": "can not have"
     }
   },
   {
-    "find": "\\b(?i)couldn['’`]t['’`]ve(?-i)\\b",
+    "find": "\\b(?i)couldn['’`]t['’`]ve\\b",
     "replace": {
       "\\bcouldn['’`]t['’`]ve\\b": "could not have",
       "\\bCouldn['’`]t['’`]ve\\b": "Could not have",
       "\\bCOULDN['’`]T['’`]VE\\b": "COULD NOT HAVE",
-      "\\b(?i)couldn['’`]t['’`]ve(?-i)\\b": "could not have"
+      "\\b(?i)couldn['’`]t['’`]ve\\b": "could not have"
     }
   },
   {
-    "find": "\\b(?i)d['’`]y['’`]all(?-i)\\b",
+    "find": "\\b(?i)d['’`]y['’`]all\\b",
     "replace": {
       "\\bd['’`]y['’`]all\\b": "do you all",
       "\\bD['’`]y['’`]all\\b": "Do you all",
       "\\bD['’`]Y['’`]ALL\\b": "DO YOU ALL",
-      "\\b(?i)d['’`]y['’`]all(?-i)\\b": "do you all"
+      "\\b(?i)d['’`]y['’`]all\\b": "do you all"
     }
   },
   {
-    "find": "\\b(?i)ha['’`]p['’`]orth(?-i)\\b",
+    "find": "\\b(?i)ha['’`]p['’`]orth\\b",
     "replace": {
       "\\bha['’`]p['’`]orth\\b": "halfpennyworth",
       "\\bHa['’`]p['’`]orth\\b": "Halfpennyworth",
       "\\bHA['’`]P['’`]ORTH\\b": "HALFPENNYWORTH",
-      "\\b(?i)ha['’`]p['’`]orth(?-i)\\b": "halfpennyworth"
+      "\\b(?i)ha['’`]p['’`]orth\\b": "halfpennyworth"
     }
   },
   {
-    "find": "\\b(?i)ha['’`]p['’`]orths(?-i)\\b",
+    "find": "\\b(?i)ha['’`]p['’`]orths\\b",
     "replace": {
       "\\bha['’`]p['’`]orths\\b": "halfpenniesworth",
       "\\bHa['’`]p['’`]orths\\b": "Halfpenniesworth",
       "\\bHA['’`]P['’`]ORTHS\\b": "HALFPENNIESWORTH",
-      "\\b(?i)ha['’`]p['’`]orths(?-i)\\b": "halfpenniesworth"
+      "\\b(?i)ha['’`]p['’`]orths\\b": "halfpenniesworth"
     }
   },
   {
-    "find": "\\b(?i)hadn['’`]t['’`]ve(?-i)\\b",
+    "find": "\\b(?i)hadn['’`]t['’`]ve\\b",
     "replace": {
       "\\bhadn['’`]t['’`]ve\\b": "had not have",
       "\\bHadn['’`]t['’`]ve\\b": "Had not have",
       "\\bHADN['’`]T['’`]VE\\b": "HAD NOT HAVE",
-      "\\b(?i)hadn['’`]t['’`]ve(?-i)\\b": "had not have"
+      "\\b(?i)hadn['’`]t['’`]ve\\b": "had not have"
     }
   },
   {
-    "find": "\\b(?i)he['’`]d['’`]ve(?-i)\\b",
+    "find": "\\b(?i)he['’`]d['’`]ve\\b",
     "replace": {
       "\\bhe['’`]d['’`]ve\\b": "he would have",
       "\\bHe['’`]d['’`]ve\\b": "He would have",
       "\\bHE['’`]D['’`]VE\\b": "HE WOULD HAVE",
-      "\\b(?i)he['’`]d['’`]ve(?-i)\\b": "he would have"
+      "\\b(?i)he['’`]d['’`]ve\\b": "he would have"
     }
   },
   {
-    "find": "\\b(?i)he['’`]ll['’`]ve(?-i)\\b",
+    "find": "\\b(?i)he['’`]ll['’`]ve\\b",
     "replace": {
       "\\bhe['’`]ll['’`]ve\\b": "he will have",
       "\\bHe['’`]ll['’`]ve\\b": "He will have",
       "\\bHE['’`]LL['’`]VE\\b": "HE WILL HAVE",
-      "\\b(?i)he['’`]ll['’`]ve(?-i)\\b": "he will have"
+      "\\b(?i)he['’`]ll['’`]ve\\b": "he will have"
     }
   },
   {
-    "find": "\\b(?i)he['’`]sn['’`]t(?-i)\\b",
+    "find": "\\b(?i)he['’`]sn['’`]t\\b",
     "replace": {
       "\\bhe['’`]sn['’`]t\\b": "he is not",
       "\\bHe['’`]sn['’`]t\\b": "He is not",
       "\\bHE['’`]SN['’`]T\\b": "HE IS NOT",
-      "\\b(?i)he['’`]sn['’`]t(?-i)\\b": "he is not"
+      "\\b(?i)he['’`]sn['’`]t\\b": "he is not"
     }
   },
   {
-    "find": "\\b(?i)i['’`]ven['’`]t(?-i)\\b",
+    "find": "\\b(?i)i['’`]ven['’`]t\\b",
     "replace": {
       "\\bi['’`]ven['’`]t\\b": "i have not",
       "\\bI['’`]ven['’`]t\\b": "I have not",
       "\\bI['’`]VEN['’`]T\\b": "I HAVE NOT",
-      "\\b(?i)i['’`]ven['’`]t(?-i)\\b": "i have not"
+      "\\b(?i)i['’`]ven['’`]t\\b": "i have not"
     }
   },
   {
-    "find": "\\b(?i)it['’`]d['’`]ve(?-i)\\b",
+    "find": "\\b(?i)it['’`]d['’`]ve\\b",
     "replace": {
       "\\bit['’`]d['’`]ve\\b": "it would have",
       "\\bIt['’`]d['’`]ve\\b": "It would have",
       "\\bIT['’`]D['’`]VE\\b": "IT WOULD HAVE",
-      "\\b(?i)it['’`]d['’`]ve(?-i)\\b": "it would have"
+      "\\b(?i)it['’`]d['’`]ve\\b": "it would have"
     }
   },
   {
-    "find": "\\b(?i)it['’`]sn['’`]t(?-i)\\b",
+    "find": "\\b(?i)it['’`]sn['’`]t\\b",
     "replace": {
       "\\bit['’`]sn['’`]t\\b": "it is not",
       "\\bIt['’`]sn['’`]t\\b": "It is not",
       "\\bIT['’`]SN['’`]T\\b": "IT IS NOT",
-      "\\b(?i)it['’`]sn['’`]t(?-i)\\b": "it is not"
+      "\\b(?i)it['’`]sn['’`]t\\b": "it is not"
     }
   },
   {
-    "find": "\\b(?i)mightn['’`]t['’`]ve(?-i)\\b",
+    "find": "\\b(?i)mightn['’`]t['’`]ve\\b",
     "replace": {
       "\\bmightn['’`]t['’`]ve\\b": "might not have",
       "\\bMightn['’`]t['’`]ve\\b": "Might not have",
       "\\bMIGHTN['’`]T['’`]VE\\b": "MIGHT NOT HAVE",
-      "\\b(?i)mightn['’`]t['’`]ve(?-i)\\b": "might not have"
+      "\\b(?i)mightn['’`]t['’`]ve\\b": "might not have"
     }
   },
   {
-    "find": "\\b(?i)mustn['’`]t['’`]ve(?-i)\\b",
+    "find": "\\b(?i)mustn['’`]t['’`]ve\\b",
     "replace": {
       "\\bmustn['’`]t['’`]ve\\b": "must not have",
       "\\bMustn['’`]t['’`]ve\\b": "Must not have",
       "\\bMUSTN['’`]T['’`]VE\\b": "MUST NOT HAVE",
-      "\\b(?i)mustn['’`]t['’`]ve(?-i)\\b": "must not have"
+      "\\b(?i)mustn['’`]t['’`]ve\\b": "must not have"
     }
   },
   {
-    "find": "\\b(?i)oughtn['’`]t['’`]ve(?-i)\\b",
+    "find": "\\b(?i)oughtn['’`]t['’`]ve\\b",
     "replace": {
       "\\boughtn['’`]t['’`]ve\\b": "ought not have",
       "\\bOughtn['’`]t['’`]ve\\b": "Ought not have",
       "\\bOUGHTN['’`]T['’`]VE\\b": "OUGHT NOT HAVE",
-      "\\b(?i)oughtn['’`]t['’`]ve(?-i)\\b": "ought not have"
+      "\\b(?i)oughtn['’`]t['’`]ve\\b": "ought not have"
     }
   },
   {
-    "find": "\\b(?i)sha['’`]n['’`]t(?-i)\\b",
+    "find": "\\b(?i)sha['’`]n['’`]t\\b",
     "replace": {
       "\\bsha['’`]n['’`]t\\b": "shall not",
       "\\bSha['’`]n['’`]t\\b": "Shall not",
       "\\bSHA['’`]N['’`]T\\b": "SHALL NOT",
-      "\\b(?i)sha['’`]n['’`]t(?-i)\\b": "shall not"
+      "\\b(?i)sha['’`]n['’`]t\\b": "shall not"
     }
   },
   {
-    "find": "\\b(?i)shan['’`]t['’`]ve(?-i)\\b",
+    "find": "\\b(?i)shan['’`]t['’`]ve\\b",
     "replace": {
       "\\bshan['’`]t['’`]ve\\b": "shall not have",
       "\\bShan['’`]t['’`]ve\\b": "Shall not have",
       "\\bSHAN['’`]T['’`]VE\\b": "SHALL NOT HAVE",
-      "\\b(?i)shan['’`]t['’`]ve(?-i)\\b": "shall not have"
+      "\\b(?i)shan['’`]t['’`]ve\\b": "shall not have"
     }
   },
   {
-    "find": "\\b(?i)she['’`]d['’`]ve(?-i)\\b",
+    "find": "\\b(?i)she['’`]d['’`]ve\\b",
     "replace": {
       "\\bshe['’`]d['’`]ve\\b": "she would have",
       "\\bShe['’`]d['’`]ve\\b": "She would have",
       "\\bSHE['’`]D['’`]VE\\b": "SHE WOULD HAVE",
-      "\\b(?i)she['’`]d['’`]ve(?-i)\\b": "she would have"
+      "\\b(?i)she['’`]d['’`]ve\\b": "she would have"
     }
   },
   {
-    "find": "\\b(?i)she['’`]ll['’`]ve(?-i)\\b",
+    "find": "\\b(?i)she['’`]ll['’`]ve\\b",
     "replace": {
       "\\bshe['’`]ll['’`]ve\\b": "she will have",
       "\\bShe['’`]ll['’`]ve\\b": "She will have",
       "\\bSHE['’`]LL['’`]VE\\b": "SHE WILL HAVE",
-      "\\b(?i)she['’`]ll['’`]ve(?-i)\\b": "she will have"
+      "\\b(?i)she['’`]ll['’`]ve\\b": "she will have"
     }
   },
   {
-    "find": "\\b(?i)she['’`]sn['’`]t(?-i)\\b",
+    "find": "\\b(?i)she['’`]sn['’`]t\\b",
     "replace": {
       "\\bshe['’`]sn['’`]t\\b": "she is not",
       "\\bShe['’`]sn['’`]t\\b": "She is not",
       "\\bSHE['’`]SN['’`]T\\b": "SHE IS NOT",
-      "\\b(?i)she['’`]sn['’`]t(?-i)\\b": "she is not"
+      "\\b(?i)she['’`]sn['’`]t\\b": "she is not"
     }
   },
   {
-    "find": "\\b(?i)shou['’`]dn['’`]t(?-i)\\b",
+    "find": "\\b(?i)shou['’`]dn['’`]t\\b",
     "replace": {
       "\\bshou['’`]dn['’`]t\\b": "should not",
       "\\bShou['’`]dn['’`]t\\b": "Should not",
       "\\bSHOU['’`]DN['’`]T\\b": "SHOULD NOT",
-      "\\b(?i)shou['’`]dn['’`]t(?-i)\\b": "should not"
+      "\\b(?i)shou['’`]dn['’`]t\\b": "should not"
     }
   },
   {
-    "find": "\\b(?i)shouldn['’`]t['’`]ve(?-i)\\b",
+    "find": "\\b(?i)shouldn['’`]t['’`]ve\\b",
     "replace": {
       "\\bshouldn['’`]t['’`]ve\\b": "should not have",
       "\\bShouldn['’`]t['’`]ve\\b": "Should not have",
       "\\bSHOULDN['’`]T['’`]VE\\b": "SHOULD NOT HAVE",
-      "\\b(?i)shouldn['’`]t['’`]ve(?-i)\\b": "should not have"
+      "\\b(?i)shouldn['’`]t['’`]ve\\b": "should not have"
     }
   },
   {
-    "find": "\\b(?i)that['’`]d['’`]ve(?-i)\\b",
+    "find": "\\b(?i)that['’`]d['’`]ve\\b",
     "replace": {
       "\\bthat['’`]d['’`]ve\\b": "that would have",
       "\\bThat['’`]d['’`]ve\\b": "That would have",
       "\\bTHAT['’`]D['’`]VE\\b": "THAT WOULD HAVE",
-      "\\b(?i)that['’`]d['’`]ve(?-i)\\b": "that would have"
+      "\\b(?i)that['’`]d['’`]ve\\b": "that would have"
     }
   },
   {
-    "find": "\\b(?i)that['’`]ll['’`]ve(?-i)\\b",
+    "find": "\\b(?i)that['’`]ll['’`]ve\\b",
     "replace": {
       "\\bthat['’`]ll['’`]ve\\b": "that will have",
       "\\bThat['’`]ll['’`]ve\\b": "That will have",
       "\\bTHAT['’`]LL['’`]VE\\b": "THAT WILL HAVE",
-      "\\b(?i)that['’`]ll['’`]ve(?-i)\\b": "that will have"
+      "\\b(?i)that['’`]ll['’`]ve\\b": "that will have"
     }
   },
   {
-    "find": "\\b(?i)they['’`]d['’`]ve(?-i)\\b",
+    "find": "\\b(?i)they['’`]d['’`]ve\\b",
     "replace": {
       "\\bthey['’`]d['’`]ve\\b": "they would have",
       "\\bThey['’`]d['’`]ve\\b": "They would have",
       "\\bTHEY['’`]D['’`]VE\\b": "THEY WOULD HAVE",
-      "\\b(?i)they['’`]d['’`]ve(?-i)\\b": "they would have"
+      "\\b(?i)they['’`]d['’`]ve\\b": "they would have"
     }
   },
   {
-    "find": "\\b(?i)they['’`]ll['’`]ve(?-i)\\b",
+    "find": "\\b(?i)they['’`]ll['’`]ve\\b",
     "replace": {
       "\\bthey['’`]ll['’`]ve\\b": "they will have",
       "\\bThey['’`]ll['’`]ve\\b": "They will have",
       "\\bTHEY['’`]LL['’`]VE\\b": "THEY WILL HAVE",
-      "\\b(?i)they['’`]ll['’`]ve(?-i)\\b": "they will have"
+      "\\b(?i)they['’`]ll['’`]ve\\b": "they will have"
     }
   },
   {
-    "find": "\\b(?i)['’`]tweren['’`]t(?-i)\\b",
+    "find": "\\b(?i)['’`]tweren['’`]t\\b",
     "replace": {
       "\\b['’`]tweren['’`]t\\b": "it were not",
       "\\b['’`]Tweren['’`]t\\b": "It were not",
       "\\b['’`]TWEREN['’`]T\\b": "IT WERE NOT",
-      "\\b(?i)['’`]tweren['’`]t(?-i)\\b": "it were not"
+      "\\b(?i)['’`]tweren['’`]t\\b": "it were not"
     }
   },
   {
-    "find": "\\b(?i)we['’`]d['’`]ve(?-i)\\b",
+    "find": "\\b(?i)we['’`]d['’`]ve\\b",
     "replace": {
       "\\bwe['’`]d['’`]ve\\b": "we would have",
       "\\bWe['’`]d['’`]ve\\b": "We would have",
       "\\bWE['’`]D['’`]VE\\b": "WE WOULD HAVE",
-      "\\b(?i)we['’`]d['’`]ve(?-i)\\b": "we would have"
+      "\\b(?i)we['’`]d['’`]ve\\b": "we would have"
     }
   },
   {
-    "find": "\\b(?i)we['’`]ll['’`]ve(?-i)\\b",
+    "find": "\\b(?i)we['’`]ll['’`]ve\\b",
     "replace": {
       "\\bwe['’`]ll['’`]ve\\b": "we will have",
       "\\bWe['’`]ll['’`]ve\\b": "We will have",
       "\\bWE['’`]LL['’`]VE\\b": "WE WILL HAVE",
-      "\\b(?i)we['’`]ll['’`]ve(?-i)\\b": "we will have"
+      "\\b(?i)we['’`]ll['’`]ve\\b": "we will have"
     }
   },
   {
-    "find": "\\b(?i)we['’`]ven['’`]t(?-i)\\b",
+    "find": "\\b(?i)we['’`]ven['’`]t\\b",
     "replace": {
       "\\bwe['’`]ven['’`]t\\b": "we have not",
       "\\bWe['’`]ven['’`]t\\b": "We have not",
       "\\bWE['’`]VEN['’`]T\\b": "WE HAVE NOT",
-      "\\b(?i)we['’`]ven['’`]t(?-i)\\b": "we have not"
+      "\\b(?i)we['’`]ven['’`]t\\b": "we have not"
     }
   },
   {
-    "find": "\\b(?i)what['’`]ll['’`]ve(?-i)\\b",
+    "find": "\\b(?i)what['’`]ll['’`]ve\\b",
     "replace": {
       "\\bwhat['’`]ll['’`]ve\\b": "what will have",
       "\\bWhat['’`]ll['’`]ve\\b": "What will have",
       "\\bWHAT['’`]LL['’`]VE\\b": "WHAT WILL HAVE",
-      "\\b(?i)what['’`]ll['’`]ve(?-i)\\b": "what will have"
+      "\\b(?i)what['’`]ll['’`]ve\\b": "what will have"
     }
   },
   {
-    "find": "\\b(?i)who['’`]ll['’`]ve(?-i)\\b",
+    "find": "\\b(?i)who['’`]ll['’`]ve\\b",
     "replace": {
       "\\bwho['’`]ll['’`]ve\\b": "who will have",
       "\\bWho['’`]ll['’`]ve\\b": "Who will have",
       "\\bWHO['’`]LL['’`]VE\\b": "WHO WILL HAVE",
-      "\\b(?i)who['’`]ll['’`]ve(?-i)\\b": "who will have"
+      "\\b(?i)who['’`]ll['’`]ve\\b": "who will have"
     }
   },
   {
-    "find": "\\b(?i)who['’`]d['’`]ve(?-i)\\b",
+    "find": "\\b(?i)who['’`]d['’`]ve\\b",
     "replace": {
       "\\bwho['’`]d['’`]ve\\b": "who would have",
       "\\bWho['’`]d['’`]ve\\b": "Who would have",
       "\\bWHO['’`]D['’`]VE\\b": "WHO WOULD HAVE",
-      "\\b(?i)who['’`]d['’`]ve(?-i)\\b": "who would have"
+      "\\b(?i)who['’`]d['’`]ve\\b": "who would have"
     }
   },
   {
-    "find": "\\b(?i)wouldn['’`]t['’`]ve(?-i)\\b",
+    "find": "\\b(?i)wouldn['’`]t['’`]ve\\b",
     "replace": {
       "\\bwouldn['’`]t['’`]ve\\b": "would not have",
       "\\bWouldn['’`]t['’`]ve\\b": "Would not have",
       "\\bWOULDN['’`]T['’`]VE\\b": "WOULD NOT HAVE",
-      "\\b(?i)wouldn['’`]t['’`]ve(?-i)\\b": "would not have"
+      "\\b(?i)wouldn['’`]t['’`]ve\\b": "would not have"
     }
   },
   {
-    "find": "\\b(?i)won['’`]t['’`]ve(?-i)\\b",
+    "find": "\\b(?i)won['’`]t['’`]ve\\b",
     "replace": {
       "\\bwon['’`]t['’`]ve\\b": "will not have",
       "\\bWon['’`]t['’`]ve\\b": "Will not have",
       "\\bWON['’`]T['’`]VE\\b": "WILL NOT HAVE",
-      "\\b(?i)won['’`]t['’`]ve(?-i)\\b": "will not have"
+      "\\b(?i)won['’`]t['’`]ve\\b": "will not have"
     }
   },
   {
-    "find": "\\b(?i)wou['’`]dn['’`]t(?-i)\\b",
+    "find": "\\b(?i)wou['’`]dn['’`]t\\b",
     "replace": {
       "\\bwou['’`]dn['’`]t\\b": "will not have",
       "\\bWou['’`]dn['’`]t\\b": "Will not have",
       "\\bWOU['’`]DN['’`]T\\b": "WILL NOT HAVE",
-      "\\b(?i)wou['’`]dn['’`]t(?-i)\\b": "will not have"
+      "\\b(?i)wou['’`]dn['’`]t\\b": "will not have"
     }
   },
   {
-    "find": "\\b(?i)y['’`]ain['’`]t(?-i)\\b",
+    "find": "\\b(?i)y['’`]ain['’`]t\\b",
     "replace": {
       "\\by['’`]ain['’`]t\\b": "you are not",
       "\\bY['’`]ain['’`]t\\b": "You are not",
       "\\bY['’`]AIN['’`]T\\b": "YOU ARE NOT",
-      "\\b(?i)y['’`]ain['’`]t(?-i)\\b": "you are not"
+      "\\b(?i)y['’`]ain['’`]t\\b": "you are not"
     }
   },
   {
-    "find": "\\b(?i)y['’`]all['’`]d(?-i)\\b",
+    "find": "\\b(?i)y['’`]all['’`]d\\b",
     "replace": {
       "\\by['’`]all['’`]d\\b": "you all would",
       "\\bY['’`]all['’`]d\\b": "You all would",
       "\\bY['’`]ALL['’`]D\\b": "YOU ALL WOULD",
-      "\\b(?i)y['’`]all['’`]d(?-i)\\b": "you all would"
+      "\\b(?i)y['’`]all['’`]d\\b": "you all would"
     }
   },
   {
-    "find": "\\b(?i)y['’`]all['’`]ll(?-i)\\b",
+    "find": "\\b(?i)y['’`]all['’`]ll\\b",
     "replace": {
       "\\by['’`]all['’`]ll\\b": "you all will",
       "\\bY['’`]all['’`]ll\\b": "You all will",
       "\\bY['’`]ALL['’`]LL\\b": "YOU ALL WILL",
-      "\\b(?i)y['’`]all['’`]ll(?-i)\\b": "you all will"
+      "\\b(?i)y['’`]all['’`]ll\\b": "you all will"
     }
   },
   {
-    "find": "\\b(?i)y['’`]all['’`]re(?-i)\\b",
+    "find": "\\b(?i)y['’`]all['’`]re\\b",
     "replace": {
       "\\by['’`]all['’`]re\\b": "you all are",
       "\\bY['’`]all['’`]re\\b": "You all are",
       "\\bY['’`]ALL['’`]RE\\b": "YOU ALL ARE",
-      "\\b(?i)y['’`]all['’`]re(?-i)\\b": "you all are"
+      "\\b(?i)y['’`]all['’`]re\\b": "you all are"
     }
   },
   {
-    "find": "\\b(?i)y['’`]all['’`]ve(?-i)\\b",
+    "find": "\\b(?i)y['’`]all['’`]ve\\b",
     "replace": {
       "\\by['’`]all['’`]ve\\b": "you all have",
       "\\bY['’`]all['’`]ve\\b": "You all have",
       "\\bY['’`]ALL['’`]VE\\b": "YOU ALL HAVE",
-      "\\b(?i)y['’`]all['’`]ve(?-i)\\b": "you all have"
+      "\\b(?i)y['’`]all['’`]ve\\b": "you all have"
     }
   },
   {
-    "find": "\\b(?i)you['’`]d['’`]ve(?-i)\\b",
+    "find": "\\b(?i)you['’`]d['’`]ve\\b",
     "replace": {
       "\\byou['’`]d['’`]ve\\b": "you would have",
       "\\bYou['’`]d['’`]ve\\b": "You would have",
       "\\bYOU['’`]D['’`]VE\\b": "YOU WOULD HAVE",
-      "\\b(?i)you['’`]d['’`]ve(?-i)\\b": "you would have"
+      "\\b(?i)you['’`]d['’`]ve\\b": "you would have"
     }
   },
   {
-    "find": "\\b(?i)you['’`]ll['’`]ve(?-i)\\b",
+    "find": "\\b(?i)you['’`]ll['’`]ve\\b",
     "replace": {
       "\\byou['’`]ll['’`]ve\\b": "you will have",
       "\\bYou['’`]ll['’`]ve\\b": "You will have",
       "\\bYOU['’`]LL['’`]VE\\b": "YOU WILL HAVE",
-      "\\b(?i)you['’`]ll['’`]ve(?-i)\\b": "you will have"
+      "\\b(?i)you['’`]ll['’`]ve\\b": "you will have"
     }
   },
   {
-    "find": "\\b(?i)you['’`]ren['’`]t(?-i)\\b",
+    "find": "\\b(?i)you['’`]ren['’`]t\\b",
     "replace": {
       "\\byou['’`]ren['’`]t\\b": "you are not",
       "\\bYou['’`]ren['’`]t\\b": "You are not",
       "\\bYOU['’`]REN['’`]T\\b": "YOU ARE NOT",
-      "\\b(?i)you['’`]ren['’`]t(?-i)\\b": "you are not"
+      "\\b(?i)you['’`]ren['’`]t\\b": "you are not"
     }
   },
   {
-    "find": "\\b(?i)you['’`]ven['’`]t(?-i)\\b",
+    "find": "\\b(?i)you['’`]ven['’`]t\\b",
     "replace": {
       "\\byou['’`]ven['’`]t\\b": "you have not",
       "\\bYou['’`]ven['’`]t\\b": "You have not",
       "\\bYOU['’`]VEN['’`]T\\b": "YOU HAVE NOT",
-      "\\b(?i)you['’`]ven['’`]t(?-i)\\b": "you have not"
+      "\\b(?i)you['’`]ven['’`]t\\b": "you have not"
     }
   },
   {
-    "find": "\\b(?i)cou['’`]dn['’`]t(?-i)\\b",
+    "find": "\\b(?i)cou['’`]dn['’`]t\\b",
     "replace": {
       "\\bcou['’`]dn['’`]t\\b": "could not",
       "\\bCou['’`]dn['’`]t\\b": "Could not",
       "\\bCOU['’`]DN['’`]T\\b": "COULD NOT",
-      "\\b(?i)cou['’`]dn['’`]t(?-i)\\b": "could not"
+      "\\b(?i)cou['’`]dn['’`]t\\b": "could not"
     }
   }
 ]

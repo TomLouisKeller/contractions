@@ -1,278 +1,278 @@
 [
   {
-    "find": "\\b(?i)kinda(?-i)\\b",
+    "find": "\\b(?i)kinda\\b",
     "replace": {
       "\\bkinda\\b": "kind of",
       "\\bKinda\\b": "Kind of",
       "\\bKINDA\\b": "KIND OF",
-      "\\b(?i)kinda(?-i)\\b": "kind of"
+      "\\b(?i)kinda\\b": "kind of"
     }
   },
   {
-    "find": "\\b(?i)luv(?-i)\\b",
+    "find": "\\b(?i)luv\\b",
     "replace": {
       "\\bluv\\b": "love",
       "\\bLuv\\b": "Love",
       "\\bLUV\\b": "LOVE",
-      "\\b(?i)luv(?-i)\\b": "love"
+      "\\b(?i)luv\\b": "love"
     }
   },
   {
-    "find": "\\b(?i)sux(?-i)\\b",
+    "find": "\\b(?i)sux\\b",
     "replace": {
       "\\bsux\\b": "sucks",
       "\\bSux\\b": "Sucks",
       "\\bSUX\\b": "SUCKS",
-      "\\b(?i)sux(?-i)\\b": "sucks"
+      "\\b(?i)sux\\b": "sucks"
     }
   },
   {
-    "find": "\\b(?i)ima(?-i)\\b",
+    "find": "\\b(?i)ima\\b",
     "replace": {
       "\\bima\\b": "i am going to",
       "\\bIma\\b": "I am going to",
       "\\bIMA\\b": "I AM GOING TO",
-      "\\b(?i)ima(?-i)\\b": "i am going to"
+      "\\b(?i)ima\\b": "i am going to"
     }
   },
   {
-    "find": "\\b(?i)woulda(?-i)\\b",
+    "find": "\\b(?i)woulda\\b",
     "replace": {
       "\\bwoulda\\b": "would have",
       "\\bWoulda\\b": "Would have",
       "\\bWOULDA\\b": "WOULD HAVE",
-      "\\b(?i)woulda(?-i)\\b": "would have"
+      "\\b(?i)woulda\\b": "would have"
     }
   },
   {
-    "find": "\\b(?i)asap(?-i)\\b",
+    "find": "\\b(?i)asap\\b",
     "replace": {
       "\\basap\\b": "as soon as possible",
       "\\bAsap\\b": "As soon as possible",
       "\\bASAP\\b": "AS SOON AS POSSIBLE",
-      "\\b(?i)asap(?-i)\\b": "as soon as possible"
+      "\\b(?i)asap\\b": "as soon as possible"
     }
   },
   {
-    "find": "\\b(?i)innit(?-i)\\b",
+    "find": "\\b(?i)innit\\b",
     "replace": {
       "\\binnit\\b": "is it not",
       "\\bInnit\\b": "Is it not",
       "\\bINNIT\\b": "IS IT NOT",
-      "\\b(?i)innit(?-i)\\b": "is it not"
+      "\\b(?i)innit\\b": "is it not"
     }
   },
   {
-    "find": "\\b(?i)whatcha(?-i)\\b",
+    "find": "\\b(?i)whatcha\\b",
     "replace": {
       "\\bwhatcha\\b": "What are you",
       "\\bWhatcha\\b": "What are you",
       "\\bWHATCHA\\b": "WHAT ARE YOU",
-      "\\b(?i)whatcha(?-i)\\b": "What are you"
+      "\\b(?i)whatcha\\b": "What are you"
     }
   },
   {
-    "find": "\\b(?i)finna(?-i)\\b",
+    "find": "\\b(?i)finna\\b",
     "replace": {
       "\\bfinna\\b": "fixing to",
       "\\bFinna\\b": "Fixing to",
       "\\bFINNA\\b": "FIXING TO",
-      "\\b(?i)finna(?-i)\\b": "fixing to"
+      "\\b(?i)finna\\b": "fixing to"
     }
   },
   {
-    "find": "\\b(?i)gimme(?-i)\\b",
+    "find": "\\b(?i)gimme\\b",
     "replace": {
       "\\bgimme\\b": "give me",
       "\\bGimme\\b": "Give me",
       "\\bGIMME\\b": "GIVE ME",
-      "\\b(?i)gimme(?-i)\\b": "give me"
+      "\\b(?i)gimme\\b": "give me"
     }
   },
   {
-    "find": "\\b(?i)gonna(?-i)\\b",
+    "find": "\\b(?i)gonna\\b",
     "replace": {
       "\\bgonna\\b": "going to",
       "\\bGonna\\b": "Going to",
       "\\bGONNA\\b": "GOING TO",
-      "\\b(?i)gonna(?-i)\\b": "going to"
+      "\\b(?i)gonna\\b": "going to"
     }
   },
   {
-    "find": "\\b(?i)`gotta(?-i)\\b",
+    "find": "\\b(?i)`gotta\\b",
     "replace": {
       "\\b`gotta\\b": "Got to",
       "\\b`GOTTA\\b": "GOT TO",
-      "\\b(?i)`gotta(?-i)\\b": "got to"
+      "\\b(?i)`gotta\\b": "got to"
     }
   },
   {
-    "find": "\\b(?i)wanna(?-i)\\b",
+    "find": "\\b(?i)wanna\\b",
     "replace": {
       "\\bwanna\\b": "want to",
       "\\bWanna\\b": "Want to",
       "\\bWANNA\\b": "WANT TO",
-      "\\b(?i)wanna(?-i)\\b": "want to"
+      "\\b(?i)wanna\\b": "want to"
     }
   },
   {
-    "find": "\\b(?i)u(?-i)\\b",
+    "find": "\\b(?i)u\\b",
     "replace": {
       "\\bu\\b": "you",
       "\\bU\\b": "You",
-      "\\b(?i)u(?-i)\\b": "you"
+      "\\b(?i)u\\b": "you"
     }
   },
   {
-    "find": "\\b(?i)r(?-i)\\b",
+    "find": "\\b(?i)r\\b",
     "replace": {
       "\\br\\b": "are",
       "\\bR\\b": "Are",
-      "\\b(?i)r(?-i)\\b": "are"
+      "\\b(?i)r\\b": "are"
     }
   },
   {
-    "find": "\\b(?i)havin['’`](?-i)\\b",
+    "find": "\\b(?i)havin['’`]\\b",
     "replace": {
       "\\bhavin['’`]\\b": "having",
       "\\bHavin['’`]\\b": "Having",
       "\\bHAVIN['’`]\\b": "HAVING",
-      "\\b(?i)havin['’`](?-i)\\b": "having"
+      "\\b(?i)havin['’`]\\b": "having"
     }
   },
   {
-    "find": "\\b(?i)havin(?-i)\\b",
+    "find": "\\b(?i)havin\\b",
     "replace": {
       "\\bhavin\\b": "having",
       "\\bHavin\\b": "Having",
       "\\bHAVIN\\b": "HAVING",
-      "\\b(?i)havin(?-i)\\b": "having"
+      "\\b(?i)havin\\b": "having"
     }
   },
   {
-    "find": "\\b(?i)lovin(?-i)\\b",
+    "find": "\\b(?i)lovin\\b",
     "replace": {
       "\\blovin\\b": "loving",
       "\\bLovin\\b": "Loving",
       "\\bLOVIN\\b": "LOVING",
-      "\\b(?i)lovin(?-i)\\b": "loving"
+      "\\b(?i)lovin\\b": "loving"
     }
   },
   {
-    "find": "\\b(?i)lovin['’`](?-i)\\b",
+    "find": "\\b(?i)lovin['’`]\\b",
     "replace": {
       "\\blovin['’`]\\b": "loving",
       "\\bLovin['’`]\\b": "Loving",
       "\\bLOVIN['’`]\\b": "LOVING",
-      "\\b(?i)lovin['’`](?-i)\\b": "loving"
+      "\\b(?i)lovin['’`]\\b": "loving"
     }
   },
   {
-    "find": "\\b(?i)['’`]cause(?-i)\\b",
+    "find": "\\b(?i)['’`]cause\\b",
     "replace": {
       "\\b['’`]cause\\b": "because",
       "\\b['’`]Cause\\b": "Because",
       "\\b['’`]CAUSE\\b": "BECAUSE",
-      "\\b(?i)['’`]cause(?-i)\\b": "because"
+      "\\b(?i)['’`]cause\\b": "because"
     }
   },
   {
-    "find": "\\b(?i)doin['’`](?-i)\\b",
+    "find": "\\b(?i)doin['’`]\\b",
     "replace": {
       "\\bdoin['’`]\\b": "doing",
       "\\bDoin['’`]\\b": "Doing",
       "\\bDOIN['’`]\\b": "DOING",
-      "\\b(?i)doin['’`](?-i)\\b": "doing"
+      "\\b(?i)doin['’`]\\b": "doing"
     }
   },
   {
-    "find": "\\b(?i)doin(?-i)\\b",
+    "find": "\\b(?i)doin\\b",
     "replace": {
       "\\bdoin\\b": "doing",
       "\\bDoin\\b": "Doing",
       "\\bDOIN\\b": "DOING",
-      "\\b(?i)doin(?-i)\\b": "doing"
+      "\\b(?i)doin\\b": "doing"
     }
   },
   {
-    "find": "\\b(?i)goin['’`](?-i)\\b",
+    "find": "\\b(?i)goin['’`]\\b",
     "replace": {
       "\\bgoin['’`]\\b": "going",
       "\\bGoin['’`]\\b": "Going",
       "\\bGOIN['’`]\\b": "GOING",
-      "\\b(?i)goin['’`](?-i)\\b": "going"
+      "\\b(?i)goin['’`]\\b": "going"
     }
   },
   {
-    "find": "\\b(?i)goin(?-i)\\b",
+    "find": "\\b(?i)goin\\b",
     "replace": {
       "\\bgoin\\b": "going",
       "\\bGoin\\b": "Going",
       "\\bGOIN\\b": "GOING",
-      "\\b(?i)goin(?-i)\\b": "going"
+      "\\b(?i)goin\\b": "going"
     }
   },
   {
-    "find": "\\b(?i)nothin['’`](?-i)\\b",
+    "find": "\\b(?i)nothin['’`]\\b",
     "replace": {
       "\\bnothin['’`]\\b": "nothing",
       "\\bNothin['’`]\\b": "Nothing",
       "\\bNOTHIN['’`]\\b": "NOTHING",
-      "\\b(?i)nothin['’`](?-i)\\b": "nothing"
+      "\\b(?i)nothin['’`]\\b": "nothing"
     }
   },
   {
-    "find": "\\b(?i)nothin(?-i)\\b",
+    "find": "\\b(?i)nothin\\b",
     "replace": {
       "\\bnothin\\b": "nothing",
       "\\bNothin\\b": "Nothing",
       "\\bNOTHIN\\b": "NOTHING",
-      "\\b(?i)nothin(?-i)\\b": "nothing"
+      "\\b(?i)nothin\\b": "nothing"
     }
   },
   {
-    "find": "\\b(?i)somethin['’`](?-i)\\b",
+    "find": "\\b(?i)somethin['’`]\\b",
     "replace": {
       "\\bsomethin['’`]\\b": "something",
       "\\bSomethin['’`]\\b": "Something",
       "\\bSOMETHIN['’`]\\b": "SOMETHING",
-      "\\b(?i)somethin['’`](?-i)\\b": "something"
+      "\\b(?i)somethin['’`]\\b": "something"
     }
   },
   {
-    "find": "\\b(?i)somethin(?-i)\\b",
+    "find": "\\b(?i)somethin\\b",
     "replace": {
       "\\bsomethin\\b": "something",
       "\\bSomethin\\b": "Something",
       "\\bSOMETHIN\\b": "SOMETHING",
-      "\\b(?i)somethin(?-i)\\b": "something"
+      "\\b(?i)somethin\\b": "something"
     }
   },
   {
-    "find": "\\b(?i)['’`]coz(?-i)\\b",
+    "find": "\\b(?i)['’`]coz\\b",
     "replace": {
       "\\b['’`]coz\\b": "because",
       "\\b['’`]Coz\\b": "Because",
       "\\b['’`]COZ\\b": "BECAUSE",
-      "\\b(?i)['’`]coz(?-i)\\b": "because"
+      "\\b(?i)['’`]coz\\b": "because"
     }
   },
   {
-    "find": "\\b(?i)coz(?-i)\\b",
+    "find": "\\b(?i)coz\\b",
     "replace": {
       "\\bcoz\\b": "because",
       "\\bCoz\\b": "Because",
       "\\bCOZ\\b": "BECAUSE",
-      "\\b(?i)coz(?-i)\\b": "because"
+      "\\b(?i)coz\\b": "because"
     }
   },
   {
-    "find": "\\b(?i)dunno(?-i)\\b",
+    "find": "\\b(?i)dunno\\b",
     "replace": {
       "\\dunno\\b": "do not know",
       "\\bDunno\\b": "Do not know",
       "\\bDUNNO\\b": "DO NOT KNOW",
-      "\\b(?i)dunno(?-i)\\b": "do not know"
+      "\\b(?i)dunno\\b": "do not know"
     }
   }
 ]

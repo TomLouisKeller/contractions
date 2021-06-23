@@ -1,19 +1,19 @@
 [
   {
-    "find": "\\b(?i)y['’`]all['’`]d['’`]ve(?-i)\\b",
+    "find": "\\b(?i)y['’`]all['’`]d['’`]ve\\b",
     "replace": {
       "\\by['’`]all['’`]d['’`]ve\\b": "you all would have",
       "\\bY['’`]all['’`]d['’`]ve\\b": "You all would have",
       "\\bY['’`]ALL['’`]D['’`]VE\\b": "YOU ALL WOULD HAVE",
-      "\\b(?i)y['’`]all['’`]d['’`]ve(?-i)\\b": "you all would have"
+      "\\b(?i)y['’`]all['’`]d['’`]ve\\b": "you all would have"
     }
   },
   {
-    "find": "\\b(?i)['’`]twou['’`]dn['’`]t(?-i)\\b",
+    "find": "\\b(?i)['’`]twou['’`]dn['’`]t\\b",
     "replace": {
       "\\b['’`]twou['’`]dn['’`]t\\b": "It would not",
       "\\b['’`]TWOU['’`]DN['’`]T\\b": "IT WOULD NOT",
-      "\\b(?i)['’`]twou['’`]dn['’`]t(?-i)\\b": "it would not"
+      "\\b(?i)['’`]twou['’`]dn['’`]t\\b": "it would not"
     }
   }
 ]
