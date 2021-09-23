@@ -40,19 +40,19 @@ use sortable_regex::SortableRegex;
 
 /// Contains slang terms which will be expanded/changed to their full form
 pub const EXPAND_SLANG_JSON :&str = include_str!("../data/expand/slang.json");
-/// Contains contractions with one apostroph in json form (eg: I'm, I've, 'twas)
+/// Contains contractions with one apostrophe in json form (eg: I'm, I've, 'twas)
 pub const EXPAND_SINGLE_CONTRACTIONS_JSON :&str =
     include_str!("../data/expand/single_contractions.json");
-/// Contains contractions with two apostroph in json form (eg: Who'll've, Wouldn't've, Mustn't've)
+/// Contains contractions with two apostrophe in json form (eg: Who'll've, Wouldn't've, Mustn't've)
 pub const EXPAND_DOUBLE_CONTRACTIONS_JSON :&str =
     include_str!("../data/expand/double_contractions.json");
-/// Contains contractions with three apostroph in json form (Y'all'd've, 'twou'dn't)
+/// Contains contractions with three apostrophe in json form (Y'all'd've, 'twou'dn't)
 pub const EXPAND_TRIPLE_CONTRACTIONS_JSON :&str =
     include_str!("../data/expand/triple_contractions.json");
-/// Contains most of `CONTRACTIONS_SINGLE_JSON` contractions but without apostroph
+/// Contains most of `CONTRACTIONS_SINGLE_JSON` contractions but without apostrophe
 pub const EXPAND_SINGLE_NO_APOSTROPHE_CONTRACTIONS_JSON :&str =
     include_str!("../data/expand/single_no_apostrophe_contractions.json");
-/// Contains most of `CONTRACTIONS_DOUBLE_JSON` contractions but without apostroph
+/// Contains most of `CONTRACTIONS_DOUBLE_JSON` contractions but without apostrophe
 pub const EXPAND_DOUBLE_NO_APOSTROPHE_CONTRACTIONS_JSON :&str =
     include_str!("../data/expand/double_no_apostrophe_contractions.json");
 /// Contains partial contractions in json form. (eg: 'm, 've, n't, 're)

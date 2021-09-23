@@ -8,7 +8,7 @@ type TestResult = core::result::Result<(), Box<dyn Error>>;
 // apply()
 
 #[test]
-fn apply__single_apostroph() -> TestResult {
+fn apply__single_apostrophe() -> TestResult {
     let contractions = Contractions::default();
     assert_eq!(
         contractions.apply("i’m happy to meet you"),
@@ -18,7 +18,7 @@ fn apply__single_apostroph() -> TestResult {
 }
 
 #[test]
-fn apply__double_apostroph() -> TestResult {
+fn apply__double_apostrophe() -> TestResult {
     let contractions = Contractions::default();
     assert_eq!(
         contractions.apply("i’m’a head out"),
@@ -28,21 +28,21 @@ fn apply__double_apostroph() -> TestResult {
 }
 
 #[test]
-fn apply__double_apostroph_would_have() -> TestResult {
+fn apply__double_apostrophe_would_have() -> TestResult {
     let contractions = Contractions::default();
     assert_eq!(contractions.apply("it’d’ve"), "it would have");
     Ok(())
 }
 
 #[test]
-fn apply__double_apostroph_will_have() -> TestResult {
+fn apply__double_apostrophe_will_have() -> TestResult {
     let contractions = Contractions::default();
     assert_eq!(contractions.apply("he’ll’ve"), "he will have");
     Ok(())
 }
 
 #[test]
-fn apply__double_apostroph_are() -> TestResult {
+fn apply__double_apostrophe_are() -> TestResult {
     let contractions = Contractions::default();
     assert_eq!(contractions.apply("you’ren’t"), "you are not");
     Ok(())
@@ -139,8 +139,8 @@ fn from_json__by_hand() -> TestResult {
     "#;
     let contractions = Contractions::from_json(&[&contractions_as_json])?;
     assert_eq!(
-        contractions.apply("I`m`a woop your butt"),
-        "I am about to woop your butt"
+        contractions.apply("I`m`a whop your butt"),
+        "I am about to whop your butt"
     );
     Ok(())
 }

@@ -48,7 +48,7 @@ rejected:
 ## no_apostrophe_single_contractions.json
 
 homophones
-Some contractions result in actual words if the apostroph is removed.
+Some contractions result in actual words if the apostrophe is removed.
 Those contractions were removed.
 "Ill": "I will",
 "hell": "he will",
