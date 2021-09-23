@@ -13,9 +13,9 @@ https://www.quora.com/Are-double-contractions-like-yourent-allowed-in-English-In
 
 ## Notes
 
-\b in regex is a word boundry
+\b in regex is a word boundary
 
-abiguous:
+ambiguous:
 "he’s" => "he is" / "he has"   (as well as all related contractions such as "he’sn’t")
 same with "she’s" and "it’s"
 "d’y’all" can be "do you all" or "did you all"
@@ -45,7 +45,7 @@ rejected:
 
 
 
-## no_apostroph_single_contractions.json
+## no_apostrophe_single_contractions.json
 
 homophones
 Some contractions result in actual words if the apostroph is removed.
@@ -61,12 +61,12 @@ Those contractions were removed.
 "well": "we will",
 "whore": "who are",
 
-## no_apostroph_double_contractions.json
+## no_apostrophe_double_contractions.json
 
 Those are overall pretty silly.
 
 homophones
-Some contractions result in actual words if the apostroph is removed.
+Some contractions result in actual words if the apostrophe is removed.
 Those contractions were removed.
 
 "dyall": "do you all",
