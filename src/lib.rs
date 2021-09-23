@@ -47,14 +47,14 @@ pub const EXPAND_SINGLE_CONTRACTIONS_JSON :&str =
 pub const EXPAND_DOUBLE_CONTRACTIONS_JSON :&str =
     include_str!("../data/expand/double_contractions.json");
 /// Contains contractions with three apostroph in json form (Y'all'd've, 'twou'dn't)
-pub const EXPAND_TRIPPLE_CONTRACTIONS_JSON :&str =
-    include_str!("../data/expand/tripple_contractions.json");
+pub const EXPAND_TRIPLE_CONTRACTIONS_JSON :&str =
+    include_str!("../data/expand/triple_contractions.json");
 /// Contains most of `CONTRACTIONS_SINGLE_JSON` contractions but without apostroph
 pub const EXPAND_SINGLE_NO_APOSTROPHE_CONTRACTIONS_JSON :&str =
-    include_str!("../data/expand/single_no_apostroph_contractions.json");
+    include_str!("../data/expand/single_no_apostrophe_contractions.json");
 /// Contains most of `CONTRACTIONS_DOUBLE_JSON` contractions but without apostroph
 pub const EXPAND_DOUBLE_NO_APOSTROPHE_CONTRACTIONS_JSON :&str =
-    include_str!("../data/expand/double_no_apostroph_contractions.json");
+    include_str!("../data/expand/double_no_apostrophe_contractions.json");
 /// Contains partial contractions in json form. (eg: 'm, 've, n't, 're)
 pub const EXPAND_PARTIAL_CONTRACTIONS_JSON :&str =
     include_str!("../data/expand/partial_contractions.json");
@@ -66,7 +66,7 @@ pub const CONTRACTIONS_JSON_ORDER :&[&str] = &[
     EXPAND_SLANG_JSON,
     EXPAND_DOUBLE_NO_APOSTROPHE_CONTRACTIONS_JSON,
     EXPAND_SINGLE_NO_APOSTROPHE_CONTRACTIONS_JSON,
-    EXPAND_TRIPPLE_CONTRACTIONS_JSON,
+    EXPAND_TRIPLE_CONTRACTIONS_JSON,
     EXPAND_DOUBLE_CONTRACTIONS_JSON,
     EXPAND_SINGLE_CONTRACTIONS_JSON,
 ];

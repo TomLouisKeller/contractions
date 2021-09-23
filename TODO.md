@@ -2,6 +2,8 @@
 
 fix up this file and the data/expand/README.md
 
+look at https://github.com/ian-beaver/pycontractions if they have something that we don't have
+
 ## Functionality
 
 - run tests and fix documentation examples !!
